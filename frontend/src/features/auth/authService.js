@@ -9,11 +9,16 @@ const register = async (clientData) => {
   if (response.data) {
     localStorage.setItem("client", JSON.stringify(response.data));
   }
+  //   Return user data and token
   return response.data;
 };
 
+// Logout client
+const logout = () => localStorage.removeItem("client");
+
 const authService = {
   register,
+  logout,
 };
 
 export default authService;
