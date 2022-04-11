@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
 import {createReport, reset} from '../features/reports/reportSlice'
 import Loading from '../components/Loading'
+import BackButton from '../components/BackButton'
 
 function NewReport() {
 const {client} = useSelector((state) => state.auth)
@@ -43,6 +44,7 @@ if(isLoading) {
 
   return (
     <>
+    <BackButton url="/" />
        <section className="heading">
            <h1>Create New Report</h1>
            <p>Please fill out the form below</p>
