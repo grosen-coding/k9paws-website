@@ -10,7 +10,7 @@ function Home() {
                 <p>Please choose from an option below</p>
             </section>
 
-            <Link to="/new-incident" className='btn btn-reverse btn-block'>
+            <Link to="/new-report" className='btn btn-reverse btn-block'>
                 <FaQuestionCircle /> Create New Incident Report
             </Link>
 
