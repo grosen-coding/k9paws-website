@@ -10,11 +10,11 @@ function Home() {
                 <p>Please choose from an option below</p>
             </section>
 
-            <Link to="/new-ticket" className='btn btn-reverse btn-block'>
+            <Link to="/new-incident" className='btn btn-reverse btn-block'>
                 <FaQuestionCircle /> Create New Incident Report
             </Link>
 
-            <Link to="/tickets" className='btn btn-block'>
+            <Link to="/reports" className='btn btn-block'>
                 <FaTicketAlt /> View My Current Reports
             </Link>
             
