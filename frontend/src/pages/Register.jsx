@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
+import Loading from '../components/Loading'
 
 
 function Register() {
@@ -59,6 +60,10 @@ function Register() {
         }
     }
 
+    // Loading spinner
+    if(isLoading) {
+        return <Loading/> 
+    }
 
     return (
 

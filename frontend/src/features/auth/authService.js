@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/clients";
+const API_URL = "/api/clients/";
 
 // Register client
 const register = async (clientData) => {
@@ -9,6 +9,16 @@ const register = async (clientData) => {
   if (response.data) {
     localStorage.setItem("client", JSON.stringify(response.data));
   }
+};
+
+// Login client
+const login = async (clientData) => {
+  const response = await axios.post(API_URL + "login", clientData);
+
+  if (response.data) {
+    localStorage.setItem("client", JSON.stringify(response.data));
+  }
+
   //   Return user data and token
   return response.data;
 };
@@ -19,6 +29,7 @@ const logout = () => localStorage.removeItem("client");
 const authService = {
   register,
   logout,
+  login,
 };
 
 export default authService;
