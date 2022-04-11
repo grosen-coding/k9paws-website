@@ -1,18 +1,44 @@
-import React from 'react'
-import {useState} from 'react'
-import {useSelector} from 'react-redux'
 
+import {useState, useEffect} from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
+import {toast} from 'react-toastify'
+import {createReport, reset} from '../features/reports/reportSlice'
+import Loading from '../components/Loading'
 
 function NewReport() {
 const {client} = useSelector((state) => state.auth)
+const {isLoading, isError, isSuccess, message}= useSelector((state) => state.report)
+
 const [name] = useState(client.name) 
-const [email] = useState(client.email) 
+const [email] = useState(client.email)
 const [category, setCategory] = useState('') 
 const [description, setDescription] = useState('') 
+
+const dispatch = useDispatch()
+const navigate = useNavigate()
+
+useEffect(() => {
+    if(isError) {
+        toast.error(message)
+    }
+
+    if(isSuccess) {
+        dispatch(reset())
+        navigate('/reports')
+    }
+
+    dispatch(reset())
+}, [dispatch, isError, isSuccess, navigate, message])
 
 const onSubmit = 
 (e) => {
     e.preventDefault()
+    dispatch(createReport({category, description}))
+}
+
+if(isLoading) {
+    return <Loading />
 }
 
   return (
