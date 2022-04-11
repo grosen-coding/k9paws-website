@@ -15,8 +15,36 @@ const createReport = async (reportData, token) => {
   return response.data;
 };
 
+// Get client reports
+const getReports = async (token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  const response = await axios.get(API_URL, config);
+
+  return response.data;
+};
+
+// Get client report
+const getReport = async (ticketId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  const response = await axios.get(API_URL + ticketId, config);
+
+  return response.data;
+};
+
 const reportService = {
   createReport,
+  getReports,
+  getReport,
 };
 
 export default reportService;

@@ -9,7 +9,7 @@ import BackButton from '../components/BackButton'
 
 function NewReport() {
 const {client} = useSelector((state) => state.auth)
-const {isLoading, isError, isSuccess, message}= useSelector((state) => state.report)
+const {isLoading, isError, isSuccess, message}= useSelector((state) => state.reports)
 
 const [name] = useState(client.name) 
 const [email] = useState(client.email)

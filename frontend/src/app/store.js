@@ -5,6 +5,6 @@ import reportReducer from "../features/reports/reportSlice";
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    report: reportReducer,
+    reports: reportReducer,
   },
 });
