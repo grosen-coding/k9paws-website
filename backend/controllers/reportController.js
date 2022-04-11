@@ -21,6 +21,34 @@ const getReports = asyncHandler(async (req, res) => {
   res.status(200).json(reports);
 });
 
+// @desc    Get Client Report
+// @route   GET /api/reports/:id
+// @access  Private
+const getReport = asyncHandler(async (req, res) => {
+  // Get client using ID in the JWT
+  const client = await Client.findById(req.client.id);
+
+  if (!client) {
+    res.status(401);
+    throw new Error("Client not found");
+  }
+
+  //   Get Report
+  const report = await Report.findById(req.params.id);
+
+  if (!report) {
+    res.status(404);
+    throw new Error("Report not found");
+  }
+
+  if (report.client.toString() !== req.client.id) {
+    res.status(401);
+    throw new Error("Not Authorized");
+  }
+
+  res.status(200).json(report);
+});
+
 // @desc    Create new Client Report
 // @route   POST /api/reports
 // @access  Private
@@ -52,5 +80,6 @@ const createReport = asyncHandler(async (req, res) => {
 
 module.exports = {
   getReports,
+  getReport,
   createReport,
 };
