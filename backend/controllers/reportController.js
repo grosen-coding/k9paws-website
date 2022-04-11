@@ -78,8 +78,73 @@ const createReport = asyncHandler(async (req, res) => {
   res.status(201).json(report);
 });
 
+// @desc    Delete Client Report
+// @route   DELETE /api/reports/:id
+// @access  Private
+const deleteReport = asyncHandler(async (req, res) => {
+  // Get client using ID in the JWT
+  const client = await Client.findById(req.client.id);
+
+  if (!client) {
+    res.status(401);
+    throw new Error("Client not found");
+  }
+
+  //   Get Report
+  const report = await Report.findById(req.params.id);
+
+  if (!report) {
+    res.status(404);
+    throw new Error("Report not found");
+  }
+
+  if (report.client.toString() !== req.client.id) {
+    res.status(401);
+    throw new Error("Not Authorized");
+  }
+  await report.remove();
+
+  res.status(200).json({ success: true });
+});
+
+// @desc    Update Client Report
+// @route   PUT /api/reports/:id
+// @access  Private
+const updateReport = asyncHandler(async (req, res) => {
+  // Get client using ID in the JWT
+  const client = await Client.findById(req.client.id);
+
+  if (!client) {
+    res.status(401);
+    throw new Error("Client not found");
+  }
+
+  //   Get Report
+  const report = await Report.findById(req.params.id);
+
+  if (!report) {
+    res.status(404);
+    throw new Error("Report not found");
+  }
+
+  if (report.client.toString() !== req.client.id) {
+    res.status(401);
+    throw new Error("Not Authorized");
+  }
+
+  const updatedReport = await Report.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true }
+  );
+
+  res.status(200).json(updatedReport);
+});
+
 module.exports = {
   getReports,
   getReport,
   createReport,
+  deleteReport,
+  updateReport,
 };
