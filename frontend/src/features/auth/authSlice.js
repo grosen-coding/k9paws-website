@@ -70,6 +70,9 @@ export const authSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         state.client = null;
+      })
+      .addCase(logout.fulfilled, (state) => {
+        state.client = null;
       });
   },
 });
