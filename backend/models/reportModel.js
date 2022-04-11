@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const incidentSchema = mongoose.Schema(
+const reportSchema = mongoose.Schema(
   {
     client: {
       type: mongoose.Schema.Types.ObjectId,
@@ -28,4 +28,4 @@ const incidentSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Incident", incidentSchema);
+module.exports = mongoose.model("Report", reportSchema);
