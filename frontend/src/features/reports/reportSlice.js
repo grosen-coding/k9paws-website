@@ -70,6 +70,26 @@ export const getReport = createAsyncThunk(
   }
 );
 
+// Close Report
+export const closeReport = createAsyncThunk(
+  "reports/close",
+  async (reportId, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.client.token;
+      return await reportService.closeReport(reportId, token);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
 export const reportSlice = createSlice({
   name: "report",
   initialState,
@@ -115,6 +135,14 @@ export const reportSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      .addCase(closeReport.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.reports.map((report) =>
+          report._id === action.payload._id
+            ? (report.status = "closed")
+            : report
+        );
       });
   },
 });
