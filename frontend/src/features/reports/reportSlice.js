@@ -102,6 +102,19 @@ export const reportSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      .addCase(getReport.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getReport.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.report = action.payload;
+      })
+      .addCase(getReport.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
       });
   },
 });
