@@ -1,13 +1,17 @@
 import {useEffect} from 'react'
 import {toast} from 'react-toastify'
 import  {useSelector, useDispatch} from 'react-redux'
-import {getReport, reset, closeReport } from '../features/reports/reportSlice';
+import {getReport, closeReport } from '../features/reports/reportSlice';
+import {getNotes, reset as notesReset} from '../features/notes/noteSlice'
 import {useParams, useNavigate} from 'react-router-dom'
 import BackButton from '../components/BackButton'
 import Loading from '../components/Loading' 
+import NoteItem from '../components/NoteItem' 
 
 function Report() {
   const {report, isLoading, isSuccess, isError, message} = useSelector((state) => state.reports)
+
+  const {notes, isLoading: notesIsLoading} = useSelector((state) => state.notes)
 
   const params = useParams()
   const navigate = useNavigate()
@@ -20,6 +24,7 @@ function Report() {
     }
 
     dispatch(getReport(reportId))
+    dispatch(getNotes(reportId))
     
     // eslint-disable-next-line
   }, [isError, message, reportId])
@@ -31,7 +36,7 @@ const onReportClose = () =>
    toast.success('Report Successfully Closed')
    navigate('/reports')
  }
-  if(isLoading) {
+  if(isLoading || notesIsLoading) {
     return <Loading />
   }
 
@@ -56,7 +61,12 @@ const onReportClose = () =>
             <h3>Description</h3>
             <p>{report.description}</p>
           </div>
+          <h2>Notes</h2>
       </header>
+
+      {notes.map((note) => (
+        <NoteItem key={note._id} note={note} />
+      ))}
 
       {report.status !== 'closed' && (
         <button onClick={onReportClose} className="btn btn-block btn-danger">Close Report</button>
