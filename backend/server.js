@@ -14,11 +14,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// ROUTE
-// app.get("/", (req, res) => {
-//   res.status(200).json({ message: "Welcome to the new Incident Reports API" });
-// });
-
 // Routes
 app.use("/api/clients", require("./routes/clientRoutes"));
 app.use("/api/reports", require("./routes/reportRoutes"));
@@ -33,7 +28,9 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.get("/", (req, res) => {
-    res.status(200).json({ message: "Welcome to the Support Desk API" });
+    res
+      .status(200)
+      .json({ message: "Welcome to the K9PAWS Client Reports API" });
   });
 }
 

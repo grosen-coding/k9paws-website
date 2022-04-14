@@ -13,7 +13,7 @@ const {isLoading, isError, isSuccess, message}= useSelector((state) => state.rep
 
 const [name] = useState(client.name) 
 const [email] = useState(client.email)
-const [category, setCategory] = useState('') 
+const [category, setCategory] = useState('Select') 
 const [description, setDescription] = useState('') 
 
 const dispatch = useDispatch()
@@ -63,6 +63,7 @@ if(isLoading) {
                <div className="form-group">
                     <label htmlFor="category">Category</label>
                     <select name="category" id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <option value="Select" disabled>Please select a Category</option>
                         <option value="Update">Update</option>
                         <option value="Question">Question</option>
                         <option value="Positive Experience">Positive Experience</option>
