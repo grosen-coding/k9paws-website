@@ -24,7 +24,7 @@ app.use("/api/clients", require("./routes/clientRoutes"));
 app.use("/api/reports", require("./routes/reportRoutes"));
 
 // Serve Frontend
-if (process.env.NODE_ENV === "production") {
+if (true) {
   // Set build folder as static
   app.use(express.static(path.join(__dirname, "../frontend/build")));
 
@@ -33,9 +33,7 @@ if (process.env.NODE_ENV === "production") {
   );
 } else {
   app.get("/", (req, res) => {
-    res
-      .status(200)
-      .json({ message: "Welcome to the new Incident Reports API" });
+    res.status(200).json({ message: "Welcome to the new Incident Reports" });
   });
 }
 
