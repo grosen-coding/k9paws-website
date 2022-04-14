@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // ROUTE
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to the new Incident Reports API" });
-});
+// app.get("/", (req, res) => {
+//   res.status(200).json({ message: "Welcome to the new Incident Reports API" });
+// });
 
 // Routes
 app.use("/api/clients", require("./routes/clientRoutes"));
