@@ -15,13 +15,16 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
+    "command": "^0.0.5",
     "concurrently": "^7.0.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-async-handler": "^1.2.0",
     "heroku": "^7.60.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "node-sass": "^7.0.1",
+    "sass": "^1.50.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

@@ -6,12 +6,12 @@ function Home() {
 
         <>
             <section className="heading">
-                <h1>What do you need help with</h1>
+                <h1>K9PAWS Progress Reporting</h1>
                 <p>Please choose from an option below</p>
             </section>
 
             <Link to="/new-report" className='btn btn-reverse btn-block'>
-                <FaQuestionCircle /> Create New Incident Report
+                <FaQuestionCircle /> Create New Report
             </Link>
 
             <Link to="/reports" className='btn btn-block'>
