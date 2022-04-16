@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {getReports, reset} from '../features/reports/reportSlice'
 import Loading from '../components/Loading'
@@ -7,8 +7,8 @@ import ReportItem from '../components/ReportItem'
 
 function Reports() {
 
-    const {reports, isLoading, isSuccess} = useSelector((state) => state.reports
-    )
+    const {reports, isLoading, isSuccess} = useSelector((state) => state.reports)
+    const [correctedReports, setCorrectedReports] = useState([]);
 
     const dispatch = useDispatch()
 
@@ -23,6 +23,11 @@ function Reports() {
     useEffect(() => {
         dispatch(getReports())
     }, [dispatch])
+
+    useEffect(()=>{
+        const newReport = [...reports]
+        setCorrectedReports(newReport.reverse())
+    },[reports])
 
     if(isLoading) {
         return <Loading />
@@ -39,7 +44,7 @@ function Reports() {
                 <div>Status</div>
                 <div></div>
             </div>
-            {reports.map((report) => 
+            {correctedReports?.map((report) => 
                 <ReportItem key={report._id} report={report}/>
             )}
         </div>

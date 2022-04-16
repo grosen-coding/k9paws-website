@@ -17,6 +17,11 @@ function Header() {
     <header className='header'>
         <div className="logo">
             <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/breed">Breed info</Link>
+            {client && <Link to="/reports">Reports</Link>}
+            
         </div>
         <ul>
             {client ? (

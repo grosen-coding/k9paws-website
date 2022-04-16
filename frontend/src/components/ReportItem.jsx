@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom'
 
 function ReportItem({report}) {
+
+
+
   return (
     <div className="report">
         <div>{new Date(report.createdAt).toLocaleString('en-US')}</div>

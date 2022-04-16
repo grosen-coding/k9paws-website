@@ -9,6 +9,12 @@ import Register from "./pages/Register";
 import NewReport from "./pages/NewReport";
 import Reports from "./pages/Reports";
 import Report from "./pages/Report";
+import MainReportsPage from "./pages/MainReportsPage";
+import BlogMainPage from "./pages/Blog/BlogMainPage";
+import BlogPostList from "./pages/Blog/BlogPostList";
+import BlogPost from "./pages/Blog/BlogPost";
+import NewPostPage from "./pages/Blog/NewPostPage";
+import BreedSearch from "./pages/BreedSearch";
 
 function App() {
   return (
@@ -16,16 +22,25 @@ function App() {
       <Router>
         <div className="container">
           <Header />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/reports" element={<MainReportsPage />} />
+            <Route path="/blog" element={<BlogMainPage />} />
+            <Route exact path="/blog/blog_list" element={<BlogPostList />} />
+            <Route
+              exact
+              path="/blog/blog_list/:postNum"
+              element={<BlogPost />}
+            />
+            <Route exact path="/blog/new_post" element={<NewPostPage />} />
+            <Route path="/breed" element={<BreedSearch />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/new-report" element={<PrivateRoute />}>
-              <Route path="/new-report" element={<NewReport />} />
+            <Route path="/reports/new-report" element={<PrivateRoute />}>
+              <Route path="/reports/new-report" element={<NewReport />} />
             </Route>
-            <Route path="/reports" element={<PrivateRoute />}>
-              <Route path="/reports" element={<Reports />} />
+            <Route path="/reports/current-reports" element={<PrivateRoute />}>
+              <Route path="/reports/current-reports" element={<Reports />} />
             </Route>
             <Route path="/report/:reportId" element={<PrivateRoute />}>
               <Route path="/report/:reportId" element={<Report />} />
