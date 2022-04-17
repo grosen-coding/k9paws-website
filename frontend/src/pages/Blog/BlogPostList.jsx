@@ -8,21 +8,21 @@ const BlogPostList = () => {
   const [categoryInput, setCategoryInput] = useState("");
 
   const [userSearchInput, setUserSearchInput] = useState("");
-  const [breedSearchResult, setBreedSearchResult] = useState();
-  const [displayBreedInfo, setDisplayBreedInfo] = useState();
+  // const [breedSearchResult, setBreedSearchResult] = useState();
+  // const [displayBreedInfo, setDisplayBreedInfo] = useState();
   const [allPostInfo, setAllPostInfo] = useState();
 
   const handleSearch = (event, userSearchInput) => {
     event.preventDefault();
    
 
-    console.log(allPostInfo);
+    // console.log(allPostInfo);
 
     const searchResultPosts = allPostInfo.filter((post)=>{
       return (post.name.category.includes(userSearchInput) || post.name.content.includes(userSearchInput) || post.name.name.includes(userSearchInput) || post.name.title.includes(userSearchInput)) 
     })
 
-    console.log(searchResultPosts)
+    // console.log(searchResultPosts)
 
 
 setBlogPosts(searchResultPosts);

@@ -1,0 +1,273 @@
+/* MAIN STYLING */
+.header-contact {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url("../img/contact-bg.jpeg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  animation: headerAnim 2s;
+  backface-visibility: hidden;
+}
+
+.contact-section {
+  background: #eee;
+  padding: 8rem 5rem;
+
+  @include respond(tab-port) {
+    padding: 0 4rem 1rem;
+  }
+}
+
+.contact-main {
+  display: flex;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.contact-left {
+  width: 40%;
+  font-size: 2rem;
+  line-height: 1.4;
+  padding: 4rem 6rem;
+  letter-spacing: 1.2px;
+  height: 100%;
+  margin: auto;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  &__info {
+    height: 70%;
+    padding-left: 5rem;
+    padding-bottom: 8rem;
+
+    @include respond(tab-port) {
+      padding: 0 5rem 3rem;
+      text-align: center;
+    }
+
+    &--social {
+      padding: 2rem 0;
+      width: auto;
+
+      ul {
+        display: flex;
+        list-style: none;
+        padding-bottom: 2rem;
+        @include respond(tab-port) {
+          width: 40%;
+          margin: 0 auto;
+        }
+
+        @include respond(phone) {
+          width: 90%;
+        }
+
+        @include respond(tab-port) {
+          justify-content: space-between;
+        }
+
+        li a {
+          padding: 0 4rem;
+          font-size: 1.2rem;
+          display: inline-block;
+          @include respond(tab-port) {
+            padding: 1rem;
+          }
+        }
+
+        li a:first-child {
+          padding-left: 0;
+
+          @include respond(tab-port) {
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+
+    i {
+      font-size: 3rem;
+      color: $color-primary;
+      transition: 0.2s ease;
+
+      &:hover {
+        color: $color-primary-light;
+        font-weight: 700;
+        transform: scale(1.3);
+        text-shadow: 0 0 black, 0.4rem 0.4rem 0.8rem $color-primary-dark;
+      }
+    }
+  }
+
+  &__img-bottom {
+    height: 30%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.9rem;
+      object-fit: cover;
+    }
+
+    .carousel {
+      box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.3);
+      width: auto;
+      height: auto;
+      overflow: hidden;
+      border-radius: 0.9rem;
+
+      @include respond(tab-port) {
+        width: auto;
+      }
+    }
+
+    .image-container {
+      display: flex;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+}
+
+.contact-right {
+  width: 55%;
+
+  @include respond(tab-port) {
+    width: 100%;
+    position: relative;
+  }
+}
+
+// Contact Form
+.contact-form-container {
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 2rem 2rem $color-primary-light;
+
+  @include respond(tab-port) {
+    margin: 3rem 0;
+    box-shadow: none;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-primary;
+  padding: 5rem 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 1rem;
+
+  &__group {
+    input,
+    textarea {
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+      border-radius: 0.2rem;
+      background-color: rgba(#eee, 0.8);
+      border: none;
+      font-family: inherit;
+      border-bottom: 3px solid transparent;
+      width: 90%;
+      display: block;
+      color: #333;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 2rem auto;
+      outline: none;
+
+      @include respond(tab-port) {
+        width: 90%;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $color-grey-very-dark;
+        opacity: 0.5;
+        font-weight: 400;
+      }
+    }
+    textarea {
+      height: 30rem;
+    }
+  }
+
+  &__submit-btn {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  input[type="submit"] {
+    text-align: center;
+    background: $color-primary-light;
+    border: none;
+    padding: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    width: 40%;
+    display: block;
+    margin-top: 3rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background-color: rgba($color-primary-light, 0.6);
+    outline: 3px solid $color-primary-light;
+    color: black;
+    transition-duration: 0.1s;
+    cursor: pointer;
+  }
+
+  .form-error-summary-msg {
+    color: red;
+    font-style: italic;
+    font-weight: 600;
+    display: flex;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    background-color: rgba(#ddd, 0.75);
+    padding: 1rem 3rem;
+    width: auto;
+    height: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: right;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    bottom: 2rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .invalid-form-field {
+    color: red;
+    outline: 3px solid red !important;
+  }
+}

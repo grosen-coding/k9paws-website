@@ -15,35 +15,41 @@ function Header() {
  }
   return (
     <header className='header'>
-        <div className="logo">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/breed">Breed info</Link>
-            {client && <Link to="/reports">Reports</Link>}
-            
-        </div>
-        <ul>
-            {client ? (
-                <li>
-                    <button className="btn" onClick={onLogout}>
-                        <FaSignOutAlt /> Logout
-                        </button>
-                </li>
-            ) : (
-            <>
-            <li><Link to="/login">
-                <FaSignInAlt /> Login
-            </Link>
-            </li>
-            <li><Link to="/register">
-                <FaUser /> Register
-            </Link>
-            </li>
-            </>)}
+        <nav className='header-nav'>
+            <div className="header-nav__left">
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/breed">Breed info</Link></li>
+                    <li>  {client && <Link to="/reports">Reports</Link>}</li>
+                </ul>
+            </div>
 
-        </ul>
+            <div className="header-nav__right">
+                <ul>
+                    {client ? (
+                        <li>
+                            <button className="btn" onClick={onLogout}>
+                                <FaSignOutAlt /> Logout
+                                </button>
+                        </li>
+                    ) : (
+                    <>
+                    <li><Link to="/login">
+                        <FaSignInAlt /> Login
+                    </Link>
+                    </li>
+                    <li><Link to="/register">
+                        <FaUser /> Register
+                    </Link>
+                    </li>
+                    </>)}
+
+                </ul>
+            </div>
         
+        </nav>
     </header>
   )
 }
