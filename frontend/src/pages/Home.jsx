@@ -5,7 +5,8 @@ function Home() {
         <>
             <section className="heading">
                 <h1>HOME</h1>
-                <p>DESIGN WELL</p>
+                <p>DESIGN WELL....</p>
+                <p>...and Lisa Smells</p>
             </section>
         </>
     )

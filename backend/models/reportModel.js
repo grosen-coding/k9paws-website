@@ -19,8 +19,8 @@ const reportSchema = mongoose.Schema(
     status: {
       type: String,
       required: true,
-      enum: ["new", "open", "closed"],
-      default: "new",
+      enum: ["open", "closed"],
+      default: "open",
     },
   },
   {

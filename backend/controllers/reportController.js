@@ -72,7 +72,7 @@ const createReport = asyncHandler(async (req, res) => {
     category,
     description,
     client: req.client.id,
-    status: "new",
+    status: "open",
   });
 
   res.status(201).json(report);
@@ -135,7 +135,7 @@ const updateReport = asyncHandler(async (req, res) => {
   const updatedReport = await Report.findByIdAndUpdate(
     req.params.id,
     req.body,
-    { new: true }
+    { open: true }
   );
 
   res.status(200).json(updatedReport);
