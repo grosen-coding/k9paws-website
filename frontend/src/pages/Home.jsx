@@ -1,6 +1,8 @@
 
 
 function Home() {
+
+
     return (
         <>
             <section className="heading">
@@ -8,6 +10,7 @@ function Home() {
                 <p>DESIGN WELL....</p>
                 <p>...and Lisa Smells</p>
             </section>
+
         </>
     )
 }
