@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <>
-            <div className="main">
+            <div className="main wrapper">
               <div className="heading-primary">
                   <h1 className="heading-primary--main">
                           <span alt="Logo" class="logo">
