@@ -15,7 +15,7 @@ function Header() {
  }
   return (
     <header className='header'>
-        <nav className='header-nav'>
+        <nav className='header-nav wrapper'>
             <div className="header-nav__left">
                 <ul>
                     <li><Link to="/">Home</Link></li>

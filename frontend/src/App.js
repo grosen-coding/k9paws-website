@@ -15,13 +15,14 @@ import BlogPostList from "./pages/Blog/BlogPostList";
 import BlogPost from "./pages/Blog/BlogPost";
 import NewPostPage from "./pages/Blog/NewPostPage";
 import BreedSearch from "./pages/BreedSearch";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Router>
+        <Header />
         <div className="wrapper">
-          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -47,6 +48,7 @@ function App() {
             </Route>
           </Routes>
         </div>
+        <Footer />
       </Router>
       <ToastContainer />
     </>
