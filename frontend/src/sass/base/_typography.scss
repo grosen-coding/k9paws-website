@@ -5,68 +5,48 @@ body {
   color: $color-grey-dark;
 }
 
+
+// Headers
+.heading-primary {
+  color: #000;
+  text-align: center;
+  cursor: default;
+
+  &--main {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 1.5rem;
+    margin: 10rem 0 2rem;
+    animation: scaleIn 2s;
+    backface-visibility: hidden;
+  }
+
+  &--sub {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1.1rem;
+    animation: moveFromBottom 1.5s forwards;
+    animation-delay: 2s;
+    text-transform: lowercase;
+    opacity: 0;
+  }
+}
+
 // Logo
 .logo {
-  font-size: 3rem;
   font-weight: 600;
   color: $color-grey-very-dark;
   transition: all 0.4s ease;
 
-  @include respond(phone) {
-    opacity: 0.6;
-  }
-
   &--nine {
     color: $color-primary;
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 700;
     display: inline-block;
     position: relative;
     top: 0.9rem;
     transition: all 0.4s ease;
-  }
-}
-
-// Headers
-.heading-primary {
-  color: $color-light;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: default;
-
-  span {
-    display: inline-block;
-
-    span {
-      display: inline-block;
-    }
-  }
-
-  &--main {
-    display: inline-block;
-    font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    margin-top: 10rem;
-    animation: moveFromLeft 2s;
-    backface-visibility: hidden;
-
-    @include respond(phone) {
-      letter-spacing: 1rem;
-      font-size: 5rem;
-    }
-  }
-
-  &--sub {
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 1.5rem;
-    animation: moveFromRight 2s;
-    position: relative;
-
-    @include respond(phone) {
-      letter-spacing: 0.5rem;
-    }
   }
 }
 
