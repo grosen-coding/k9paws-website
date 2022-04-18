@@ -46,3 +46,19 @@
 .btn:hover {
   transform: scale(0.98);
 }
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  color: red;
+  transform: scale(0.98);
+}

@@ -60,3 +60,19 @@ h3 {
   background-color: $color-primary;
   color: #fff;
 }
+
+p.status-in-progress {
+  color: orangered;
+}
+
+p.status-waiting {
+  color: red;
+}
+
+p.status-ready {
+  color: steelblue;
+}
+
+p.status-complete {
+  color: green;
+}

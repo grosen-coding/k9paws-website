@@ -7,7 +7,6 @@
 1200-1800px: Normal styles
 1800px+: Large TVs ETC
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -79,6 +78,22 @@ h3 {
 ::selection {
   background-color: #0e8044;
   color: #fff;
+}
+
+p.status-in-progress {
+  color: orangered;
+}
+
+p.status-waiting {
+  color: red;
+}
+
+p.status-ready {
+  color: steelblue;
+}
+
+p.status-complete {
+  color: green;
 }
 
 @-webkit-keyframes moveFromLeft {
@@ -248,6 +263,26 @@ h3 {
             transform: scaleY(1);
     -webkit-transform-origin: top;
             transform-origin: top;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 body {
@@ -442,141 +477,6 @@ body {
   margin-top: 10rem !important;
 }
 
-.boxes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.boxes div {
-  padding: 30px;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-}
-
-.boxes h2 {
-  margin-top: 20px;
-}
-
-.boxes a:hover {
-  color: #777;
-}
-
-.btn-close {
-  background: none;
-  border: none;
-  color: #000;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-close:hover {
-  color: red;
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
-}
-
-p.status-in-progress {
-  color: orangered;
-}
-
-p.status-waiting {
-  color: red;
-}
-
-p.status-ready {
-  color: steelblue;
-}
-
-p.status-complete {
-  color: green;
-}
-
-footer {
-  position: sticky;
-  top: 95vh;
-  text-align: center;
-}
-
-.loadingSpinnerContainer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loadingSpinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #000 transparent #555 transparent;
-  border-radius: 50%;
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@media (max-width: 600px) {
-  .boxes {
-    grid-template-columns: 1fr;
-  }
-
-  .form {
-    width: 90%;
-  }
-
-  .report-created h2,
-.heading h1 {
-    font-size: 2rem;
-  }
-
-  .heading p {
-    font-size: 1.5rem;
-  }
-}
 .report-desc {
   margin: 20px 0;
   font-size: 17px;
@@ -805,4 +705,50 @@ footer {
 .btn:hover {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  color: red;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
 }
