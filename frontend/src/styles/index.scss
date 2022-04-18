@@ -9,22 +9,29 @@
 @import "base/utilities";
 
 @import "pages/home";
+@import "pages/about";
+@import "pages/breedInfo";
 @import "pages/contact";
-@import "pages/faq";
-@import "pages/terms";
-@import "pages/company";
+@import "pages/login";
+@import "pages/register";
+
+@import "pages/blog/all-blog-posts";
+@import "pages/blog/blog";
+@import "pages/blog/blogPost";
+@import "pages/blog/createBlogPost";
+
+@import "pages/reports/report";
+@import "pages/reports/currentReports";
+@import "pages/reports/newReport";
+@import "pages/reports/reportsPage";
 
 @import "components/wrapper";
 @import "components/button";
 @import "components/composition";
 @import "components/slideshow";
-@import "components/team-box";
 @import "components/card";
-@import "components/testimonial";
 @import "components/bg-video";
 @import "components/form";
-
-@import "components/popup";
 
 @import "layout/navigation";
 @import "layout/header";
