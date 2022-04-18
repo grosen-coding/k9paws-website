@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="container">
+        <div className="wrapper">
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
