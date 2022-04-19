@@ -239,7 +239,7 @@ body {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -429,7 +429,7 @@ h4 {
           transform: translate(-50%, -50%);
 }
 .blog-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 4rem;
@@ -476,6 +476,7 @@ h4 {
 }
 .blog-preview-card:hover .blog-preview-card--title {
   top: 3rem;
+  font-weight: 800;
 }
 .blog-preview-card:hover .blog-preview-card--author {
   bottom: 12rem;
@@ -525,6 +526,9 @@ h4 {
   width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  line-height: 1;
+  font-size: 1.4rem;
+  padding: 0 0.6rem;
 }
 .blog-preview-card--author {
   font-weight: 500;

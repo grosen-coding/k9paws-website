@@ -7,7 +7,7 @@
     }
 
     &-title {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         text-transform: uppercase;
         text-align: center;
         font-size: 4rem;
@@ -53,6 +53,7 @@
 
         &:hover &--title {
             top: 3rem;
+            font-weight: 800;
         }
 
         &:hover &--author {
@@ -98,6 +99,9 @@
             top: 12rem;
             width: 100%;
             transition: 0.5s;
+            line-height: 1;
+            font-size: 1.4rem;
+            padding: 0 .6rem;
         }
 
         &--author {
