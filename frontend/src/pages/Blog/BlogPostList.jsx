@@ -72,63 +72,73 @@ setBlogPosts(searchResultPosts);
 
   return (
     <section className="blog-posts wrapper">
-        <div className="all-blog-posts-container">
 
-          <h2>
-            Search <span>All Posts</span>
-          </h2>
- 
+        <div className="all-blog-posts--container">
+          
+          <div className="all-blog-posts--header">
+            <h2 className="all-blog-posts--title-main">Blog Posts</h2>
 
-          <section className="blogPostSection">
-            <div className="blogPostContainer">
-              <h2>Search Posts by Category:</h2>
+            
+            {/* <h2 className="all-blog-posts--title-sub">Search/Filter Posts</h2> */}
 
-              <label htmlFor="blogPostCategory" className="srOnly"></label>
-              <select
-                name="blogPostCategory"
-                onChange={(event) => {
-                  setCategoryInput(event.target.value);
-                }}
-                value={categoryInput}
-                className="categorySelectMenu"
-              >
-                <option value="">All Categories</option>
-                <option value="General Interest">General Interest</option>
-                <option value="Training Tools">Training Tools</option>
-                <option value="Training Tips">Training Tips</option>
-                <option value="Problem Behaviour">Problem Behaviour</option>
-                <option value="Breeds">Breeds</option>
-                <option value="Puppies">Puppies</option>
-                <option value="Strange Stories">Strange Stories</option>
-                <option value="Success Stories">Success Stories</option>
-                <option value="Fun Stories">Fun Stories</option>
-              </select>
+              <p>Search through all blog posts below either by selecting a <strong>Category</strong> from the drop down menu, or entering a <strong>Keyword</strong> in the search bar.</p>
+              <div className="all-blog-posts--search-container">
 
-              <div className="breedSearchForm">
-              <form
-                onSubmit={(event) => {
-                  handleSearch(event, userSearchInput);
-                }}
-                action="search"
-              >
-                <label htmlFor="searchBar">Search by keyword</label>
-                <input
-                  onChange={(event) => {
-                    setUserSearchInput(event.target.value);
-                  }}
-                  value={userSearchInput}
-                  type="text"
-                  name="searchBar"
-                  id="searchBar"
-                  placeholder="Search"
-                  required
-                />
-                <button type="submit">Search</button>
-              </form>
-            </div>
+                <div className="all-blog-posts--search-category">
+                  <div className="form-group">
+                    <label htmlFor="blogPostCategory" className="srOnly form-control">Search by <strong>Category</strong>:</label>
+                    <select
+                      name="blogPostCategory"
+                      onChange={(event) => {
+                        setCategoryInput(event.target.value);
+                      }}
+                      value={categoryInput}
+                      className="categorySelectMenu">
+                      <option value="">All Categories</option>
+                      <option value="General Interest">General Interest</option>
+                      <option value="Training Tools">Training Tools</option>
+                      <option value="Training Tips">Training Tips</option>
+                      <option value="Problem Behaviour">Problem Behaviour</option>
+                      <option value="Breeds">Breeds</option>
+                      <option value="Puppies">Puppies</option>
+                      <option value="Strange Stories">Strange Stories</option>
+                      <option value="Success Stories">Success Stories</option>
+                      <option value="Fun Stories">Fun Stories</option>
+                    </select>
+                  </div>
+                </div>
 
-                  <div className="blog-post-container">
-              <ul className="blog-posts-cards">
+                  <div className="all-blog-posts--search-keyword">
+                    <form onSubmit={(event) => { 
+                      handleSearch(event, userSearchInput);
+                      }}
+                      action="search">
+
+                      <div className="form-group">
+                        <label htmlFor="searchBar">Search by <strong>Keyword</strong>:</label>
+                        <input
+                          onChange={(event) => {
+                          setUserSearchInput(event.target.value);
+                          }}
+                          value={userSearchInput}
+                          className="form-control"
+                          type="text"
+                          name="searchBar"
+                          id="searchBar"
+                          placeholder="Search"
+                          required
+                          />
+                      </div>
+                    <button type="submit" className="btn">Search</button>
+                    </form>
+                  </div>
+
+                </div>
+
+          </div>
+
+            <div className="blog-post--container">
+              <ul className="blog-post--cards">
                 {blogPosts
                   .filter((post) => {
                     return post.name.category.includes(categoryInput);
@@ -136,7 +146,8 @@ setBlogPosts(searchResultPosts);
                   .map((post) => {
                     return (
                       <Link to={`/blog/blog_list/${post.name.urlLink}`}>
-                        <li key={post.key} className="preview-cards">
+                        <li key={post.key} className="blog-preview-cards">
+
                           <div className="blog-preview-card">
                                 <div className="blog-preview-card--content">
                                   <div className="blog-preview-card--paw">
@@ -160,16 +171,18 @@ setBlogPosts(searchResultPosts);
                                   </Link>
                                 </div>
                           </div>
+
                         </li>
                       </Link>
                     );
                   })}
               </ul>
-              </div>
+
             </div>
-          </section>
-             </div>
-    </section>
+          </div>
+
+        </section>
+
   );
 };
 

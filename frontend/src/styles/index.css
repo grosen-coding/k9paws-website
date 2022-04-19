@@ -430,19 +430,58 @@ h4 {
   margin-bottom: 2rem;
 }
 
-.all-blog-posts-container {
+.all-blog-posts--container {
   padding-top: 8rem;
   padding-bottom: 10rem;
   width: 100%;
 }
-.all-blog-posts-heading {
+.all-blog-posts--header {
   width: 75%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 1rem;
   color: #333;
 }
-.blog-posts-cards {
+.all-blog-posts--title-main {
+  margin: 3rem 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.all-blog-posts--title-sub {
+  margin-bottom: 2rem;
+  color: #888;
+}
+.all-blog-posts--search-container {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.all-blog-posts--search-category {
+  padding: 4rem 2rem;
+  width: 50%;
+}
+.all-blog-posts--search-category .form-group {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.all-blog-posts--search-keyword {
+  padding: 4rem 2rem;
+  border-left: 1px solid #bbb;
+  width: 50%;
+}
+.all-blog-posts--search-keyword .form-group {
+  width: 50%;
+  margin: 0 auto;
+}
+.all-blog-posts--search-keyword button {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.blog-post--cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,7 +496,7 @@ h4 {
   padding: 2rem;
 }
 
-.preview-cards {
+.blog-preview-cards {
   margin: 2rem;
 }
 
