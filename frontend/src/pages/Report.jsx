@@ -79,54 +79,62 @@ const closeModal = () => setModalIsOpen(false)
   }
 
   return (
-    <div className='report-page'>
-      <header className="report-header">
-        <BackButton url='/reports' />
-        <h2>
-          Report ID: {report._id}
-          <span className={`status status-${report.status}`}>
-            {report.status}
-          </span>
-          </h2>
-          <h3>Date Submitted: {new Date(report.createdAt).toLocaleString('en-US')}</h3>
-          <h3>Category: {report.category}</h3>
-          <hr />
-          <div className="report-desc">
-            <h3>Description</h3>
-            <p>{report.description}</p>
-          </div>
+    <section className='wrapper'>
+        <div className="report-container">
+  
+          <header className="report-header">
+            <BackButton url='/reports/current-reports' />
+
+            <div className="report-info">
+              <h2>
+                  Report ID: {report._id} &nbsp;
+                  <span className={`status status-${report.status}`}>
+                    {report.status}
+                  </span>
+                </h2>
+                <h3>Date Submitted: {new Date(report.createdAt).toLocaleString('en-US')}</h3>
+                <h3>Category: {report.category}</h3>
+              </div>
+
+              <div className="report-desc">
+                <h3>Description</h3>
+                <p>{report.description}</p>
+              </div>
+
+          </header>
+
           <h2>Notes</h2>
-      </header>
 
-      {report.status !== 'closed' && (
-        <button onClick={openModal} className="btn"><FaPlus /> Add Note</button>
-      )}
+          {report.status !== 'closed' && (
+            <button onClick={openModal} className="btn btn-note"><FaPlus /> Add Note</button>
+          )}
 
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Add Note">
+          <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Add Note">
 
-        <h2>Add Note</h2>
-        <button className="btn-close" onClick={closeModal}>X</button>
-        
-        <form onSubmit={onNoteSubmit}>
-        <div className="form-group">
-          <textarea name="noteText" id="noteText" className='form-control' placeholder='Note text' value={noteText} onChange={(e) => setNoteText(e.target.value)}></textarea>
-        </div>
-        <div className="form-group">
-          <button className="btn" type='submit'>Submit</button>
-        </div>
+          <h2>Add Note</h2>
+          <button className="btn-close" onClick={closeModal}>X</button>
+          
+          <form onSubmit={onNoteSubmit}>
+            <div className="form-group">
+              <textarea name="noteText" id="noteText" className='form-control' placeholder='Note text' value={noteText} onChange={(e) => setNoteText(e.target.value)}></textarea>
+            </div>
+            <div className="form-group">
+              <button className="btn" type='submit'>Submit</button>
+            </div>
 
-        </form>
+          </form>
 
-      </Modal>
+        </Modal>
 
-      {notes.map((note) => (
-        <NoteItem key={note._id} note={note} />
-      ))}
+        {notes.map((note) => (
+          <NoteItem key={note._id} note={note} />
+        ))}
 
-      {report.status !== 'closed' && (
-        <button onClick={onReportClose} className="btn btn-block btn-danger">Close Report</button>
-      )}
-    </div>
+        {report.status !== 'closed' && (
+          <button onClick={onReportClose} className="btn btn-block btn-danger">Close Report</button>
+        )}
+      </div>
+    </section>
   )
 }
 

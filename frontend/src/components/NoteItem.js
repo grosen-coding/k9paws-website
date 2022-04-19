@@ -12,9 +12,11 @@ function NoteItem({ note }) {
         color: note.isStaff ? "#fff" : "#000",
       }}
     >
-      <h4>
-        Note from{" "}
-        {note.isStaff ? <span>Staff</span> : <span>{client.name}</span>}
+      <h4 className="note-from">
+        Note from: &nbsp;
+        <span className="note-from-author">
+          {note.isStaff ? <span>Staff</span> : <span>{client.name}</span>}
+        </span>
       </h4>
       <p>{note.text}</p>
       <div className="note-date">

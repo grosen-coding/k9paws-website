@@ -47,7 +47,7 @@ if(isLoading) {
 
         <div className="new-report-container">
 
-            <BackButton url="/" />
+            <BackButton url="/reports" />
 
             <div className="new-report-heading">
                 <h1>Create a New <strong>K<span className='logo--nine'>9</span>PAWS</strong> Progress Report</h1>

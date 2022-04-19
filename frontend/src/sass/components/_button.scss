@@ -36,6 +36,7 @@
 .btn-danger {
   background: darkred;
   border: none;
+  width: 50%;
 }
 
 .btn-back {
@@ -89,4 +90,8 @@
         transform: scale(1.02);
         outline: 2px solid #333;
     }
+}
+
+.btn-note {
+  margin: 1rem 0;
 }

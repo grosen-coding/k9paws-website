@@ -629,52 +629,38 @@ h4 {
       justify-content: space-around;
 }
 
+.report-container {
+  padding: 9rem 5rem 10rem;
+  width: 100%;
+}
+.report-container .btn-block {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.report-container-header {
+  padding: 2rem 0;
+}
+.report-heading {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #333;
+}
+.report-heading .logo--nine {
+  font-size: 3rem;
+}
+.report-heading h1 {
+  margin-bottom: 3rem;
+}
+
 .report-desc {
-  margin: 20px 0;
+  margin: 3rem 2rem;
   font-size: 17px;
   background-color: #f4f4f4;
   border: 1px #ccc solid;
-  padding: 10px 15px;
+  padding: 1.5rem;
   border-radius: 5px;
-}
-
-.note {
-  border: 1px solid #e6e6e6;
-  border-radius: 5px;
-  text-align: left;
-  padding: 20px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.note-head {
-  background: #f4f4f4;
-  padding: 5px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 20px;
-}
-
-.note-date {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  font-size: 14px;
-}
-
-.delete-note {
-  color: red;
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
 }
 
 .current-reports-container {
@@ -838,6 +824,54 @@ h4 {
   margin-bottom: 30px;
 }
 
+.note {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.note-from {
+  text-transform: uppercase;
+}
+.note-from-author {
+  color: rgb(63, 174, 76);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.note-head {
+  background: #f4f4f4;
+  padding: 5px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.note-date {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.delete-note {
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
 .wrapper {
   width: 100%;
   max-width: 110rem;
@@ -916,6 +950,7 @@ h4 {
 .btn-danger {
   background: darkred;
   border: none;
+  width: 50%;
 }
 
 .btn-back {
@@ -970,6 +1005,10 @@ h4 {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   outline: 2px solid #333;
+}
+
+.btn-note {
+  margin: 1rem 0;
 }
 
 .loadingSpinnerContainer {
