@@ -58,6 +58,11 @@ h4 {
     transition: all 0.4s ease;
   }
 
+  &--nine-med {
+        font-size: 2.2rem;
+        color: $color-primary;
+  }
+
   &--nine-sm {
     font-size: 1.5rem;
         color: $color-primary;

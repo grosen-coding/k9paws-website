@@ -34,22 +34,28 @@ function Reports() {
     }
 
   return (
-    <section className='wrapper'>
-        <BackButton url="/" />
-        <h1>Reports</h1>
-        <div className="reports">
-            <div className="report-headings">
-                <div>Date</div>
-                <div>Category</div>
-                <div>Status</div>
-                <div></div>
-            </div>
-            {correctedReports?.map((report) => 
-                <ReportItem key={report._id} report={report}/>
-            )}
-        </div>
+        <section className='current-reports wrapper'>
+                <div className="current-reports-container">
 
-    </section>
+                    <BackButton url="/reports" />
+
+                    <h1 className='current-reports-heading'><strong>K<span className='logo--nine'>9</span>PAWS</strong> Reports</h1>
+
+                    <div className="reports">
+                        <div className="report-headings">
+                            <div>Date</div>
+                            <div>Category</div>
+                            <div>Status</div>
+                            <div></div>
+                        </div>
+
+                        {correctedReports?.map((report) => 
+                            <ReportItem key={report._id} report={report}/>
+                        )}
+
+                    </div>
+                </div>
+        </section>
   )
 }
 

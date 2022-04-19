@@ -294,6 +294,10 @@ h4 {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+.logo--nine-med {
+  font-size: 2.2rem;
+  color: #0e8044;
+}
 .logo--nine-sm {
   font-size: 1.5rem;
   color: #0e8044;
@@ -673,27 +677,22 @@ h4 {
   right: 20px;
 }
 
-.report-created {
-  border: 1px solid #e6e6e6;
-  border-radius: 5px;
-  padding: 50px;
+.current-reports-container {
+  padding: 10rem 0;
+}
+.current-reports-heading {
+  margin: 0 auto;
+  margin-top: -3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000;
+  font-size: 3rem;
+}
+.current-reports-heading .logo--nine {
+  font-size: 4rem;
 }
 
-.report-number {
-  margin-bottom: 30px;
-}
-
-.report-number h2 {
-  font-size: 2.3rem;
-  margin-bottom: 10px;
-}
-
-.report-number p {
-  font-size: 1.3rem;
-}
-
-.report,
-.report-headings {
+.report {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -709,9 +708,38 @@ h4 {
   border-radius: 5px;
   text-align: center;
 }
-
+.report-created {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 50px;
+}
+.report-number {
+  margin-bottom: 30px;
+}
+.report-number h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+.report-number p {
+  font-size: 1.3rem;
+}
 .report-headings {
   font-weight: 700;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  background: #f4f4f4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  color: #000;
 }
 
 .status {
@@ -724,13 +752,11 @@ h4 {
   font-size: 16px;
   text-align: center;
 }
-
 .status-open {
   background-color: green;
   color: #fff;
   border-radius: 10px;
 }
-
 .status-closed {
   background-color: darkred;
   color: #fff;
