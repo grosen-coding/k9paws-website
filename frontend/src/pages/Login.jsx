@@ -60,15 +60,17 @@ function Login() {
 
     return (
 
-        <>
-            <section className="heading">
-                <h1>
-                    <FaSignInAlt /> Login
-                </h1>
-                <p>Please log in to create an incident report</p>
-            </section>
+    <section className='wrapper'>
 
-            <section className="form">
+        <div className="login-container">
+            <div className="login-heading">
+                <h1>
+                    <FaSignInAlt /> Reporting Login
+                </h1>
+                <p>If you're currently a client of <strong>K<span className='logo--nine-sm'>9</span>PAWS</strong>, please log-in to access your <strong>Training Reports</strong></p>
+            </div>
+
+            <div className="form">
                 <form onSubmit={onSubmit}>
 
                     <div className="form-group">
@@ -97,8 +99,9 @@ function Login() {
                     </div>
 
                 </form>
-            </section>
-        </>
+            </div>
+        </div>
+    </section>
     )
 }
 

@@ -236,6 +236,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #a5a5af;
+  letter-spacing: 0.1rem;
 }
 
 h4 {
@@ -293,6 +294,10 @@ h4 {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+.logo--nine-sm {
+  font-size: 1.5rem;
+  color: #0e8044;
+}
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -310,11 +315,6 @@ h4 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-@media only screen and (max-width: 500px) {
-  .heading-secondary {
-    font-size: 3.5rem !important;
-  }
-}
 .heading-secondary--white {
   font-size: 3.5rem;
   display: inline-block;
@@ -328,16 +328,6 @@ h4 {
   border-radius: 0.2rem;
   background-color: #0e8044;
 }
-@media only screen and (max-width: 768px) {
-  .heading-secondary {
-    font-size: 3rem;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .heading-secondary {
-    font-size: 2.5rem;
-  }
-}
 
 .heading-tertiary {
   cursor: default;
@@ -347,32 +337,12 @@ h4 {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-@media only screen and (max-width: 1068px) {
-  .heading-tertiary {
-    font-size: 2.3rem;
-  }
-}
 
 .paragraph {
   font-size: 1.6rem;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
-}
-
-.faq-heading--sub {
-  display: inline-block;
-  font-size: 1.8rem;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: default;
-}
-@media only screen and (max-width: 500px) {
-  .faq-heading--sub {
-    letter-spacing: 0.5rem;
-  }
 }
 
 .u-center-text {
@@ -418,6 +388,24 @@ h4 {
   height: 100vh;
   text-align: center;
   position: relative;
+}
+
+.login-container {
+  margin-top: 12rem;
+}
+.login-container form .form-group {
+  width: 60%;
+  margin: 0 auto;
+}
+.login-heading {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #333;
+}
+.login-heading h1 {
+  margin-bottom: 3rem;
 }
 
 .blog-main {

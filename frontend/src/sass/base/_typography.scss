@@ -3,7 +3,7 @@ body {
   font-size: $default-font-size;
   line-height: 1.7;
   color: $color-grey-dark;
-  // position: relative;
+  letter-spacing: .1rem;
 }
 
 h4 {
@@ -20,7 +20,6 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // border: 1px solid green;
 
   &--main {
     text-transform: uppercase;
@@ -58,6 +57,11 @@ h4 {
     top: 0.9rem;
     transition: all 0.4s ease;
   }
+
+  &--nine-sm {
+    font-size: 1.5rem;
+        color: $color-primary;
+  }
 }
 
 .heading-secondary {
@@ -78,10 +82,6 @@ h4 {
   color: transparent;
   transition: all 0.2s ease;
 
-  @include respond(phone) {
-    font-size: 3.5rem !important;
-  }
-
   &--white {
     font-size: 3.5rem;
     display: inline-block;
@@ -95,14 +95,6 @@ h4 {
     border-radius: 0.2rem;
     background-color: $color-primary;
   }
-
-  @include respond(tab-port) {
-    font-size: 3rem;
-  }
-
-  @include respond(phone) {
-    font-size: 2.5rem;
-  }
 }
 
 .heading-tertiary {
@@ -111,10 +103,6 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   transition: all 0.3s ease;
-
-  @include respond(tab-land) {
-    font-size: 2.3rem;
-  }
 }
 
 .paragraph {
@@ -125,17 +113,3 @@ h4 {
   }
 }
 
-// FAQ SECTION
-.faq-heading--sub {
-  display: inline-block;
-  font-size: 1.8rem;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: default;
-
-  @include respond(phone) {
-    letter-spacing: 0.5rem;
-  }
-}
