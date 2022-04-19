@@ -1,8 +1,8 @@
 .note {
     border: 1px solid #e6e6e6;
-    border-radius: 5px;
+    border-radius: .5rem;
     text-align: left;
-    padding: 20px;
+    padding: 2rem;
     margin-bottom: 20px;
     position: relative;
 }
@@ -19,11 +19,11 @@
 
 .note-head {
     background: #f4f4f4;
-    padding: 5px 20px;
+    padding: .5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .note-date {

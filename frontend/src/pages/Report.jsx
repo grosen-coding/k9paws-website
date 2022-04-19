@@ -13,7 +13,8 @@ import NoteItem from '../components/NoteItem'
 // Modal Styles
 const customStyles = {
   content: {
-    width: '600px',
+    width: '60rem',
+    height: '20rem',
     top: '50%',
     left: '50%',
     right: 'auto',
