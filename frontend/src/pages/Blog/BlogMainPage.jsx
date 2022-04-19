@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import firebase from '../../config/firebase';
 import { Link } from "react-router-dom";
+import { FaPaw } from 'react-icons/fa';
 
 const BlogMainPage = () => {
   const [recentPosts, setRecentPosts] = useState([]);
@@ -34,25 +35,35 @@ const BlogMainPage = () => {
             
             <div className="blog-posts-container">
               <h2 className="blog-title--sub">Recently Posted Stories</h2>
+
               <ul className="blog-recent-posts">
                 {recentPosts.map((post, idx) => {
                   return (
-                    
+
                         <div className="blog-preview-card">
-                          <li>
 
-                          <h3 className="blog-preview-card--title">{post.name.title}</h3>
+                          <li className="blog-preview-card--content">
+                            <div className="blog-preview-card--paw">
+                              <FaPaw />
+                            </div>
 
+                            <h3 className="blog-preview-card--title">{post.name.title}</h3>
+                            
+                            <h4 className="blog-preview-card--category">
+                              <strong>Category:</strong> {post.name.category}
+                            </h4>
 
-                          <h4 className="blog-preview-card--category">
-                            <strong>Category:</strong> {post.name.category}
-                          </h4>
-                          <h4 className="blog-preview-card--author">
-                            <strong>Author:</strong> {post.name.name}
-                          </h4>
-                          <Link to={`/blog/blog_list/${post.name.urlLink}`} key={post.key}>View Post</Link>
-
+                            <h4 className="blog-preview-card--author">
+                              <strong>Author:</strong> {post.name.name}
+                            </h4>
                           </li>
+
+                          <div className="card-btn">
+                            <Link to={`/blog/blog_list/${post.name.urlLink}`} key={post.key}>
+                              <button className="blog-preview-card--btn">View Post</button>
+                            </Link>
+                          </div>
+
                         </div>
 
                   );
