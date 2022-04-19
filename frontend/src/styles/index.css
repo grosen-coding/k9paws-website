@@ -391,7 +391,7 @@ h4 {
 }
 
 .login-container {
-  margin-top: 12rem;
+  padding-top: 12rem;
 }
 .login-container form .form-group {
   width: 60%;
@@ -409,7 +409,7 @@ h4 {
 }
 
 .register-container {
-  margin-top: 12rem;
+  padding-top: 12rem;
 }
 .register-container form .form-group {
   width: 60%;
