@@ -27,47 +27,47 @@ const BlogMainPage = () => {
   }, []);
 
   return (
-    <div>
-      <header>
-        <div className="headerTitle wrapper">
-          <h1>Lets Discuss Dogs!</h1>
-          <h2>
-            The <span>JUNO College</span> Dog Blog
-          </h2>
-        </div>
-      </header>
+      <section>
+        <div className="wrapper">
+          <div className="blog-main">
+            <h1 className="blog-title">The Dog Blog</h1>
+            
+            <div className="blog-posts-container">
+              <h2 className="blog-title--sub">Recently Posted Stories</h2>
+              <ul className="blog-recent-posts">
+                {recentPosts.map((post, idx) => {
+                  return (
+                    
+                        <div className="blog-preview-card">
+                          <li>
 
-      <section className="recentPostDisplaySection">
-        <div className="blogPostContainer wrapper">
-          <h2>Recently Posted Stories:</h2>
-          <ul>
-            {recentPosts.map((post, idx) => {
-              return (
-                <Link to={`/blog/blog_list/${post.name.urlLink}`} key={post.key}>
-                  <li>
-                    <div className="blogPreviewCard">
-                      <div>
-                        <h3>{post.name.title}</h3>
-                      </div>
-                      <div>
-                        <strong>Author:</strong> {post.name.name}
-                      </div>
-                      <div>
-                        <strong>Category:</strong> {post.name.category}
-                      </div>
-                    </div>
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
-<p>HELLO!!!</p>
-              <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page">All posts</Link>
-              <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page">new posts</Link>
+                          <h3 className="blog-preview-card--title">{post.name.title}</h3>
 
+
+                          <h4 className="blog-preview-card--category">
+                            <strong>Category:</strong> {post.name.category}
+                          </h4>
+                          <h4 className="blog-preview-card--author">
+                            <strong>Author:</strong> {post.name.name}
+                          </h4>
+                          <Link to={`/blog/blog_list/${post.name.urlLink}`} key={post.key}>View Post</Link>
+
+                          </li>
+                        </div>
+
+                  );
+                })}
+              </ul>
+
+                  <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page" className="btn">All posts</Link>
+                  <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page" className="btn">New post</Link>
+
+            </div>
+
+          </div>
         </div>
       </section>
-    </div>
+
   );
 };
 

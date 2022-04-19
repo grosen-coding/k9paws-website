@@ -422,6 +422,41 @@ body {
   position: relative;
 }
 
+.blog-main {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.blog-title {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+}
+.blog-title--sub {
+  text-align: center;
+  font-weight: 500;
+}
+.blog-recent-posts {
+  border: 1px solid purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 5rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.blog-preview-card {
+  border: 1px solid red;
+  width: 25rem;
+  height: 30rem;
+}
 .report-desc {
   margin: 20px 0;
   font-size: 17px;
