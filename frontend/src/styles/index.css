@@ -429,7 +429,7 @@ h4 {
           transform: translate(-50%, -50%);
 }
 .blog-title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 4rem;
@@ -438,10 +438,10 @@ h4 {
 .blog-title--sub {
   text-align: center;
   font-weight: 500;
+  margin-bottom: -3rem;
+  color: #555;
 }
 .blog-recent-posts {
-  border: 1px solid #333;
-  padding: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,9 +450,6 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
-          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
 }
 .blog-preview-card {
   border: 1px solid #aaa;
@@ -475,7 +472,7 @@ h4 {
   right: 1rem;
   -webkit-transform: scale(2.5) rotate(45deg);
           transform: scale(2.5) rotate(45deg);
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .blog-preview-card:hover .blog-preview-card--title {
   top: 3rem;
@@ -518,6 +515,7 @@ h4 {
   font-size: 5rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  color: rgb(63, 174, 76);
 }
 .blog-preview-card--title {
   color: #555;
@@ -597,6 +595,23 @@ h4 {
   transition: 0.5s;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
+}
+
+.recent-posts-container {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+  border: 1px solid #333;
+  padding: 2rem 5rem;
+}
+
+.blog-buttons {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .report-desc {
@@ -842,6 +857,30 @@ h4 {
   color: red;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.btn-blog {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  width: 15rem;
+  margin: auto 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.btn-blog:hover {
+  background: #fff;
+  color: #000;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  outline: 2px solid #333;
 }
 
 .loadingSpinnerContainer {

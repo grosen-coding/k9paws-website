@@ -7,7 +7,7 @@
     }
 
     &-title {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         text-transform: uppercase;
         text-align: center;
         font-size: 4rem;
@@ -16,18 +16,18 @@
         &--sub {
             text-align: center;
             font-weight: 500;
+            margin-bottom: -3rem;
+            color: #555;
         }
     }
 
     &-recent-posts {
-        border: 1px solid #333;
-        padding: 5rem;
+
         display: flex;
         width: 100%;
         margin: 5rem 0;
         justify-content: space-between;
-        border-radius: .5rem;
-        box-shadow: 0 0 2rem rgba(0,0,0,0.7);
+
     }  
     
     &-preview-card {
@@ -48,7 +48,7 @@
             top: -1rem;
             right: 1rem;
             transform: scale(2.5) rotate(45deg);
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         &:hover &--title {
@@ -88,6 +88,7 @@
             transform: translate(-50%, -80%);
             font-size: 5rem;
             transition: 0.5s;
+            color: rgb(63, 174, 76);
         }
 
         &--title {
@@ -163,4 +164,17 @@
             transform: translateX(-50%);
             transition: 0.5s;
             transition-delay: 0.3s;
+}
+
+.recent-posts-container {
+                border-radius: .5rem;
+                box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+                border: 1px solid #333;
+                padding: 2rem 5rem;
+}
+
+.blog-buttons {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
 }

@@ -32,46 +32,58 @@ const BlogMainPage = () => {
         <div className="wrapper">
           <div className="blog-main">
             <h1 className="blog-title">The Dog Blog</h1>
+
+
             
             <div className="blog-posts-container">
-              <h2 className="blog-title--sub">Recently Posted Stories</h2>
 
-              <ul className="blog-recent-posts">
-                {recentPosts.map((post, idx) => {
-                  return (
+              <div className="recent-posts-container">
+                <h2 className="blog-title--sub">Recently Posted Stories</h2>
+                
+                <ul className="blog-recent-posts">
+                  {recentPosts.map((post, idx) => {
+                    return (
 
-                        <div className="blog-preview-card">
+                          <div className="blog-preview-card">
 
-                          <li className="blog-preview-card--content">
-                            <div className="blog-preview-card--paw">
-                              <FaPaw />
+                            <li className="blog-preview-card--content">
+                              <div className="blog-preview-card--paw">
+                                <FaPaw />
+                              </div>
+
+                              <h3 className="blog-preview-card--title">{post.name.title}</h3>
+                              
+                              <h4 className="blog-preview-card--category">
+                                <strong>Category:</strong> {post.name.category}
+                              </h4>
+
+                              <h4 className="blog-preview-card--author">
+                                <strong>Author:</strong> {post.name.name}
+                              </h4>
+                            </li>
+
+                            <div className="card-btn">
+                              <Link to={`/blog/blog_list/${post.name.urlLink}`} key={post.key}>
+                                <button className="blog-preview-card--btn">View Post</button>
+                              </Link>
                             </div>
 
-                            <h3 className="blog-preview-card--title">{post.name.title}</h3>
-                            
-                            <h4 className="blog-preview-card--category">
-                              <strong>Category:</strong> {post.name.category}
-                            </h4>
 
-                            <h4 className="blog-preview-card--author">
-                              <strong>Author:</strong> {post.name.name}
-                            </h4>
-                          </li>
 
-                          <div className="card-btn">
-                            <Link to={`/blog/blog_list/${post.name.urlLink}`} key={post.key}>
-                              <button className="blog-preview-card--btn">View Post</button>
-                            </Link>
                           </div>
 
-                        </div>
+                    );
+                  })}
+                </ul>
 
-                  );
-                })}
-              </ul>
+                  <div className="blog-buttons">
+                    <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page" className="btn-blog">All posts</Link>
+                    <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page" className="btn-blog">New post</Link>
+                  </div>
 
-                  <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page" className="btn">All posts</Link>
-                  <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page" className="btn">New post</Link>
+              </div>
+
+
 
             </div>
 
