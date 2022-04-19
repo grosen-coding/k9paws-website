@@ -430,12 +430,12 @@ h4 {
   margin-bottom: 2rem;
 }
 
-.blog-posts-container {
+.all-blog-posts-container {
   padding-top: 8rem;
   padding-bottom: 10rem;
   width: 100%;
 }
-.blog-posts-heading {
+.all-blog-posts-heading {
   width: 75%;
   margin: 0 auto;
   text-align: center;

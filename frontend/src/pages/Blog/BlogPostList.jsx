@@ -72,7 +72,7 @@ setBlogPosts(searchResultPosts);
 
   return (
     <section className="blog-posts wrapper">
-        <div className="blog-posts-container">
+        <div className="all-blog-posts-container">
 
           <h2>
             Search <span>All Posts</span>
