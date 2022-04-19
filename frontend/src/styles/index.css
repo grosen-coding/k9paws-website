@@ -737,6 +737,60 @@ h4 {
   border-radius: 10px;
 }
 
+.new-report-container {
+  padding-top: 10rem;
+}
+.new-report-container form .form-group {
+  width: 100%;
+  margin: 0 auto;
+}
+.new-report-container form .form-group textarea {
+  height: 10rem;
+}
+.new-report-heading {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #333;
+}
+.new-report-heading .logo--nine {
+  font-size: 3.2rem;
+}
+.new-report-heading h1 {
+  margin-bottom: 1rem;
+  margin-top: -2rem;
+}
+.new-report-heading p {
+  margin-bottom: -2rem;
+}
+
+.main-reports-container {
+  padding-top: 12rem;
+}
+.main-reports-container .btn-block {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.main-reports-container form .form-group {
+  width: 60%;
+  margin: 0 auto;
+}
+.main-reports-heading {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #333;
+}
+.main-reports-heading .logo--nine {
+  font-size: 3rem;
+}
+.main-reports-heading h1 {
+  margin-bottom: 3rem;
+}
+
 .report-page {
   position: relative;
   text-align: left;
@@ -756,11 +810,6 @@ h4 {
 
 .report-page .btn {
   margin-bottom: 30px;
-}
-
-.report-page .btn-block {
-  width: 100%;
-  margin-top: 30px;
 }
 
 .wrapper {

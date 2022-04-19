@@ -29,7 +29,7 @@ function Login() {
 
         // Redirect when logged in
         if(isSuccess || client) {
-            navigate('/')
+            navigate('/reports')
         }
 
         dispatch(reset())
@@ -60,7 +60,7 @@ function Login() {
 
     return (
 
-    <section className='wrapper'>
+    <section className='login wrapper'>
 
         <div className="login-container">
             <div className="login-heading">

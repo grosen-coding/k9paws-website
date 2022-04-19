@@ -1,24 +1,26 @@
 import { Link } from 'react-router-dom'
-import { FaQuestionCircle, FaTicketAlt} from 'react-icons/fa'
+import { FaPaw, FaRegListAlt} from 'react-icons/fa'
 
 function MainReportsPage() {
     return (
 
-        <>
-            <section className="heading">
-                <h1>K9PAWS Progress Reporting</h1>
-                <p>Please choose from an option below</p>
-            </section>
+        <section className='wrapper'>
 
-            <Link to="/reports/new-report" className='btn btn-reverse btn-block'>
-                <FaQuestionCircle /> Create New Report
-            </Link>
+            <div className="main-reports-container">
+                <div className="main-reports-heading">
+                    <h1><strong>K<span className='logo--nine'>9</span>PAWS</strong> Progress Reporting</h1>
+                    <p>Please choose from an option below</p>
+                </div>
 
-            <Link to="/reports/current-reports" className='btn btn-block'>
-                <FaTicketAlt /> View My Current Reports
-            </Link>
-            
-        </>
+                <Link to="/reports/new-report" className='btn btn-reverse btn-block'>
+                    <FaPaw /> Create New Report
+                </Link>
+
+                <Link to="/reports/current-reports" className='btn btn-block'>
+                    <FaRegListAlt /> View My Current Reports
+                </Link>
+            </div>
+        </section>
     )
 }
 

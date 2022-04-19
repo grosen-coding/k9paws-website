@@ -34,7 +34,7 @@ function Reports() {
     }
 
   return (
-    <>
+    <section className='wrapper'>
         <BackButton url="/" />
         <h1>Reports</h1>
         <div className="reports">
@@ -49,7 +49,7 @@ function Reports() {
             )}
         </div>
 
-    </>
+    </section>
   )
 }
 
