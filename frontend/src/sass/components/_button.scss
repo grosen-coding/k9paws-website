@@ -73,11 +73,15 @@
     font-weight: 700;
     cursor: pointer;
     text-align: center;
-    width: 15rem;
+    width: 20rem;
     // display: inline-block;
     margin: auto 0;
     transition: 0.3s;
     text-transform: uppercase;
+
+    span {
+      color: rgb(63, 174, 76);
+    }
 
     &:hover {
         background: #fff;

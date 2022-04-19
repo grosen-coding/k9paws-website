@@ -77,8 +77,8 @@ const BlogMainPage = () => {
                 </ul>
 
                   <div className="blog-buttons">
-                    <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page" className="btn-blog">All posts</Link>
-                    <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page" className="btn-blog">New post</Link>
+                    <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page" className="btn-blog"><span>view</span> all posts</Link>
+                    <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page" className="btn-blog"><span>create</span> new post</Link>
                   </div>
 
               </div>

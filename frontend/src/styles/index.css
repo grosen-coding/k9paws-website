@@ -435,11 +435,12 @@ h4 {
           transform: translate(-50%, -50%);
 }
 .blog-title {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 4rem;
   color: #333;
+  margin-top: -4rem;
 }
 .blog-title--sub {
   text-align: center;
@@ -879,11 +880,14 @@ h4 {
   font-weight: 700;
   cursor: pointer;
   text-align: center;
-  width: 15rem;
+  width: 20rem;
   margin: auto 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   text-transform: uppercase;
+}
+.btn-blog span {
+  color: rgb(63, 174, 76);
 }
 .btn-blog:hover {
   background: #fff;
