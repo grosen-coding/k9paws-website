@@ -936,6 +936,7 @@ h4 {
   padding: 2rem;
   width: 100%;
   height: auto;
+  border-bottom: 2px solid #ddd;
 }
 .header-nav__left ul {
   display: -webkit-box;
