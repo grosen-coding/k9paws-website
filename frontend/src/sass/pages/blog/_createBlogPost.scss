@@ -1,7 +1,7 @@
 .new-blog-post {
 
     &--container {
-        padding-top: 12rem;
+        padding: 8rem 0 6rem;
     }
 
     &--form {
@@ -10,13 +10,20 @@
 
     &--title {
         
-        &-main {
-        text-align: center;
-        }
+&-main {
+    // margin-bottom: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
 
-        &-sub {
-        text-align: center;
-        margin-bottom: 2rem;
-        }
+&-sub {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #555;
+}
     }
 }

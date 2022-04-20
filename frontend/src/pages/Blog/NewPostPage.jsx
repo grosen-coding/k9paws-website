@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import firebase from "../../config/firebase";
+import BackButton from '../../components/BackButton'
+
 
 const NewPostPage = () => {
   const [nameInput, setNameInput] = useState("");
@@ -60,6 +62,9 @@ const NewPostPage = () => {
     <section className="new-blog-post">
       <div className="wrapper">
         <div className="new-blog-post--container">
+
+                      <BackButton url='/blog' />
+
 
           <div className="new-blog-post--form form">
             <form action="submit" onSubmit={handleSubmit}>

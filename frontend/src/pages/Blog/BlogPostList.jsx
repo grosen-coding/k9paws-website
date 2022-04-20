@@ -78,10 +78,14 @@ setBlogPosts(searchResultPosts);
           <div className="all-blog-posts--header">
             <h2 className="all-blog-posts--title-main">Blog Posts</h2>
 
-            
+
             {/* <h2 className="all-blog-posts--title-sub">Search/Filter Posts</h2> */}
 
               <p>Search through all blog posts below either by selecting a <strong>Category</strong> from the drop down menu, or entering a <strong>Keyword</strong> in the search bar.</p>
+
+              <Link to={`/blog/new_post`} aria-label="Move to Blog Post Form Page" className="btn-blog-new-post"><span>create</span> new post</Link>
+
+
               <div className="all-blog-posts--search-container">
 
                 <div className="all-blog-posts--search-category">
