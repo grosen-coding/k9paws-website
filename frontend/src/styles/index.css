@@ -776,13 +776,14 @@ h4 {
   text-align: center;
   font-size: 4rem;
   color: #333;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 .new-blog-post--title-sub {
   text-align: center;
   font-weight: 500;
   margin-bottom: 2rem;
   color: #555;
+  font-size: 1.5rem;
 }
 
 .report-container {

@@ -69,7 +69,7 @@ const NewPostPage = () => {
           <div className="new-blog-post--form form">
             <form action="submit" onSubmit={handleSubmit}>
               <h2 className="new-blog-post--title-main">Create a New Post</h2>
-              <h3 className="new-blog-post--title-sub">Write a new post</h3>
+              <h3 className="new-blog-post--title-sub">If you have a fun story, interesting experience, training tip, or anything dog related, feel free to share it with us by creating a new post in the form below.</h3>
 
               <div className="form-group">
                 <label htmlFor="name"></label>
