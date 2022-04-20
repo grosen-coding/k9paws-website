@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import firebase from "../../config/firebase";
 // import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 import { useParams } from "react-router-dom";
+import { FaPaw } from 'react-icons/fa';
+
 
 const BlogPost = () => {
   const [blogPost, setBlogPost] = useState([]);
 
-  console.log('is it running')
+  // console.log('is it running')
 
   const { postNum } = useParams();
 
-  console.log(postNum, 'yes')
+  // console.log(postNum, 'yes')
 
   useEffect(() => {
     const blogRef = firebase.database().ref();
@@ -41,36 +43,34 @@ const BlogPost = () => {
   }, [postNum]);
 
   return (
-    <div>
-      <header>
-        <div className="headerTitle wrapper">
-          <h1>Lets Discuss Dogs!</h1>
-          <h2>
-            <span>{blogPost.category}</span> POST
-          </h2>
-        </div>
-      </header>
-
-      <section className="fullPostSection">
+    <section className="post">
         <div className="wrapper">
-          <div className="blogFullPostDisplay">
-            <h2>{blogPost.title}</h2>
 
-            <h3>Author: {blogPost.name}</h3>
-            <div className="blogFullPostDiv">
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: blogPost.content
-                    ? blogPost.content.replace(/\n/g, "<br />")
-                    : null,
-                }}
-              />
+          <div className="post--container">
+
+
+            <div className="post--content">
+                       <Link className="btn btn-back" to={`/blog/blog_list`} aria-label="Move to Blog Posts Page">All posts</Link>
+              <h2 className="post--title-main">{blogPost.title}</h2>
+              <div className="post-paw">
+                <FaPaw />
+              </div>
+              <h3 className="post--title-sub"><span>Category: {blogPost.category}</span></h3>
+              <h3 className="post--title-sub">Author: {blogPost.name}</h3>
+              <div className="post--text">
+                <p dangerouslySetInnerHTML={{
+                    __html: blogPost.content
+                      ? blogPost.content.replace(/\n/g, "<br />")
+                      : null,
+                  }}
+                />
+              </div>
             </div>
-          </div>
+
+ 
         </div>
-      </section>
-      <Link to={`/blog/blog_list`} aria-label="Move to Blog Posts Page">All posts</Link>
-    </div>
+      </div>
+    </section>
   );
 };
 

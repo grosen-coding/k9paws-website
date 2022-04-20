@@ -459,7 +459,8 @@ h4 {
   width: 100%;
 }
 .all-blog-posts--search-category {
-  padding: 4rem 2rem;
+  padding: 2rem;
+  height: 100%;
   width: 50%;
 }
 .all-blog-posts--search-category .form-group {
@@ -468,7 +469,7 @@ h4 {
   margin-top: 2rem;
 }
 .all-blog-posts--search-keyword {
-  padding: 4rem 2rem;
+  padding: 2rem;
   border-left: 1px solid #bbb;
   width: 50%;
 }
@@ -481,6 +482,9 @@ h4 {
   width: 50%;
 }
 
+.blog-post--container {
+  margin-top: -2rem;
+}
 .blog-post--cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,6 +701,52 @@ h4 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.post--container {
+  width: 100%;
+  padding: 12rem 0 8rem;
+  margin-top: -2rem;
+}
+.post--content {
+  border: 1px solid #ccc;
+  padding: 2rem;
+  -webkit-box-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+.post--title-main {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.post--title-sub {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #555;
+}
+.post--text {
+  padding: 3rem;
+  font-size: 1.3rem;
+  letter-spacing: normal;
+  line-height: 1.2;
+  color: #333;
+}
+
+.post-paw {
+  font-size: 40rem;
+  position: absolute;
+  right: 0;
+  top: -15rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0.3;
+  z-index: -1;
+  color: rgb(63, 174, 76);
 }
 
 .report-container {
@@ -962,7 +1012,7 @@ h4 {
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;

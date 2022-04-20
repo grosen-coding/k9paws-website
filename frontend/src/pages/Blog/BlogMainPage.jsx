@@ -44,9 +44,9 @@ const BlogMainPage = () => {
                   {recentPosts.map((post, idx) => {
                     return (
 
-                          <div className="blog-preview-card">
+                          <div key={post.key} className="blog-preview-card">
 
-                            <li className="blog-preview-card--content">
+                            <li  className="blog-preview-card--content">
                               <div className="blog-preview-card--paw">
                                 <FaPaw />
                               </div>
