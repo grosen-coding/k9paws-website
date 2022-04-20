@@ -57,72 +57,85 @@ const NewPostPage = () => {
   };
 
   return (
-    <section className="blogPostComment">
+    <section className="new-blog-post">
       <div className="wrapper">
-        <div className="blogForm">
-          <form action="submit" onSubmit={handleSubmit}>
-            <h2>Create a New Post</h2>
+        <div className="new-blog-post--container">
 
-            <label htmlFor="name"></label>
-            <input
-              type="text"
-              onChange={(event) => {
-                setNameInput(event.target.value);
-              }}
-              value={nameInput}
-              placeholder="Name"
-              required
-              className="formInput"
-            ></input>
+          <div className="new-blog-post--form form">
+            <form action="submit" onSubmit={handleSubmit}>
+              <h2 className="new-blog-post--title-main">Create a New Post</h2>
+              <h3 className="new-blog-post--title-sub">Write a new post</h3>
 
-            <label htmlFor="blogPostTitle"></label>
-            <input
-              type="text"
-              onChange={(event) => {
-                setTitleInput(event.target.value);
-              }}
-              value={titleInput}
-              placeholder="BLOG Post Title"
-              className="formInput"
-              required
-            ></input>
+              <div className="form-group">
+                <label htmlFor="name"></label>
+                <input
+                  type="text"
+                  onChange={(event) => {
+                    setNameInput(event.target.value);
+                  }}
+                  value={nameInput}
+                  placeholder="Name"
+                  required
+                  className="form-control"
+                ></input>
+              </div>
 
-            <label htmlFor="blogPostCategory" className="srOnly"></label>
-            <select
-              name="blogPostCategory"
-              onChange={(event) => {
-                setCategoryInput(event.target.value);
-              }}
-              value={categoryInput}
-              className="postFormDropDown"
-            >
-              <option value="General Interest">General Interest</option>
-              <option value="Training Tools">Training Tools</option>
-              <option value="Training Tips">Training Tips</option>
-              <option value="Problem Behaviour">Problem Behaviour</option>
-              <option value="Breeds">Breeds</option>
-              <option value="Puppies">Puppies</option>
-              <option value="Strange Stories">Strange Stories</option>
-              <option value="Success Stories">Success Stories</option>
-              <option value="Fun Stories">Fun Stories</option>
-            </select>
+              <div className="form-group">
+                <label htmlFor="blogPostTitle"></label>
+                <input
+                  type="text"
+                  onChange={(event) => {
+                    setTitleInput(event.target.value);
+                  }}
+                  value={titleInput}
+                  placeholder="BLOG Post Title"
+                  className="form-control"
+                  required
+                ></input>
+              </div>
 
-            <label htmlFor="blogPostContent"></label>
-            <textarea
-              type="text"
-              cols="40"
-              rows="20"
-              onChange={(event) => {
-                setBlogContentInput(event.target.value);
-              }}
-              value={blogContentInput}
-              placeholder="Tell us your story!"
-              required
-              className="formTextArea"
-            ></textarea>
+              <div className="form-group">
+                <label htmlFor="blogPostCategory" className="srOnly"></label>
+                <select
+                  name="blogPostCategory"
+                  onChange={(event) => {
+                    setCategoryInput(event.target.value);
+                  }}
+                  value={categoryInput}
+                  className="form-control"
+                >
+                  <option value="General Interest">General Interest</option>
+                  <option value="Training Tools">Training Tools</option>
+                  <option value="Training Tips">Training Tips</option>
+                  <option value="Problem Behaviour">Problem Behaviour</option>
+                  <option value="Breeds">Breeds</option>
+                  <option value="Puppies">Puppies</option>
+                  <option value="Strange Stories">Strange Stories</option>
+                  <option value="Success Stories">Success Stories</option>
+                  <option value="Fun Stories">Fun Stories</option>
+                </select>
+              </div>
 
-            <button type="submit">Post your story!</button>
-          </form>
+              <div className="form-group">
+                <label htmlFor="blogPostContent"></label>
+                <textarea
+                  type="text"
+                  cols="40"
+                  rows="20"
+                  onChange={(event) => {
+                    setBlogContentInput(event.target.value);
+                  }}
+                  value={blogContentInput}
+                  placeholder="Tell us your story!"
+                  required
+                  className="form-control"
+                ></textarea>
+              </div>
+
+              <button className="btn btn-block" type="submit">Post your story!</button>
+            </form>
+          </div>
+
         </div>
       </div>
     </section>

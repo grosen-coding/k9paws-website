@@ -50,7 +50,7 @@ const BlogPost = () => {
 
 
             <div className="post--content">
-                       <Link className="btn btn-back" to={`/blog/blog_list`} aria-label="Move to Blog Posts Page">All posts</Link>
+              <Link className="btn btn-back" to={`/blog/blog_list`} aria-label="Move to Blog Posts Page">All posts</Link>
               <h2 className="post--title-main">{blogPost.title}</h2>
               <div className="post-paw">
                 <FaPaw />

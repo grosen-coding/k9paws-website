@@ -1,0 +1,22 @@
+.new-blog-post {
+
+    &--container {
+        padding-top: 12rem;
+    }
+
+    &--form {
+
+    }
+
+    &--title {
+        
+        &-main {
+        text-align: center;
+        }
+
+        &-sub {
+        text-align: center;
+        margin-bottom: 2rem;
+        }
+    }
+}
