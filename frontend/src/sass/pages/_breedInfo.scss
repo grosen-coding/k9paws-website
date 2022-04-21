@@ -1,15 +1,37 @@
 .breed-info {
 
     &--container {
+
+        padding: 10rem 0 8rem;
         
         ul {
 
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 
+        &--title {
+        
+            &-main {
+                text-align: center;
+                color: #333;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+        
+            &-sub {
+                text-transform: none;
+                text-align: center;
+                color: #666;
+                margin-bottom: 3rem;
+            }
+        }
+
     &--search {
+
+        padding: 3rem;
 
         &-form {
 

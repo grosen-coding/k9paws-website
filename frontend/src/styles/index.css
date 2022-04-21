@@ -421,12 +421,33 @@ h4 {
   width: 50%;
 }
 
+.breed-info--container {
+  padding: 10rem 0 8rem;
+}
 .breed-info--container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.breed-info--title-main {
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.breed-info--title-sub {
+  text-transform: none;
+  text-align: center;
+  color: #666;
+  margin-bottom: 3rem;
+}
+.breed-info--search {
+  padding: 3rem;
 }
 .breed-info--results-card {
   width: 30rem;

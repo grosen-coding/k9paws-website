@@ -46,8 +46,8 @@ function MainReportsPage() {
 
         <div className="breed-info--container">
           <div className="breed-info--search">
-            <h1>Breed search</h1>
-            <p>Please choose from an option below</p>
+            <h1 className="breed-info--title-main">Breed search</h1>
+            <p className="breed-info--title-sub">Welcome to the Breed Information API. Type in any keyword below (breed name, country, breed traits or personality traits, etc...) to learn more about all dog breeds! </p>
 
             <div className="breed-info--search-form form">
               <form
@@ -57,7 +57,7 @@ function MainReportsPage() {
                 action="search">
                 
                 <div className="form-group">
-                  <label htmlFor="searchBar">Search your favorite Breeds!</label>
+                  <label htmlFor="searchBar"></label>
                   <input
                     onChange={(event) => {
                       setUserSearchInput(event.target.value);
@@ -72,7 +72,7 @@ function MainReportsPage() {
                   />
                 </div>
 
-                <button type="submit">Search</button>
+                <button type="submit" className="btn btn-block">Search</button>
               </form>
             </div>
           </div>
@@ -105,7 +105,7 @@ function MainReportsPage() {
 
                           <div className="breed-info--results-imgBx">  
                               <div className="breed-info--results-img">
-                                <strong>Image:</strong> <img src={breedInfo.image.url} alt="dog images" />
+                                <img src={breedInfo.image.url} alt="dog images" />
                               </div>
                           </div>
 
