@@ -394,6 +394,55 @@ h4 {
   position: relative;
 }
 
+.about--container {
+  margin-top: 12rem;
+  padding: 2rem;
+}
+.about--title-main {
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.about--title-sub {
+  text-transform: uppercase;
+  color: #666;
+}
+.about--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.about--content-left {
+  width: 50%;
+}
+.about--content-right {
+  width: 50%;
+}
+
+.breed-info--container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.breed-info--results-card {
+  width: 30rem;
+  border: 1px solid blue;
+  margin: 1rem;
+}
+.breed-info--results-content {
+  width: 100%;
+  border: solid 1px red;
+}
+.breed-info--results-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .login-container {
   padding-top: 12rem;
 }

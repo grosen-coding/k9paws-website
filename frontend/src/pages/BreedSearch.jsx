@@ -8,7 +8,7 @@ function MainReportsPage() {
   const [userSearchInput, setUserSearchInput] = useState("");
   const [initialBreedInfo, setInitialBreedInfo] = useState([]);
   const [breedSearchResult, setBreedSearchResult] = useState();
-  const [displayBreedInfo, setDisplayBreedInfo] = useState();
+  // const [displayBreedInfo, setDisplayBreedInfo] = useState();
 
   useEffect(()=>{
     axios({
@@ -38,78 +38,89 @@ function MainReportsPage() {
       })
 
       setBreedSearchResult(filteredBreedInfo)
-
-
-    // axios({
-    //   method: `GET`,
-    //   dataResponse: "json",
-    //   url: `https://api.thedogapi.com/v1/breeds`,
-    //   params: {
-    //     header: { "x-api-key": "8c75642c-ea48-42d1-90b0-273eed3ab258" },
-    //     // query: userSearchInput,
-    //   },
-    // }).then((response) => {
-    //   setBreedSearchResult(response);
-    //   console.log(response);
-    // });
-    // setDisplayBreedInfo(true);
   };
 
   return (
-    <>
-      <section className="heading">
-        <h1>Breed search</h1>
-        <p>Please choose from an option below</p>
-        <div className="breedSearchForm">
-          <form
-            onSubmit={(event) => {
-              handleSearch(event, userSearchInput);
-            }}
-            action="search"
-          >
-            Search your favorite Breeds!
-            <label htmlFor="searchBar"></label>
-            <input
-              onChange={(event) => {
-                setUserSearchInput(event.target.value);
-              }}
-              value={userSearchInput}
-              type="text"
-              name="searchBar"
-              id="searchBar"
-              placeholder="Search"
-              required
-            />
-            <button type="submit">Search</button>
-          </form>
-        </div>
-        {breedSearchResult?.map((breedInfo) => {
+    <section className="breed-info">
+      <div className="wrapper">
+
+        <div className="breed-info--container">
+          <div className="breed-info--search">
+            <h1>Breed search</h1>
+            <p>Please choose from an option below</p>
+
+            <div className="breed-info--search-form form">
+              <form
+                onSubmit={(event) => {
+                  handleSearch(event, userSearchInput);
+                }}
+                action="search">
+                
+                <div className="form-group">
+                  <label htmlFor="searchBar">Search your favorite Breeds!</label>
+                  <input
+                    onChange={(event) => {
+                      setUserSearchInput(event.target.value);
+                    }}
+                    value={userSearchInput}
+                    type="text"
+                    name="searchBar"
+                    id="searchBar"
+                    placeholder="Search"
+                    className="form-control"
+                    required
+                  />
+                </div>
+
+                <button type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+
+          <div className="breed-info--results-container">
+              <ul>
+            {breedSearchResult?.map((breedInfo) => {
                 return (
                 //   <Link to={`/blog/blog_list/${post.name.urlLink}`}>
-                    <li key={breedInfo.id}>
-                      <div className="blogPreviewCard">
-                        <div>
-                          <h3>{breedInfo.name}</h3>
-                        </div>
-                        <div>
-                          <strong>bred for:</strong> {breedInfo.bred_for}
-                        </div>
-                        <div>
-                          <strong>breed group:</strong> {breedInfo.breed_group}
-                        </div>
-                        <div>
-                          <strong>life span:</strong> {breedInfo.life_span}
-                        </div>
-                        <div>
-                          <strong>Image:</strong> <img src={breedInfo.image.url} alt="dog images" />
-                        </div>
+                      <div className="breed-info--results-card">
+                        <li key={breedInfo.id}>
+
+                          <div className="breed-info--results-content">
+                            <div className="breed-info--results-name">
+                              <h3>{breedInfo.name}</h3>
+                            </div>
+                            <p className="breed-info--results-item">
+                              <strong>bred for:</strong> {breedInfo.bred_for}
+                            </p>
+                            <p className="breed-info--results-item">
+                              <strong>breed group:</strong> {breedInfo.breed_group}
+                            </p>
+                            <p className="breed-info--results-item">
+                              <strong>temperament:</strong> {breedInfo.temperament}
+                            </p>
+                            <p className="breed-info--results-item">
+                              <strong>life span:</strong> {breedInfo.life_span}
+                            </p>
+                          </div>
+
+                          <div className="breed-info--results-imgBx">  
+                              <div className="breed-info--results-img">
+                                <strong>Image:</strong> <img src={breedInfo.image.url} alt="dog images" />
+                              </div>
+                          </div>
+
+                        </li>
                       </div>
-                    </li>
                 //   </Link>
                 );
               })}
-      </section>
-    </>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
   );
 }
 

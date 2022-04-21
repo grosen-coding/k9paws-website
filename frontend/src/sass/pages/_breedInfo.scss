@@ -1,0 +1,55 @@
+.breed-info {
+
+    &--container {
+        
+        ul {
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &--search {
+
+        &-form {
+
+        }
+
+    }
+
+    &--results {
+
+        
+        &-card {
+            width: 30rem;
+            border: 1px solid blue;
+            margin: 1rem;
+            
+        }
+
+        &-content {
+            width: 100%;
+            border: solid 1px red;
+
+        }
+
+        &-item {
+
+        }
+
+        &-imgBx {
+
+        }
+
+        &-img {
+            // width: 50%;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+}

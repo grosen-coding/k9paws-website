@@ -1,11 +1,35 @@
+// import {Slideshow}  from "../components/Slideshow"
 
 function About() {
   return (
-    <div>
-        <h2>About coming soon...</h2>
+    <section className="about">
+      <div className="wrapper">
+        <div className="about--container">
+
+        <h2 className="about--title-main">About K9PAWS</h2>
+
+        <div className="about--content">
+
+          <div className="about--content-left">
+            <h3 className="about--title-sub">left side</h3>
+          </div>
+
+          <div className="about--content-right">
+            <h3 className="about--title-sub">right side</h3>
+            {/* <Slideshow /> */}
+          </div>
+
+        </div>
+
+        </div>
+
+      </div>
+
+
+
        
         
-    </div>
+    </section>
   )
 }
 
