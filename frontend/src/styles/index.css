@@ -303,52 +303,6 @@ h4 {
   color: #0e8044;
 }
 
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  cursor: default;
-  display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#b5e582), to(#015249));
-  background-image: linear-gradient(to right, #b5e582, #015249);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  letter-spacing: 0.2rem;
-  color: transparent;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.heading-secondary--white {
-  font-size: 3.5rem;
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 700;
-  width: auto;
-  cursor: default;
-  color: #fff;
-  padding: 1rem 4rem;
-  letter-spacing: 2.2px;
-  border-radius: 0.2rem;
-  background-color: #0e8044;
-}
-
-.heading-tertiary {
-  cursor: default;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.paragraph {
-  font-size: 1.6rem;
-}
-.paragraph:not(:last-child) {
-  margin-bottom: 3rem;
-}
-
 .u-center-text {
   text-align: center !important;
 }
