@@ -403,6 +403,7 @@ h4 {
   color: #333;
   text-transform: uppercase;
   margin-bottom: 3rem;
+  font-size: 4rem;
 }
 .about--title-sub {
   text-transform: uppercase;
@@ -439,6 +440,7 @@ h4 {
   color: #333;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  font-size: 4rem;
 }
 .breed-info--title-sub {
   text-transform: none;
@@ -451,17 +453,92 @@ h4 {
 }
 .breed-info--results-card {
   width: 30rem;
-  border: 1px solid blue;
+  height: 20rem;
   margin: 1rem;
+  position: relative;
+  -webkit-perspective: 100rem;
+  perspective: 100rem;
 }
-.breed-info--results-content {
+.breed-info--results-back {
   width: 100%;
-  border: solid 1px red;
+  height: 100%;
+  padding: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.8rem;
+  border: 1px solid #333;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #ddd;
 }
-.breed-info--results-img img {
+.breed-info--results-name {
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+.breed-info--results-item {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.breed-info--results-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 0.8rem;
+}
+.breed-info--results-front-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ddd;
+}
+.breed-info--results-front-img {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.breed-info--results-front-img img {
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   width: 100%;
+  height: 20rem;
   height: auto;
+  border-radius: 0.8rem;
+}
+
+.breed-info--results-card:hover .breed-info--results-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.breed-info--results-card:hover .breed-info--results-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 
 .login-container {

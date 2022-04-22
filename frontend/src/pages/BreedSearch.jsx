@@ -85,7 +85,7 @@ function MainReportsPage() {
                       <div className="breed-info--results-card">
                         <li key={breedInfo.id}>
 
-                          <div className="breed-info--results-content">
+                          <div className="breed-info--results-back">
                             <div className="breed-info--results-name">
                               <h3>{breedInfo.name}</h3>
                             </div>
@@ -103,10 +103,13 @@ function MainReportsPage() {
                             </p>
                           </div>
 
-                          <div className="breed-info--results-imgBx">  
-                              <div className="breed-info--results-img">
+                          <div className="breed-info--results-front">  
+                              <div className="breed-info--results-front-img">
                                 <img src={breedInfo.image.url} alt="dog images" />
                               </div>
+                              <div className="breed-info--results-front-name">
+                                <h3>{breedInfo.name}</h3>
+                            </div>
                           </div>
 
                         </li>
