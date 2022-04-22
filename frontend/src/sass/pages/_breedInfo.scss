@@ -1,11 +1,8 @@
 .breed-info {
-
     &--container {
-
         padding: 10rem 0 8rem;
         
         ul {
-
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -13,7 +10,6 @@
     }
 
         &--title {
-        
             &-main {
                 text-align: center;
                 color: #333;
@@ -31,50 +27,34 @@
         }
 
     &--search {
-
         padding: 3rem;
-
-        &-form {
-
-        }
-
     }
 
     &--results {
-
-        
         &-card {
             width: 30rem;
             height: 20rem;
-            // border: 1px solid blue;
             margin: 1rem;
-            // box-shadow: 0 1rem 1rem rgba(0,0,0,0.8);
             position: relative;
             -moz-perspective: 100rem;
             -webkit-perspective: 100rem;
             perspective: 100rem;
-            // transition: 0.9s;
         }
 
         // Card Content
         &-back {
             width: 100%;
-            // border: solid 1px red;
             height: 100%;
-            // min-height: 20rem;
-            padding: 2.5rem;
+            padding: 1rem;
             position: absolute;
             top: 0;
             left: 0;
-                        border-radius: .8rem;
-                        border: 1px solid #333;
-            // z-index: 5;
+            border-radius: .8rem;
+            border: 1px solid #333;
             transform: rotateY(180deg);
             backface-visibility: hidden;
-                        transition: 0.5s;
-                        background-color: #ded;
-                        // transform: rotateY(180deg);
-
+            transition: 0.5s;
+            background-color: #ded;
         }
 
         &-name {
@@ -91,36 +71,17 @@
             font-size: 1rem;        
         }
 
-            // height: 50rem;
-            // transition: all 0.8s ease;
-            // font-size: 2rem;
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 100%;
-            // overflow: hidden;
-            // backface-visibility: hidden;
-            // border-radius: 0.3rem;
-            // box-shadow: 0 1.5rem 4rem $box-shadow-1;
-
         // Card Image
         &-front {
             position: absolute;
-            // z-index: 100;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-                        border: 1px solid #333;
+            border: 1px solid #333;
             backface-visibility: hidden;
-                        transition: 0.5s;
-                                    border-radius: .8rem;
-            // min-height: 15rem;
-            // height: 100%;
-            // max-height: 15rem;
-            // width: 100%;
-                        // transform: rotateY(0);
-            // overflow: hidden;
+            transition: 0.5s;
+            border-radius: .8rem;
 
             &-name {
                 position: absolute;
@@ -130,31 +91,26 @@
                 color: #eee;
                 width: 100%;
                 text-align: center;
-                // width: 75%;
-                // text-shadow: 0 1rem 10rem rgba(0,0,0,1);
-                // z-index: 5;
-                // text-shadow: 0 0 5rem rgba(0,0,0,0.9);
+
                 h3 {
-                                text-shadow: #000 0px 0px 2px,
-                                #000 0px 0px 2px,
-                                #000 0px 0px 2px,
-                                #000 0px 0px 2px,
-                                #000 0px 0px 2px,
-                                #000 0px 0px 2px;
-                                
+                    text-shadow: 
+                        #000 0px 0px 2px,
+                        #000 0px 0px 2px,
+                        #000 0px 0px 2px,
+                        #000 0px 0px 2px,
+                        #000 0px 0px 2px,
+                        #000 0px 0px 2px;         
                 }
             }
 
             &-img {
-                // width: 100%;
-                // height: 100%;
+
                 position: absolute;
                 display: flex;
-                            // border-radius: .8rem;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
     
                 img {
                     display: block;
@@ -163,18 +119,11 @@
                     width: 100%;
                     height: 20rem;
                     height: auto;
-                                border-radius: .8rem;
-                    // height: 30rem;
-                    // height: 100%;
-                    // position: absolute;
-
-                    // height: 20rem;
+                    border-radius: .8rem;
                 }
             }
         }
-
     }
-
 }
 
 .breed-info--results-card:hover .breed-info--results-front {
