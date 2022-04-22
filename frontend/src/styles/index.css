@@ -474,7 +474,7 @@ h4 {
           backface-visibility: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ddd;
+  background-color: #ded;
 }
 .breed-info--results-name {
   text-transform: uppercase;
@@ -507,7 +507,12 @@ h4 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #ddd;
+  color: #eee;
+  width: 100%;
+  text-align: center;
+}
+.breed-info--results-front-name h3 {
+  text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
 }
 .breed-info--results-front-img {
   position: absolute;

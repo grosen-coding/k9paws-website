@@ -72,7 +72,7 @@
             transform: rotateY(180deg);
             backface-visibility: hidden;
                         transition: 0.5s;
-                        background-color: #ddd;
+                        background-color: #ded;
                         // transform: rotateY(180deg);
 
         }
@@ -127,10 +127,22 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                color: #ddd;
+                color: #eee;
+                width: 100%;
+                text-align: center;
                 // width: 75%;
                 // text-shadow: 0 1rem 10rem rgba(0,0,0,1);
                 // z-index: 5;
+                // text-shadow: 0 0 5rem rgba(0,0,0,0.9);
+                h3 {
+                                text-shadow: #000 0px 0px 2px,
+                                #000 0px 0px 2px,
+                                #000 0px 0px 2px,
+                                #000 0px 0px 2px,
+                                #000 0px 0px 2px,
+                                #000 0px 0px 2px;
+                                
+                }
             }
 
             &-img {
