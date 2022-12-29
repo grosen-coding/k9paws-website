@@ -1526,7 +1526,6 @@ h4 {
   padding-top: 100px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  display: none;
 }
 .navbar ul {
   text-transform: uppercase;

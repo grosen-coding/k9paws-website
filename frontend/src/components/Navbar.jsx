@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import {GiHamburgerMenu} from 'react-icons/gi'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 
 const Navbar = () => {
           const [showNav, setShowNav] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-            <div className='navbar' showNav={showNav}>
+            <Nav className='navbar' showNav={showNav}>
             <ul className='navbar-links'>
                 <li className='nav-link-side'><Link to="/" onClick={() => setShowNav((prev) => !prev)}>Home</Link></li>
                 <li className='nav-link-side'><Link to="/about" onClick={() => setShowNav((prev) => !prev)}>About</Link></li>
@@ -22,7 +22,7 @@ const Navbar = () => {
                 {client && <li className='nav-link-side'>  <Link to="/reports" onClick={() => setShowNav((prev) => !prev)}>Reports</Link></li>}
             </ul>
 
-        </div>
+        </Nav>
                 <div className='nav-toggle'  onClick={() => setShowNav((prev) => !prev)}><GiHamburgerMenu /></div>
 
     </>
@@ -33,8 +33,8 @@ const Navbar = () => {
 
 export default Navbar
 
-// const Nav = styled.div`
+const Nav = styled.div`
 
-//   transform: ${(props) => (props.showNav ? "translateX(-100%)" : "translateX(0)")};
-//   transition: transform 0.3s ease-in-out;
-//   `
+  transform: ${(props) => (props.showNav ? "translateX(-100%)" : "translateX(0)")};
+  transition: transform 0.3s ease-in-out;
+  `
