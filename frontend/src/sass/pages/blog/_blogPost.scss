@@ -3,13 +3,13 @@
         
     &--container {
         width: 100%;
-        padding: 12rem 0 8rem;
+        padding: 4rem 1rem;
         margin-top: -2rem;
     }
     
     &--content {
         border: 1px solid #ccc;
-        padding: 2rem;
+        padding: 1rem;
         box-shadow: 0.5rem 1rem 5rem rgba(0,0,0,0.5);
         position: relative;
         overflow: hidden;
@@ -35,7 +35,7 @@
     }
 
     &--text {
-        padding: 3rem;
+        padding: 1rem;
         font-size: 1.3rem;
         letter-spacing: normal;
         line-height: 1.2;

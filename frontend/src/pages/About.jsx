@@ -2,7 +2,7 @@
 
 function About() {
   return (
-    <section className="about">
+    <section className="main about">
       <div className="wrapper">
         <div className="about--container">
 

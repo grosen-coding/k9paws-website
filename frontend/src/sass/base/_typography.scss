@@ -1,10 +1,4 @@
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: $default-font-size;
-  line-height: 1.7;
-  color: $color-grey-dark;
-  letter-spacing: .1rem;
-}
+
 
 h4 {
   font-size: 1.2rem;
@@ -16,6 +10,7 @@ h4 {
 
 .heading-container {
   width: 100vw;
+  height: 100%;
 }
 .heading-primary {
   cursor: default;
@@ -34,7 +29,7 @@ h4 {
     font-weight: 600;
     letter-spacing: 1.5rem;
     margin-bottom: 5rem;
-    animation: scaleIn 2s;
+    animation: scaleIn 1.3s;
     backface-visibility: hidden;
 
 
@@ -44,8 +39,8 @@ h4 {
     font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 1.1rem;
-    animation: moveFromBottom 1.5s forwards;
-    animation-delay: 2s;
+    animation: moveFromBottom 1s forwards;
+    animation-delay: 1s;
     text-transform: lowercase;
     opacity: 0;
   }

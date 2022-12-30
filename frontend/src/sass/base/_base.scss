@@ -7,7 +7,6 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 
   @include respond(big-desktop) {
@@ -23,14 +22,21 @@ html {
   }
 
   @include respond(tab-port) {
-    font-size: 50%;
+    font-size: 55%;
   }
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  letter-spacing: .1rem;
   height: 100vh;
+
+  overflow-x: hidden;
 }
+
 
 a {
   text-decoration: none;
@@ -40,6 +46,13 @@ a {
 
 ul {
   list-style: none;
+}
+
+p {
+
+  @include respond(tab-port) {
+    font-size: 1.8rem;
+  }
 }
 
 ::selection {

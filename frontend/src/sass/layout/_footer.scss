@@ -1,12 +1,20 @@
 .footer {
   background-color: $color-grey-very-dark;
   padding: 1rem 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: $color-grey-light-1;
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 30px;
+  letter-spacing: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 0;
-  letter-spacing: .2rem;
+
+  span {
+    position: relative;
+    top: .4rem !important;
+  }
 }

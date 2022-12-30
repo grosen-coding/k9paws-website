@@ -17,13 +17,14 @@ import BlogPost from "./pages/Blog/BlogPost";
 import NewPostPage from "./pages/Blog/NewPostPage";
 import BreedSearch from "./pages/BreedSearch";
 import Footer from "./components/Footer";
+import styled from "styled-components";
 
 function App() {
   return (
     <>
       <Router>
         <Header />
-
+        {/* <Container> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -45,6 +46,7 @@ function App() {
             <Route path="/report/:reportId" element={<Report />} />
           </Route>
         </Routes>
+        {/* </Container> */}
 
         <Footer />
       </Router>
@@ -54,3 +56,14 @@ function App() {
 }
 
 export default App;
+
+// const Container = styled.div`
+//   .wrapper {
+//     height: 100%;
+//     width: 1100px;
+//     margin: 0 auto;
+//     // max-height: auto;
+//     // padding: 0 20px;
+//     // position: relative;
+//   }
+// `;

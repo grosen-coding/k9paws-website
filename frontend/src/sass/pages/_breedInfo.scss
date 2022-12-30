@@ -1,6 +1,7 @@
 .breed-info {
     &--container {
-        padding: 8rem 0 8rem;
+        padding: 1rem;
+
         
         ul {
             display: flex;
@@ -20,7 +21,7 @@
         
             &-sub {
                 text-transform: none;
-                text-align: center;
+                text-align: justify;
                 color: #666;
                 margin-bottom: 3rem;
             }

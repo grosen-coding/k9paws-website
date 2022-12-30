@@ -28,7 +28,7 @@ const BlogMainPage = () => {
   }, []);
 
   return (
-      <section>
+      <section className="main">
         <div className="wrapper">
           <div className="blog-main">
             <h1 className="blog-title">The Dog Blog</h1>
