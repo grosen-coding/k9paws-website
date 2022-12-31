@@ -18,7 +18,6 @@
     &--title {
 
         &-main {
-            // margin-bottom: 4rem;
             text-transform: uppercase;
             text-align: center;
             font-size: 4rem;
@@ -44,19 +43,13 @@
 }
 
 .post-paw {
+            font-size: 40rem;
+            position: absolute;
+            right: 0;
+            top: -15rem;
+            transform: rotate(45deg);
+            opacity: 0.3;
+            z-index: -1;
+            color: rgb(63, 174, 76);
 
-                font-size: 40rem;
-                position: absolute;
-                right: 0;
-                top: -15rem;
-                transform: rotate(45deg);
-                opacity: 0.3;
-                z-index: -1;
-                // transition: 0.5s;
-                color: rgb(63, 174, 76);
-
-
-    // transform: translate(20%, -70%) rotate(45deg);
-    // transform: translateX(50%)
-    // z-index: 100;
 }

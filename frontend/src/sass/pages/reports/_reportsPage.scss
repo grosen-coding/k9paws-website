@@ -4,14 +4,8 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-
         padding: 2rem 1rem 7rem;
-        // justify-content: center;
         align-items: center;
-        // padding-top: 12rem;
-
-
-
 
             .btn-block {
                 width: 50%;
@@ -20,7 +14,6 @@
             }
 
         form {
-
             .form-group {
                 width: 60%;
                 margin: 0 auto;
@@ -36,10 +29,10 @@
         margin-bottom: 5rem;
         color: #333;
 
-                        @include respond(tab-port) {
-                                text-align: justify;
-                                width: 90%;
-                            }
+        @include respond(tab-port) {
+            text-align: justify;
+            width: 90%;
+        }
 
                 @include respond(phone) {
                         text-align: justify;

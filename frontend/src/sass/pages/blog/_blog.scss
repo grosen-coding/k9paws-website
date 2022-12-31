@@ -176,10 +176,10 @@
                             font-size: 7rem;
                         }
 
-                                                                                        @include respond(phone) {
-                                                                                            top: 60%;
-                                                                                            font-size: 5rem;
-                                                                                        }
+            @include respond(phone) {
+                top: 60%;
+                font-size: 5rem;
+            }
         }
 
         &--title {
