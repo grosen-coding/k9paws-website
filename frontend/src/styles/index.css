@@ -397,6 +397,7 @@ h4 {
 }
 
 .breed-info--container {
+  margin-top: 100px;
   padding: 1rem;
 }
 .breed-info--container ul {
@@ -693,6 +694,7 @@ h4 {
 .blog-main {
   width: 100%;
   height: 100%;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1265,6 +1267,7 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem 1rem 7rem;
+  margin-top: 7rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1418,9 +1421,9 @@ h4 {
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 5px;
-  background: #000;
-  color: #fff;
-  font-size: 16px;
+  background-color: #0e8044;
+  color: #000;
+  font-size: 1.3rem;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
@@ -1462,7 +1465,7 @@ h4 {
 
 .btn-reverse {
   background: #fff;
-  color: #000;
+  color: #015249;
 }
 
 .btn-block {
@@ -1671,9 +1674,27 @@ h4 {
 
 .header {
   width: 100%;
-  height: 90px;
+  height: 80px;
+  position: fixed;
   top: 0;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   z-index: 10;
+}
+.header.scrolled {
+  background-color: rgba(14, 128, 68, 0.7);
+}
+.header.scrolled:hover {
+  background-color: rgb(14, 128, 68);
+}
+.header.scrolled .header-nav {
+  border-bottom: none;
+}
+.header.scrolled .nav-link:after, .header.scrolled .nav-link:before {
+  background-color: #e2e2e2;
+}
+.header.scrolled .btn-client-portal {
+  background-color: #e2e2e2;
 }
 .header-nav {
   display: -webkit-box;
@@ -1688,7 +1709,9 @@ h4 {
   padding: 1rem;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid #ddd;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-bottom: 1px solid #ddd;
 }
 .header-nav__left {
   height: 100%;
@@ -1713,9 +1736,10 @@ h4 {
   }
 }
 .header-nav__left ul li {
-  margin: 0 1.8rem;
+  margin: 0 1.2rem;
+  font-size: 1.2rem;
   letter-spacing: 0.12rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .header-nav__right {
   width: 30%;

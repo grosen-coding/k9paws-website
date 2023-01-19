@@ -1,69 +1,102 @@
-import {FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa';
-import {Link, useNavigate } from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux'
-import {logout, reset} from '../features/auth/authSlice'
-import Navbar from './Navbar';
-
+import { FaSignOutAlt, FaUser } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout, reset } from "../features/auth/authSlice";
+import SideNavbar from "./SideNavbar";
 
 function Header() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { client } = useSelector((state) => state.auth);
 
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
-    const {client} = useSelector((state) => state.auth)
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/");
+  };
 
-    const onLogout = () => {
-     dispatch(logout())
-     dispatch(reset())
-     navigate('/')
-
-     
- }
+  window.addEventListener("scroll", function (e) {
+    let header = document.querySelector(".header");
+    if (
+      document.documentElement.scrollTop ||
+      document.body.scrollTop > window.innerHeight
+    ) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
   return (
-    <header className='header'>
-        
-        {/* Hamburger Menu */}
-        <Navbar />
+    <header className="header" id="header">
+      {/* Hamburger Menu */}
+      <SideNavbar />
 
-        <div className="wrapper">
-            <nav className='header-nav'>
+      <div className="wrapper">
+        <nav className="header-nav">
+          <div className="header-nav__left">
+            <ul>
+              <li className="nav-link">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="nav-link">
+                <Link to="/about">About</Link>
+              </li>
+              <li className="nav-link">
+                <Link to="/about">Training</Link>
+              </li>
+              <li className="nav-link">
+                <Link to="/about">Behaviour</Link>
+              </li>
+              <li className="nav-link">
+                <Link to="/about">Pricing</Link>
+              </li>
 
-                <div className="header-nav__left">
-                    <ul>
-                        <li className='nav-link'><Link to="/">Home</Link></li>
-                        <li className='nav-link'><Link to="/about">About</Link></li>
-                        <li className='nav-link'><Link to="/blog">Blog</Link></li>
-                        <li className='nav-link'><Link to="/breed">Breed info</Link></li>
-                        {client && <li className='nav-link'>  <Link to="/reports">Reports</Link></li>}
-                    </ul>
-                </div>
+              <li className="nav-link">
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li className="nav-link">
+                <Link to="/blog">FAQ</Link>
+              </li>
+              <li className="nav-link">
+                <Link to="/breed">Breed Info</Link>
+              </li>
+            </ul>
+          </div>
 
-                <div className="header-nav__right">
-                    <ul>
-                        {client ? (
-                            <li>
-                                <button className="btn" onClick={onLogout}>
-                                    <FaSignOutAlt /> Logout
-                                    </button>
-                            </li>
-                        ) : (
-                        <>
-                        <li><Link to="/login">
-                            <FaSignInAlt /> Login
-                        </Link>
-                        </li>
-                        <li><Link to="/register">
-                            <FaUser /> Register
-                        </Link>
-                        </li>
-                        </>)}
-
-                    </ul>
-                </div>
-            
-            </nav>
-        </div>
+          <div className="header-nav__right">
+            <ul>
+              {client ? (
+                <>
+                  <li>
+                    <Link to="/reports">
+                      <button className="btn btn-client-portal">
+                        Client Portal
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <button className="btn" onClick={onLogout}>
+                      <FaSignOutAlt /> Logout
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login">
+                      <button className="btn btn-client-portal">
+                        <FaUser /> Client Portal
+                      </button>
+                    </Link>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
