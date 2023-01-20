@@ -5,14 +5,20 @@
   top: 0;
   transition: all 0.7s ease;
   z-index: 10;
+  background-color: rgb(44, 53, 49, 0.6);
+    // border-bottom: 3px solid rgb(44, 53, 49);
+
+          &:hover {
+              background-color: rgb(44, 53, 49, 1);
+            }
 
 
 
   &.scrolled {
-    background-color: rgba(14, 128, 68, 0.7);
+    background-color: rgb(44, 53, 49, 0.85);
 
       &:hover {
-          background-color: rgba(14, 128, 68, 1);
+          background-color: rgb(44, 53, 49, 1);
         }
   }
 
@@ -20,15 +26,13 @@
     border-bottom: none;
   }
 
-  &.scrolled .nav-link:after,
-  &.scrolled .nav-link:before {
-    background-color: #e2e2e2;
-  }
-
   &.scrolled .btn-client-portal {
-    background-color: #e2e2e2;
+    background-color: rgb(209, 232, 226);
+    color: rgba(17, 100, 102, 1);
   }
-
+&.scrolled .nav-link:after {
+  transform-origin: center;
+}
   &-nav {
     display: flex;
     justify-content: space-between;
@@ -37,7 +41,7 @@
     width: 100%;
     height: 100%;
     transition: all 0.2s;
-    border-bottom: 1px solid #ddd;
+
 
 
     &__left {
@@ -47,9 +51,9 @@
 
       ul {
         height: 100%;
-                      display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
 
         @include respond(phone) {
@@ -58,10 +62,15 @@
           }
 
         li {
-          margin: 0 1.2rem;
-          font-size: 1.2rem;
-          letter-spacing: .12rem;
-          font-weight: 600;
+          margin: 0 1.5rem;
+          font-size: 1.6rem;
+          letter-spacing: .18rem;
+          font-weight: 500;
+
+           a {
+              color: rgb(209, 232, 226);
+           }
+          
         }
       }
     }
@@ -85,48 +94,39 @@
 }
 
 .nav-link {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   position: relative;
   transition: all 0.3s ease-in-out;
+  
 
   &:hover:after,
-  &:hover:before,
-  &:focus:after,
-  &:focus:before {
+  &:focus:after
+{
       transform: scale(1);
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease-in-out;
   }
 
-    &:hover:after,
-    &focus:after {
-      transform-origin: right;
-    }
 
-  &:hover:before
-  &:focus:before {
-    transform-origin: left;
-  }
+
+
 }
 
-.nav-link:after,
-.nav-link:before {
+.nav-link:after
+{
   content: '';
   position: absolute;
-  height: 2px;
+  height: 1px;
   width: 100%;
   transform: scale(0);
-  background-color: $color-primary;
-      transition: all 0.4s ease-in-out;
+    background-color: #ddd;
+      transition: all 0.2s ease-in-out;
 }
 
         .nav-link:after {
           transform: scale(0);
-          transform-origin: right;
+          transform-origin: center;
         }
     
-        .nav-link:before {
-          transform-origin: left;
-        }
 
 .nav-link-side {
   position: relative;
@@ -151,7 +151,7 @@ width: 100%;
 opacity: 0;
 z-index: -1;
   transform: translateX(100%);
-  background-color: $color-primary;
+  background-color: #333;
   transition: all 0.1s ease-in-out;
 }
 

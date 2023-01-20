@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./components/Header";
+import HeaderNav from "./components/HeaderNav";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        <HeaderNav />
         {/* <Container> */}
         <Routes>
           <Route path="/" element={<Home />} />
