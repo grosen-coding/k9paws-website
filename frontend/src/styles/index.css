@@ -1616,6 +1616,9 @@ h4 {
 .header:hover {
   background-color: rgb(44, 53, 49);
 }
+.header:hover .header-nav .logo {
+  color: rgb(209, 232, 226);
+}
 .header.scrolled {
   background-color: rgba(44, 53, 49, 0.85);
 }
@@ -1649,9 +1652,24 @@ h4 {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
+.header-nav .logo {
+  font-size: 1.8rem;
+  margin-right: 25px;
+  color: rgba(209, 232, 226, 0.5) !important;
+}
+.header-nav .logo:hover {
+  color: rgb(209, 232, 226) !important;
+}
+.header-nav .logo span {
+  font-size: 2rem;
+  top: 6px;
+}
 .header-nav__left {
   height: 100%;
-  width: 70%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .header-nav__left ul {
   height: 100%;
@@ -1681,7 +1699,7 @@ h4 {
   color: rgb(209, 232, 226);
 }
 .header-nav__right {
-  width: 30%;
+  width: 20%;
 }
 @media only screen and (max-width: 540px) {
   .header-nav__right {

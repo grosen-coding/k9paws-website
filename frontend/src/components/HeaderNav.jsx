@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../features/auth/authSlice";
 import SideNavbar from "./SideNavbar";
+import Logo from "./Logo";
 
 function Header() {
   const navigate = useNavigate();
@@ -34,31 +35,34 @@ function Header() {
       <div className="wrapper">
         <nav className="header-nav">
           <div className="header-nav__left">
+            <Link to="/">
+              <Logo className="header-logo" />
+            </Link>
             <ul>
-              <li className="nav-link">
-                <Link to="/">Home</Link>
-              </li>
               <li className="nav-link">
                 <Link to="/about">About</Link>
               </li>
               <li className="nav-link">
-                <Link to="/about">Training</Link>
+                <Link to="/training">Training</Link>
               </li>
               <li className="nav-link">
-                <Link to="/about">Behaviour</Link>
+                <Link to="/behaviour">Behaviour</Link>
               </li>
               <li className="nav-link">
-                <Link to="/about">Pricing</Link>
+                <Link to="/pricing">Pricing</Link>
               </li>
 
               <li className="nav-link">
                 <Link to="/blog">Blog</Link>
               </li>
               <li className="nav-link">
+                <Link to="/breed">Breed Info</Link>
+              </li>
+              <li className="nav-link">
                 <Link to="/blog">FAQ</Link>
               </li>
               <li className="nav-link">
-                <Link to="/breed">Breed Info</Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>

@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import styled from "styled-components";
+import SectionsStages from "../components/SectionsStages";
 
 function Home() {
   return (
@@ -105,6 +106,9 @@ function Home() {
             </MethodsCards>
           </MethodsWrap>
         </SectionMethods>
+
+        {/* Development Stages Section */}
+        <SectionsStages />
       </main>
     </>
   );
@@ -268,7 +272,7 @@ const SectionMethods = styled.section`
 
   h2 {
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 0;
     color: rgb(17, 100, 102);
     font-size: 4rem;
     /* text-shadow: 0 0 2px rgba(44, 53, 49, 1); */

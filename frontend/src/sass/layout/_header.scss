@@ -12,6 +12,10 @@
               background-color: rgb(44, 53, 49, 1);
             }
 
+  &:hover &-nav .logo {
+    color: rgb(209, 232, 226);
+  }
+
 
 
   &.scrolled {
@@ -42,11 +46,28 @@
     height: 100%;
     transition: all 0.2s;
 
+ .logo {
+  font-size: 1.8rem;
+  margin-right: 25px;
+  color: rgb(209, 232, 226, 0.5) !important;
+
+  &:hover {
+    color: rgb(209, 232, 226) !important;
+  }
+
+
+  span {
+    font-size: 2rem;
+    top: 6px;
+  }
+ }
+
 
 
     &__left {
       height: 100%;
-      width: 70%;
+      width: 80%;
+      display: flex;
 
 
       ul {
@@ -67,6 +88,8 @@
           letter-spacing: .18rem;
           font-weight: 500;
 
+
+
            a {
               color: rgb(209, 232, 226);
            }
@@ -76,7 +99,7 @@
     }
 
     &__right {
-      width: 30%;
+      width: 20%;
 
               @include respond(phone) {
                   width: 80%;
@@ -97,6 +120,8 @@
   // text-transform: uppercase;
   position: relative;
   transition: all 0.3s ease-in-out;
+
+
   
 
   &:hover:after,
