@@ -15,9 +15,14 @@ import BlogMainPage from "./pages/Blog/BlogMainPage";
 import BlogPostList from "./pages/Blog/BlogPostList";
 import BlogPost from "./pages/Blog/BlogPost";
 import NewPostPage from "./pages/Blog/NewPostPage";
+import Training from "./pages/Training";
+import Behaviour from "./pages/Behaviour";
+import Pricing from "./pages/Pricing";
+import Faq from "./pages/Faq";
+import Contact from "./pages/Contact";
 import BreedSearch from "./pages/BreedSearch";
 import Footer from "./components/Footer";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 function App() {
   return (
@@ -28,6 +33,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/training" element={<Training />} />
+          <Route path="/behaviour" element={<Behaviour />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/reports" element={<MainReportsPage />} />
           <Route path="/blog" element={<BlogMainPage />} />

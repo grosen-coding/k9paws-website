@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SectionCertified = () => {
@@ -29,7 +30,9 @@ const SectionCertified = () => {
               Feel good about putting your trust in the hands of educated,
               experienced, and credentialed professionals.
             </p>
-            <button className="btn">More About Us!</button>
+            <Link to="/about">
+              <button className="btn">More About Us!</button>
+            </Link>
           </Left>
           <Right>
             <img src="../img/certified-bg.jpeg" alt="" />

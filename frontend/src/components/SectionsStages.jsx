@@ -98,7 +98,7 @@ const CardsWrap = styled.div`
 
 const DevelopmentCard = styled.div`
   width: 30%;
-  margin: 0 25px;
+  margin: 25px;
   border: 2px solid #3e6d74;
   padding: 25px;
   border-radius: 10px;
