@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
 import styled from "styled-components";
 import SectionsStages from "../components/SectionsStages";
+import SectionCertified from "../components/SectionCertified";
+import SectionBookNow from "../components/SectionBookNow";
 
 function Home() {
   return (
@@ -109,6 +111,12 @@ function Home() {
 
         {/* Development Stages Section */}
         <SectionsStages />
+
+        {/* Certified Trainers Section */}
+        <SectionCertified />
+
+        {/* Book Now Section */}
+        <SectionBookNow />
       </main>
     </>
   );
@@ -156,10 +164,12 @@ const IntroWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   h2 {
     font-size: 4rem;
     color: #d1e8e2;
     padding: 20px 0;
+    line-height: 1.2;
   }
 
   h3 {
@@ -258,6 +268,7 @@ const SectionMethods = styled.section`
   background-attachment: fixed;
   position: relative;
   z-index: 0;
+  border-bottom: 5px solid rgb(44, 53, 49);
 
   &:after {
     content: "";

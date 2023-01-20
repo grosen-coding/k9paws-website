@@ -77,6 +77,7 @@ const DevelopmentStages = styled.section`
   height: auto;
   background-color: rgb(53, 65, 59);
   padding-bottom: 40px;
+  border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const Wrap = styled.div`
