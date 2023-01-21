@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function About() {
   return (
-    <Container className="main about">
+    <Container>
       <Wrap>
         <AboutHeader>
           <HeaderLeft>
@@ -145,6 +145,9 @@ function About() {
             </BottomRight>
           </AboutBottomContent>
         </AboutBottom>
+        <Banner>
+          <img src="../img/banner-2.jpeg" alt="" />
+        </Banner>
       </Wrap>
     </Container>
   );
@@ -181,6 +184,8 @@ const AboutHeader = styled.header`
   width: 100%;
   height: 100%;
   position: relative;
+  border-bottom: 5px solid rgb(44, 53, 49);
+
   /* padding: 30px; */
 `;
 
@@ -209,9 +214,10 @@ const HeaderRight = styled.div`
 
   h2 {
     color: rgb(255, 203, 154);
-    text-transform: uppercase;
-    font-weight: 600;
+    /* text-transform: uppercase; */
+    font-weight: 400;
     letter-spacing: 1.8px;
+    font-size: 3.5rem;
   }
 
   h3 {
@@ -237,6 +243,7 @@ const AboutIntro = styled.section`
   background-color: #e2e2e2;
   width: 100%;
   height: auto;
+  border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const AboutIntroContent = styled.div`
@@ -260,6 +267,7 @@ const AboutSection = styled.section`
   flex-direction: row-reverse;
   position: relative;
   width: 100%;
+  border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const AboutLeft = styled.div`
@@ -304,6 +312,7 @@ const AboutMiddle = styled.div`
   background-color: #e2e2e2;
   width: 100%;
   height: auto;
+  border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const AboutMiddleContent = styled.div`
@@ -325,6 +334,7 @@ const AboutMiddleContent = styled.div`
 const AboutBottom = styled.div`
   width: 100%;
   height: auto;
+  border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const AboutBottomContent = styled.div`
@@ -355,11 +365,36 @@ const BottomRight = styled.div`
 `;
 
 const TradeDiv = styled.div`
-  margin-top: 25px;
+  margin-top: 55px;
   background-color: rgb(17, 100, 102);
 
   color: rgb(255, 203, 154);
   font-size: 1.5rem;
   letter-spacing: 0.5px;
   padding: 20px;
+`;
+
+// Banner
+
+const Banner = styled.div`
+  height: 300px;
+  width: 100%;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    background-color: rgba(209, 232, 226, 0.4);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;

@@ -95,7 +95,7 @@ const Left = styled.div`
     font-size: 1.4rem;
     padding: 20px 0;
     font-weight: 600;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
   }
 
   button {

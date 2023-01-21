@@ -8,6 +8,10 @@
   background-color: rgb(44, 53, 49, 0.6);
     // border-bottom: 3px solid rgb(44, 53, 49);
 
+    ul {
+      list-style: none;
+    }
+
           &:hover {
               background-color: rgb(44, 53, 49, 1);
             }

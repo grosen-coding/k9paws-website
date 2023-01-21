@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SectionsStages from "../components/SectionsStages";
 import SectionCertified from "../components/SectionCertified";
 import SectionBookNow from "../components/SectionBookNow";
+import SectionBanner from "../components/SectionBanner";
 
 function Home() {
   return (
@@ -117,6 +118,8 @@ function Home() {
 
         {/* Book Now Section */}
         <SectionBookNow />
+
+        <SectionBanner />
       </main>
     </>
   );
@@ -140,7 +143,7 @@ const SectionIntro = styled.section`
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: rgba(44, 53, 49, 0.4);
+    background-color: rgba(44, 53, 49, 0.1);
   }
 `;
 
@@ -249,7 +252,7 @@ const ResultsWrap = styled.div`
     font-size: 1.4rem;
     padding: 20px 0;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
   }
 `;
 
@@ -320,7 +323,7 @@ const Method = styled.div`
   p {
     font-size: 1.2rem;
     color: rgb(209, 232, 226);
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     font-weight: 500;
   }
 `;

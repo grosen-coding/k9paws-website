@@ -60,10 +60,6 @@ a {
   display: block;
 }
 
-ul {
-  list-style: none;
-}
-
 @media only screen and (max-width: 768px) {
   p {
     font-size: 1.8rem;
@@ -1616,6 +1612,9 @@ h4 {
   transition: all 0.7s ease;
   z-index: 10;
   background-color: rgba(44, 53, 49, 0.6);
+}
+.header ul {
+  list-style: none;
 }
 .header:hover {
   background-color: rgb(44, 53, 49);

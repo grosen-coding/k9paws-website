@@ -52,7 +52,7 @@ const Main = styled.header`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(44, 53, 49, 0.3);
+    background-color: rgb(44, 53, 49, 0.1);
     z-index: 1;
   }
 

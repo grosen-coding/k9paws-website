@@ -101,6 +101,7 @@ const Container = styled.section`
   height: auto;
   background-color: rgb(53, 65, 59);
   padding-bottom: 40px;
+  border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const Wrap = styled.div`
@@ -116,13 +117,13 @@ const Wrap = styled.div`
     text-transform: uppercase;
     font-size: 1.5rem;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 
   p {
     text-align: center;
     color: rgb(209, 232, 226, 0.7);
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     font-size: 1.3rem;
     font-style: italic;
   }
@@ -137,13 +138,15 @@ const CardWrap = styled.div`
 `;
 
 const GetStartedCard = styled.div`
-  width: 20%;
+  width: 22%;
   background-color: #e2e2e2;
   position: relative;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: 1px solid #3e6d74; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
 
   .card-link {
     display: inline-block;
@@ -163,7 +166,7 @@ const GetStartedCard = styled.div`
     color: rgb(53, 65, 59) !important;
     padding: 5px;
     width: 100%;
-    margin: -10px auto 25px;
+    margin: -10px auto 0;
 
     &:after {
       content: "";
@@ -181,10 +184,9 @@ const GetStartedCard = styled.div`
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: center; */
-    padding: 15px;
+    padding: 20px;
 
     li {
-      list-style: circle;
       font-size: 1.4rem;
       line-height: 1.1;
       font-weight: 600;

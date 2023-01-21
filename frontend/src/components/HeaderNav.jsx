@@ -58,9 +58,7 @@ function Header() {
               <li className="nav-link">
                 <Link to="/breed">Breed Info</Link>
               </li>
-              <li className="nav-link">
-                <Link to="/faq">FAQ</Link>
-              </li>
+
               <li className="nav-link">
                 <Link to="/contact">Contact</Link>
               </li>
