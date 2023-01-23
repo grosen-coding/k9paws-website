@@ -283,7 +283,7 @@ const Wrap = styled.div`
 const Header = styled.header`
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   position: relative;
   flex-direction: row-reverse;
   border-bottom: 5px solid rgb(44, 53, 49);
@@ -295,14 +295,15 @@ const HeaderLeft = styled.div`
   background-color: rgb(17, 100, 102);
   padding: 40px 60px;
   left: 0;
-  bottom: -10%;
-  height: 100%;
-  /* transform: translate(0, -50%); */
+  bottom: 50%;
+  height: 80vh;
+  transform: translate(0, 50%);
   z-index: 1;
 `;
 
 const LeftContent = styled.div`
   width: 70%;
+  height: 80vh;
 
   margin: 0 auto;
   h2 {
@@ -393,9 +394,9 @@ const PricingRight = styled.div`
 const HeaderRight = styled.div`
   width: 60%;
   height: auto;
-  position: relative;
+  /* position: relative;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
 
   img {
     width: 100%;
@@ -427,7 +428,7 @@ const BenefitsLeft = styled.div`
 const BenefitsRight = styled.div`
   width: 50%;
   /* background-color: #e2e2e2; */
-  padding: 140px 80px 40px;
+  padding: 60px 80px 40px;
 
   h3 {
     color: rgb(17, 100, 102);
@@ -454,7 +455,7 @@ const BenefitsContent = styled.div`
     font-size: 2rem;
     font-weight: 400;
     text-align: left;
-    padding-top: 25px;
+    padding-top: 35px;
   }
 `;
 
