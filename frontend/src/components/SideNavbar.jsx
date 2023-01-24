@@ -25,8 +25,18 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-link-side">
-            <Link to="/about" onClick={() => setShowNav((prev) => !prev)}>
+            <Link to="/training" onClick={() => setShowNav((prev) => !prev)}>
               Training
+            </Link>
+          </li>
+          <li className="nav-link-side">
+            <Link to="/behaviour" onClick={() => setShowNav((prev) => !prev)}>
+              Behaviour
+            </Link>
+          </li>
+          <li className="nav-link-side">
+            <Link to="/pricing" onClick={() => setShowNav((prev) => !prev)}>
+              Pricing
             </Link>
           </li>
           <li className="nav-link-side">
