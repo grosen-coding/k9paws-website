@@ -610,13 +610,13 @@ const PriceCard7 = styled(PriceCard)`
   background-image: url("../img/new-dog.jpeg");
 `;
 const PriceCard8 = styled(PriceCard)`
-  background-image: url("../img/life-skills.jpeg");
+  background-image: url("../img/puppy-play.jpeg");
 `;
 const PriceCard9 = styled(PriceCard)`
-  background-image: url("../img/life-skills.jpeg");
+  background-image: url("../img/1on1.jpeg");
 `;
 const PriceCard10 = styled(PriceCard)`
-  background-image: url("../img/life-skills.jpeg");
+  background-image: url("../img/day-train.jpeg");
 `;
 
 const PriceTitle = styled.div``;

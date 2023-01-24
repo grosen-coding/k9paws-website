@@ -272,7 +272,6 @@ const SectionMethods = styled.section`
   position: relative;
   z-index: 0;
   border-bottom: 5px solid rgb(44, 53, 49);
-  /* perspective: 150rem; */
 
   &:after {
     content: "";
