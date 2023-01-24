@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { GoArrowRight } from "react-icons/go";
 import { GiSittingDog } from "react-icons/gi";
 import SectionBookNow from "../components/SectionBookNow";
+import SectionBanner from "../components/SectionBanner";
 
 const Training = () => {
   return (
@@ -247,8 +248,6 @@ const Training = () => {
           </OptionsSection>
 
           <SectionBookNow />
-
-          <SectionBanner></SectionBanner>
         </Wrap>
       </Container>
     </>
@@ -660,15 +659,4 @@ const OptionsRight = styled.div`
     background-color: rgb(209, 232, 226);
     color: rgb(44, 53, 49);
   }
-`;
-
-// Banner Section
-
-const SectionBanner = styled.section`
-  height: 400px;
-  width: 100vw;
-  background-image: url("../img/banner-2.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 70%;
 `;
