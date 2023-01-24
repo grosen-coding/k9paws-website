@@ -3,9 +3,14 @@
 
     &-container {
     padding-top: 12rem;
+    height: 100vh;
 
 
     form {
+        border: 2px solid $color-primary;
+        padding: 40px;
+        background-color: $color-primary-light;
+        border-radius: 20px;
 
         .form-group {
             width: 60%;
@@ -24,6 +29,11 @@
         text-align: center;
         margin-bottom: 5rem;
         color: #333;
+
+        a {
+            display: inline;
+            text-decoration: underline;
+        }
 
         h1 {
             margin-bottom: 3rem;

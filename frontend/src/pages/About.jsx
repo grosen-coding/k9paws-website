@@ -217,6 +217,8 @@ const HeaderRight = styled.div`
     /* text-transform: uppercase; */
     font-weight: 400;
     letter-spacing: 1.8px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+
     font-size: 3.5rem;
   }
 

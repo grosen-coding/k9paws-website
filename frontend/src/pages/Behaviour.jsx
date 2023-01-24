@@ -46,7 +46,7 @@ const Behaviour = () => {
                     </div>
                   </PricingLeft>
                   <PricingRight>
-                    <button className="btn">
+                    <button className="btn btn-reverse">
                       <a href="#book-now">Sign Up</a>
                     </button>
                   </PricingRight>
@@ -401,10 +401,6 @@ const PricingLeft = styled.div`
 
 const PricingRight = styled.div`
   padding-right: 20px;
-
-  button {
-    background-color: rgb(209, 232, 226);
-  }
 `;
 
 const HeaderRight = styled.div`
@@ -655,4 +651,16 @@ const SectionBanner2 = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 50%;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    background-color: rgba(209, 232, 226, 0.4);
+  }
 `;

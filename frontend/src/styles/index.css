@@ -454,6 +454,13 @@ h4 {
 
 .login-container {
   padding-top: 12rem;
+  height: 100vh;
+}
+.login-container form {
+  border: 2px solid rgb(17, 100, 102);
+  padding: 40px;
+  background-color: rgb(209, 232, 226);
+  border-radius: 20px;
 }
 .login-container form .form-group {
   width: 60%;
@@ -471,12 +478,23 @@ h4 {
   margin-bottom: 5rem;
   color: #333;
 }
+.login-heading a {
+  display: inline;
+  text-decoration: underline;
+}
 .login-heading h1 {
   margin-bottom: 3rem;
 }
 
 .register-container {
   padding-top: 12rem;
+  height: 100vh;
+}
+.register-container form {
+  border: 2px solid rgb(17, 100, 102);
+  padding: 40px;
+  background-color: rgb(209, 232, 226);
+  border-radius: 20px;
 }
 .register-container form .form-group {
   width: 60%;
@@ -1373,6 +1391,11 @@ h4 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.btn:hover {
+  background-color: rgb(209, 232, 226);
+  color: rgb(44, 53, 49);
+  border: 1px solid rgb(44, 53, 49);
+}
 @media only screen and (max-width: 768px) {
   .btn {
     font-size: 1.5rem;
@@ -1392,11 +1415,6 @@ h4 {
   .btn svg {
     font-size: 2.5rem;
   }
-}
-
-.btn-reverse {
-  background: #fff;
-  color: rgb(44, 53, 49);
 }
 
 .btn-block {
@@ -1447,9 +1465,14 @@ h4 {
   outline: 1px solid rgb(63, 174, 76);
 }
 
-.btn:hover {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+.btn-reverse {
+  background: rgb(209, 232, 226);
+  color: rgb(17, 100, 102);
+}
+.btn-reverse:hover {
+  background-color: rgba(17, 100, 102, 0.7);
+  color: rgb(209, 232, 226);
+  border: 1px solid rgb(209, 232, 226);
 }
 
 .btn-close {
@@ -1630,10 +1653,6 @@ h4 {
 }
 .header.scrolled .header-nav {
   border-bottom: none;
-}
-.header.scrolled .btn-client-portal {
-  background-color: rgb(209, 232, 226);
-  color: rgb(17, 100, 102);
 }
 .header.scrolled .nav-link:after {
   -webkit-transform-origin: center;

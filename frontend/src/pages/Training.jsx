@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { GoArrowRight } from "react-icons/go";
 import { GiSittingDog } from "react-icons/gi";
 import SectionBookNow from "../components/SectionBookNow";
-import SectionBanner from "../components/SectionBanner";
 
 const Training = () => {
   return (
@@ -51,7 +50,7 @@ const Training = () => {
                     </div>
                   </PricingLeft>
                   <PricingRight>
-                    <button className="btn">
+                    <button className="btn btn-reverse">
                       <a href="#book-now">Sign Up</a>
                     </button>
                   </PricingRight>
@@ -240,7 +239,7 @@ const Training = () => {
                 </h4>
                 <p>All prices subject to HST</p>
 
-                <button className="btn">
+                <button className="btn-reverse btn">
                   <a href="#book-now">Book Now!</a>
                 </button>
               </OptionsRight>
@@ -384,10 +383,6 @@ const PricingLeft = styled.div`
 
 const PricingRight = styled.div`
   padding-right: 20px;
-
-  button {
-    background-color: rgb(209, 232, 226);
-  }
 `;
 
 const HeaderRight = styled.div`
@@ -652,11 +647,5 @@ const OptionsRight = styled.div`
     color: rgb(209, 232, 226, 0.5);
     padding: 8px 0;
     font-weight: 400;
-  }
-
-  button {
-    margin-top: 30px;
-    background-color: rgb(209, 232, 226);
-    color: rgb(44, 53, 49);
   }
 `;
