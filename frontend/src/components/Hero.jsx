@@ -37,6 +37,7 @@ const Main = styled.header`
   background-size: cover;
   background-position: bottom bottom;
   background-repeat: no-repeat;
+  background-color: rgba(209, 232, 226, 0.2);
   /* background-attachment: fixed; */
   width: 100vw;
   height: 100vh;
@@ -58,7 +59,7 @@ const Main = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgb(44, 53, 49, 0.1);
     z-index: 1;
   }
