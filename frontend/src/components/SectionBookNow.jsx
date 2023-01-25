@@ -167,7 +167,7 @@ const GetStartedCard = styled.div`
     color: rgb(53, 65, 59);
     padding: 10px;
     font-size: 6rem;
-    font-weight: 600;
+    /* font-weight: 600; */
   }
 
   h3 {
@@ -177,16 +177,7 @@ const GetStartedCard = styled.div`
     padding: 5px;
     width: 100%;
     margin: -10px auto 0;
-
-    &:after {
-      content: "";
-      background-color: rgb(62, 109, 116, 0.2);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
+    background-color: rgb(62, 109, 116, 0.4);
   }
 
   ul {
@@ -199,13 +190,13 @@ const GetStartedCard = styled.div`
     li {
       font-size: 1.4rem;
       line-height: 1.1;
-      font-weight: 600;
+      font-weight: 500;
       color: rgb(53, 65, 59, 0.7);
 
       padding: 10px 0;
       span {
         color: #3e6d74;
-        font-weight: 800;
+        font-weight: 600;
       }
     }
   }

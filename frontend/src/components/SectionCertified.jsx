@@ -50,10 +50,21 @@ const Container = styled.section`
   width: 100%;
   height: auto;
   /* padding: 40px 0; */
-  position: relative;
+  /* position: relative; */
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(209, 232, 226, 0.5);
 
-  &:after {
+  /* &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(209, 232, 226, 0.5);
+    z-index: -1;
+  } */
+  /* &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -62,7 +73,7 @@ const Container = styled.section`
     height: 100%;
     z-index: -1;
     background-color: rgba(44, 53, 49, 0.4);
-  }
+  } */
 `;
 
 const Wrap = styled.div`
@@ -106,7 +117,7 @@ const Left = styled.div`
     color: rgb(44, 53, 49);
     font-size: 1.4rem;
     padding: 20px 0;
-    font-weight: 600;
+    /* font-weight: 400; */
     letter-spacing: 0.5px;
 
     @media ${device.mobileL} {

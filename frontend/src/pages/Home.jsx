@@ -140,7 +140,7 @@ const SectionIntro = styled.section`
     flex-direction: column-reverse;
   }
 
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -149,7 +149,7 @@ const SectionIntro = styled.section`
     height: 100%;
     z-index: -1;
     background-color: rgba(44, 53, 49, 0.1);
-  }
+  } */
 `;
 
 const IntroLeft = styled.div`
@@ -203,7 +203,7 @@ const IntroWrap = styled.div`
 
   p {
     color: rgb(255, 203, 154);
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     padding: 20px 0;
 
     @media ${device.mobileL} {
@@ -226,6 +226,7 @@ const SectionResults = styled.section`
   /* height: 100%; */
   display: flex;
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(209, 232, 226, 0.5);
 
   @media ${device.mobileL} {
     flex-direction: column;
@@ -233,7 +234,7 @@ const SectionResults = styled.section`
     /* padding: 0 20px; */
   }
 
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -241,8 +242,7 @@ const SectionResults = styled.section`
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: rgba(44, 53, 49, 0.4);
-  }
+  } */
 `;
 
 const ResultsRight = styled.div`
@@ -251,7 +251,7 @@ const ResultsRight = styled.div`
   background-image: url("../img/results-bg.jpeg");
   background-position: center;
   background-size: cover;
-  z-index: -2;
+  z-index: 0;
 
   @media ${device.mobileL} {
     width: 100%;
@@ -288,20 +288,24 @@ const ResultsWrap = styled.div`
 
   h2 {
     color: rgb(17, 100, 102);
+    padding: 20px 0;
+
     font-size: 4rem;
   }
 
   h3 {
     color: rgb(255, 203, 154);
+    /* font-weight: 600; */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+
     text-transform: uppercase;
   }
 
   p {
     color: rgb(44, 53, 49);
-    font-size: 1.4rem;
+
     padding: 20px 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+
     @media ${device.mobileL} {
       text-align: justify;
     }
@@ -375,7 +379,8 @@ const Method = styled.div`
   h3 {
     color: rgb(255, 203, 154);
 
-    line-height: 1.2;
+    line-height: 1.4;
+
     font-size: 1.5rem;
     padding: 10px 0 20px;
   }

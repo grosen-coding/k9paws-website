@@ -46,6 +46,8 @@ const Main = styled.header`
   justify-content: center;
   align-items: center;
   border-bottom: 5px solid rgb(44, 53, 49);
+  position: relative;
+  z-index: 1;
   /* perspective: 1000; */
 
   @media ${device.mobileL} {
@@ -60,8 +62,8 @@ const Main = styled.header`
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgb(44, 53, 49, 0.1);
-    z-index: 1;
+    background-color: rgba(209, 232, 226, 0.2);
+    z-index: -1;
   }
 
   .heading-container {
