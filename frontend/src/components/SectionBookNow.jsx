@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { device } from "./device";
 
 const SectionBookNow = () => {
   return (
@@ -135,6 +136,11 @@ const CardWrap = styled.div`
   justify-content: center;
   margin-bottom: 40px;
   gap: 40px;
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    padding: 0 20px;
+  }
 `;
 
 const GetStartedCard = styled.div`
@@ -147,6 +153,10 @@ const GetStartedCard = styled.div`
   align-items: center;
   /* border: 1px solid #3e6d74; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
 
   .card-link {
     display: inline-block;

@@ -6,7 +6,7 @@ position: fixed;
 top: 0;
 bottom: 0;
 left: 0;
-background-color: #e2e2e2;
+background-color: $color-primary;
 width: 60%;
 z-index: 10;
 padding: 15px;
@@ -14,12 +14,13 @@ padding-top: 100px;
 transition: all 0.3s;
 
 ul {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     width: 100%;
     
     li {
         padding: 20px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        font-weight: 400;
         
         &:nth-child(1) {
             border-top: 1px solid rgba(0, 0, 0, 0.3);

@@ -60,7 +60,7 @@ const Navbar = () => {
         </ul>
       </Nav>
       <div className="nav-toggle" onClick={() => setShowNav((prev) => !prev)}>
-        <GiHamburgerMenu />
+        <GiHamburgerMenu style={{ color: "#e2e2e2" }} />
       </div>
     </>
   );

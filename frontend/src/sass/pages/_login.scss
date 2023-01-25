@@ -4,6 +4,11 @@
     &-container {
     padding-top: 12rem;
     height: 100vh;
+    margin-bottom: 60px;
+
+    @include respond(phone) {
+        height: 100%;
+    }
 
 
     form {
@@ -29,6 +34,7 @@
         text-align: center;
         margin-bottom: 5rem;
         color: #333;
+        line-height: normal;
 
         a {
             display: inline;
@@ -37,6 +43,18 @@
 
         h1 {
             margin-bottom: 3rem;
+
+            @include respond(phone) {
+                line-height: normal;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        p {
+            @include respond(phone) {
+                margin-top: 30px;
+            }
         }
     }
 }

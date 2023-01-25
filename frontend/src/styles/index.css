@@ -56,7 +56,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: rgb(217, 176, 140);
   display: block;
 }
 
@@ -456,6 +456,12 @@ h4 {
 .login-container {
   padding-top: 12rem;
   height: 100vh;
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 600px) {
+  .login-container {
+    height: 100%;
+  }
 }
 .login-container form {
   border: 2px solid rgb(17, 100, 102);
@@ -467,7 +473,7 @@ h4 {
   width: 60%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .login-container form .form-group {
     width: 100%;
   }
@@ -478,6 +484,7 @@ h4 {
   text-align: center;
   margin-bottom: 5rem;
   color: #333;
+  line-height: normal;
 }
 .login-heading a {
   display: inline;
@@ -486,22 +493,40 @@ h4 {
 .login-heading h1 {
   margin-bottom: 3rem;
 }
+@media only screen and (max-width: 600px) {
+  .login-heading h1 {
+    line-height: normal;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login-heading p {
+    margin-top: 30px;
+  }
+}
 
 .register-container {
   padding-top: 12rem;
   height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+  .register-container {
+    height: 100%;
+  }
 }
 .register-container form {
   border: 2px solid rgb(17, 100, 102);
   padding: 40px;
   background-color: rgb(209, 232, 226);
   border-radius: 20px;
+  margin-bottom: 60px;
 }
 .register-container form .form-group {
   width: 60%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .register-container form .form-group {
     width: 100%;
   }
@@ -530,7 +555,7 @@ h4 {
   margin-bottom: 1rem;
   color: #333;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .all-blog-posts--header {
     width: 100%;
     padding: 0 1rem;
@@ -562,7 +587,7 @@ h4 {
   height: 100%;
   width: 50%;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .all-blog-posts--search-category {
     text-align: center;
     padding: 0 1rem;
@@ -666,7 +691,7 @@ h4 {
     padding: 3rem;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-main {
     width: 100%;
   }
@@ -683,7 +708,7 @@ h4 {
   margin-bottom: -3rem;
   color: #555;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-title--sub {
     line-height: 1.2;
     font-size: 2rem;
@@ -693,7 +718,7 @@ h4 {
   margin: 10px 0 30px;
   text-align: center;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-text {
     text-align: justify;
   }
@@ -721,7 +746,7 @@ h4 {
     width: 100%;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-recent-posts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -747,7 +772,7 @@ h4 {
     width: 60%;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card {
     height: 15rem;
     width: 22rem;
@@ -769,7 +794,7 @@ h4 {
   top: 3rem;
   font-weight: 800;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card:hover .blog-preview-card--title {
     top: 1rem;
   }
@@ -783,7 +808,7 @@ h4 {
     bottom: 10rem;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card:hover .blog-preview-card--author {
     bottom: 8rem;
   }
@@ -798,7 +823,7 @@ h4 {
     line-height: 1.2;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card:hover .blog-preview-card--category {
     bottom: 6rem;
   }
@@ -840,7 +865,7 @@ h4 {
     font-size: 7rem;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card--paw {
     top: 60%;
     font-size: 5rem;
@@ -863,7 +888,7 @@ h4 {
     font-size: 2rem;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card--title {
     top: 10rem;
     font-size: 1.2rem;
@@ -924,7 +949,7 @@ h4 {
     font-size: 1.3rem;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .blog-preview-card--btn {
     padding: 5px 10px;
     font-size: 1rem;
@@ -1160,7 +1185,7 @@ h4 {
   font-size: 16px;
   text-align: center;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .status {
     width: 60px;
     font-size: 1.5rem;
@@ -1243,7 +1268,7 @@ h4 {
     width: 90%;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .main-reports-heading {
     text-align: justify;
     width: 95%;
@@ -1412,7 +1437,7 @@ h4 {
     font-size: 2rem;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .btn svg {
     font-size: 2.5rem;
   }
@@ -1429,7 +1454,7 @@ h4 {
     padding: 10px 15px;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .btn-reports {
     font-size: 1.8rem;
     padding: 10px 25px;
@@ -1445,7 +1470,7 @@ h4 {
 .btn-view-report:hover {
   outline: 1px solid rgb(63, 174, 76);
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .btn-view-report {
     padding: 5px;
   }
@@ -1515,7 +1540,7 @@ h4 {
     padding: 8px 15px;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .btn-blog {
     font-size: 1.1rem;
     padding: 8px 12px;
@@ -1591,7 +1616,7 @@ h4 {
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: #e2e2e2;
+  background-color: rgb(17, 100, 102);
   width: 60%;
   z-index: 10;
   padding: 15px;
@@ -1600,12 +1625,12 @@ h4 {
   transition: all 0.3s;
 }
 .navbar ul {
-  text-transform: uppercase;
   width: 100%;
 }
 .navbar ul li {
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-weight: 400;
 }
 .navbar ul li:nth-child(1) {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
@@ -1621,7 +1646,7 @@ h4 {
   top: 15px;
   display: none;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .nav-toggle {
     display: block;
   }
@@ -1636,6 +1661,11 @@ h4 {
   transition: all 0.7s ease;
   z-index: 10;
   background-color: rgba(44, 53, 49, 0.6);
+}
+@media only screen and (max-width: 600px) {
+  .header-logo {
+    display: none;
+  }
 }
 .header ul {
   list-style: none;
@@ -1706,7 +1736,7 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .header-nav__left ul {
     display: none;
     width: 20%;
@@ -1724,7 +1754,7 @@ h4 {
 .header-nav__right {
   width: 20%;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .header-nav__right {
     width: 80%;
   }

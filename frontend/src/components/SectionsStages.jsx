@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../components/device";
 
 const SectionsStages = () => {
   return (
@@ -78,6 +79,10 @@ const DevelopmentStages = styled.section`
   background-color: rgb(53, 65, 59);
   padding-bottom: 40px;
   border-bottom: 5px solid rgb(44, 53, 49);
+
+  @media ${device.mobileL} {
+    padding: 0 10px;
+  }
 `;
 
 const Wrap = styled.div`
@@ -108,7 +113,13 @@ const DevelopmentCard = styled.div`
   position: relative;
 
   align-items: center;
+
   /* background-color: rgb(209, 232, 226, 0.5); */
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
+
   &:after {
     content: "";
     position: absolute;

@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import styled from "styled-components";
 import { FaPaw } from "react-icons/fa";
+import { device } from "../components/device";
 
 const Hero = () => {
   return (
@@ -35,6 +36,7 @@ const Main = styled.header`
   background-image: url("./img/hero-bg.jpeg");
   background-size: cover;
   background-position: bottom bottom;
+  background-repeat: no-repeat;
   /* background-attachment: fixed; */
   width: 100vw;
   height: 100vh;
@@ -43,7 +45,12 @@ const Main = styled.header`
   justify-content: center;
   align-items: center;
   border-bottom: 5px solid rgb(44, 53, 49);
-  perspective: 1000;
+  /* perspective: 1000; */
+
+  @media ${device.mobileL} {
+    background-size: contain;
+    background-position: bottom;
+  }
 
   &:after {
     content: "";

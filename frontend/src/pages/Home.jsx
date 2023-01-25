@@ -4,6 +4,7 @@ import SectionsStages from "../components/SectionsStages";
 import SectionCertified from "../components/SectionCertified";
 import SectionBookNow from "../components/SectionBookNow";
 import SectionBanner from "../components/SectionBanner";
+import { device } from "../components/device";
 
 function Home() {
   return (
@@ -135,6 +136,10 @@ const SectionIntro = styled.section`
   width: 100%;
   border-bottom: 5px solid rgb(44, 53, 49);
 
+  @media ${device.mobileL} {
+    flex-direction: column-reverse;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -153,12 +158,22 @@ const IntroLeft = styled.div`
   background-size: cover;
   z-index: -2;
   width: 45%;
+  /* height: 100%; */
+
+  @media ${device.mobileL} {
+    width: 100%;
+    height: 300px;
+  }
 `;
 
 const IntroRight = styled.div`
   width: 55%;
   padding: 60px 0 60px 60px;
   background-color: rgb(44, 53, 49);
+  @media ${device.mobileL} {
+    width: 100%;
+    padding: 30px 0;
+  }
 `;
 
 const IntroWrap = styled.div`
@@ -167,6 +182,12 @@ const IntroWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media ${device.mobileL} {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
 
   h2 {
     font-size: 4rem;
@@ -184,6 +205,10 @@ const IntroWrap = styled.div`
     color: rgb(255, 203, 154);
     font-size: 1.4rem;
     padding: 20px 0;
+
+    @media ${device.mobileL} {
+      text-align: justify;
+    }
   }
 `;
 
@@ -198,8 +223,15 @@ const SectionResults = styled.section`
   position: relative;
   width: 100%;
   /* width: 100%; */
+  /* height: 100%; */
   display: flex;
   border-bottom: 5px solid rgb(44, 53, 49);
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    /* width: 100%; */
+    /* padding: 0 20px; */
+  }
 
   &:after {
     content: "";
@@ -220,6 +252,12 @@ const ResultsRight = styled.div`
   background-position: center;
   background-size: cover;
   z-index: -2;
+
+  @media ${device.mobileL} {
+    width: 100%;
+    padding: 20px;
+    height: 300px;
+  }
 `;
 
 const ResultsLeft = styled.div`
@@ -228,6 +266,12 @@ const ResultsLeft = styled.div`
   position: relative;
   /* padding: 30px 0 30px 60px; */
   margin-left: 10%;
+
+  @media ${device.mobileL} {
+    width: 100%;
+    margin: 0;
+    /* padding: 0 20px; */
+  }
 `;
 
 const ResultsWrap = styled.div`
@@ -236,6 +280,11 @@ const ResultsWrap = styled.div`
   flex-direction: column;
 
   padding: 60px;
+
+  @media ${device.mobileL} {
+    text-align: center;
+    padding: 30px 20px;
+  }
 
   h2 {
     color: rgb(17, 100, 102);
@@ -253,6 +302,9 @@ const ResultsWrap = styled.div`
     padding: 20px 0;
     font-weight: 600;
     letter-spacing: 0.5px;
+    @media ${device.mobileL} {
+      text-align: justify;
+    }
   }
 `;
 
@@ -302,6 +354,10 @@ const MethodsCards = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+
+  @media ${device.mobileL} {
+    gap: 15px;
+  }
 `;
 
 const Method = styled.div`
@@ -311,6 +367,10 @@ const Method = styled.div`
   text-align: center;
   background-color: rgba(44, 53, 49, 0.7);
   border-radius: 5px;
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
 
   h3 {
     color: rgb(255, 203, 154);

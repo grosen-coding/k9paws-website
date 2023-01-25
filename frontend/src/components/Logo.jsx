@@ -17,6 +17,7 @@ export default Logo;
 
 const LogoWrap = styled.h1`
   // Logo
+  display: inline-block;
   .logo {
     font-weight: 600;
     color: #333;

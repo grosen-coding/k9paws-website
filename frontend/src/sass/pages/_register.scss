@@ -4,11 +4,16 @@
         padding-top: 12rem;
         height: 100vh;
 
+        @include respond(phone) {
+            height: 100%;
+        }
+
         form {
                     border: 2px solid $color-primary;
                         padding: 40px;
                         background-color: $color-primary-light;
                         border-radius: 20px;
+                        margin-bottom: 60px;
 
             .form-group {
                 width: 60%;

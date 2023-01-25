@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { device } from "../components/device";
 
 const SectionCertified = () => {
   return (
@@ -69,6 +70,10 @@ const Wrap = styled.div`
   width: 100%;
   z-index: 2;
   position: relative;
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -78,6 +83,13 @@ const Left = styled.div`
   margin-left: 10%;
 
   padding: 60px;
+
+  @media ${device.mobileL} {
+    width: 100%;
+    padding: 25px 15px;
+    margin: 0;
+    text-align: center;
+  }
 
   h2 {
     color: rgb(17, 100, 102);
@@ -96,6 +108,10 @@ const Left = styled.div`
     padding: 20px 0;
     font-weight: 600;
     letter-spacing: 0.5px;
+
+    @media ${device.mobileL} {
+      text-align: justify;
+    }
   }
 
   button {
@@ -106,6 +122,10 @@ const Left = styled.div`
 
 const Right = styled.div`
   width: 50%;
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
 
   img {
     width: 100%;

@@ -35,8 +35,8 @@ function Header() {
       <div className="wrapper">
         <nav className="header-nav">
           <div className="header-nav__left">
-            <Link to="/">
-              <Logo className="header-logo" />
+            <Link to="/" className="header-logo">
+              <Logo />
             </Link>
             <ul>
               <li className="nav-link">
