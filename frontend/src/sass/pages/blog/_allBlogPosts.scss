@@ -4,6 +4,11 @@
         width: 100%;
         padding: 0 0 4rem;
         letter-spacing: 0.2px;
+        padding-top: 100px;
+
+        ul {
+            list-style: none;
+        }
     }
 
     &--header {

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import SectionBookNow from "../components/SectionBookNow";
+import SectionBanner from "../components/SectionBanner";
 
 const Pricing = () => {
   return (
@@ -26,16 +28,20 @@ const Pricing = () => {
                 and your dog.
               </p>
 
-              <button className="btn btn-reverse">Show Me the Bundles!</button>
-              <p></p>
-              <button className="btn btn-reverse">
-                <a href="#pricing">Check Out Individual Pricing</a>
-              </button>
+              <PricingButtons>
+                <button className="btn btn-reverse">
+                  Show Me the Bundles!
+                </button>
+
+                <button className="btn btn-reverse">
+                  <a href="#pricing">Check Out Individual Pricing</a>
+                </button>
+              </PricingButtons>
             </HeaderLeftContent>
           </HeaderLeft>
 
           <HeaderRight>
-            <img src="../img/behaviour-header.jpeg" alt="" />
+            <img src="../img/pricing-header.jpeg" alt="" />
           </HeaderRight>
         </PricingHeader>
 
@@ -395,6 +401,10 @@ const Pricing = () => {
             </PriceCard10>
           </Cards>
         </Prices>
+
+        <SectionBookNow />
+
+        <SectionBanner />
       </Wrap>
     </Container>
   );
@@ -409,7 +419,7 @@ const Container = styled.div`
   position: relative;
   /* border-bottom: 5px solid rgb(44, 53, 49); */
 
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -418,14 +428,15 @@ const Container = styled.div`
     height: 100%;
     z-index: -1;
     background-color: rgba(44, 53, 49, 1);
-  }
+  } */
 `;
 
 const Wrap = styled.div`
   padding-top: 80px;
   /* width: 100%; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  background-color: rgba(44, 53, 49, 1);
 `;
 
 const PricingHeader = styled.header`
@@ -441,10 +452,10 @@ const HeaderLeft = styled.div`
   width: 60%;
   position: absolute;
   background-color: rgb(17, 100, 102);
-  padding: 40px 60px;
+  padding: 40px 60px 40px 120px;
   left: 0;
   top: 50%;
-  height: 80vh;
+  height: auto;
   transform: translate(0, -50%);
   z-index: 1;
 `;
@@ -457,8 +468,8 @@ const HeaderLeftContent = styled.div`
   h1 {
     color: rgb(255, 203, 154);
     /* text-transform: uppercase; */
-    font-weight: 400;
-    letter-spacing: 1.8px;
+    /* font-weight: 400; */
+    /* letter-spacing: 1.8px; */
     font-size: 3.5rem;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
   }
@@ -466,16 +477,16 @@ const HeaderLeftContent = styled.div`
   h3 {
     color: rgb(209, 232, 226);
     padding: 25px 0;
-    font-weight: 600;
-    line-height: 1.3;
+    /* font-weight: 600; */
+    /* line-height: 1.3; */
   }
 
   p {
     color: rgba(209, 232, 226, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+    /* font-size: 1.5rem; */
+    /* letter-spacing: 0.5px; */
     padding: 10px 0;
-    line-height: 1.3;
+    /* line-height: 1.3; */
   }
 
   h6 {
@@ -484,9 +495,22 @@ const HeaderLeftContent = styled.div`
     color: rgb(255, 203, 154);
     font-weight: 400;
   }
+`;
+
+const PricingButtons = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 70px;
 
   button {
-    margin-top: 50px;
+    a {
+      color: rgb(17, 100, 102);
+    }
+
+    &:hover {
+      color: rgba(209, 232, 226, 1) !important;
+    }
   }
 `;
 
@@ -501,6 +525,7 @@ const HeaderRight = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* object-position: 200% right; */
   }
 `;
 
@@ -510,6 +535,7 @@ const Prices = styled.section`
   width: 100%;
   height: 100%;
   padding: 40px 0;
+  background-color: rgba(209, 232, 226, 0.8);
 `;
 
 const Cards = styled.div`
@@ -544,21 +570,23 @@ const PriceContent = styled.div`
   h3 {
     color: rgb(255, 203, 154);
     font-size: 2rem;
-    line-height: normal;
+    /* font-weight: 600; */
+    /* line-height: normal; */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
   }
 
   h4 {
     text-align: left;
     color: rgb(209, 232, 226);
     font-size: 1.4rem;
-    line-height: normal;
+    /* line-height: normal; */
   }
 
   h5 {
     color: rgba(209, 232, 226, 0.6);
     font-weight: 400;
     /* text-transform: uppercase; */
-    letter-spacing: 0.1;
+    /* letter-spacing: 0.1; */
     font-size: 1.5rem;
     line-height: normal;
 

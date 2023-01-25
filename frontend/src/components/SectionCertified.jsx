@@ -105,7 +105,6 @@ const Left = styled.div`
   h2 {
     color: rgb(17, 100, 102);
     font-size: 4rem;
-    line-height: 1.2;
   }
 
   h3 {

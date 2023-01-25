@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../components/device";
+import StartToday from "./StartToday";
 
 const SectionsStages = () => {
   return (
@@ -59,12 +60,7 @@ const SectionsStages = () => {
             </DevelopmentCard>
           </CardsWrap>
 
-          <StartToday>
-            <h2>Start Today!</h2>
-            <a href="#book-now">
-              <button className="btn">Book Now</button>
-            </a>
-          </StartToday>
+          <StartToday />
         </Wrap>
       </DevelopmentStages>
     </>
@@ -91,7 +87,7 @@ const Wrap = styled.div`
     padding: 40px 0;
     font-size: 4rem;
     color: rgb(209, 232, 226);
-    font-weight: 500;
+    /* font-weight: 500; */
   }
 `;
 
@@ -186,43 +182,7 @@ const DevelopmentCard = styled.div`
       color: rgb(53, 65, 59);
       font-size: 1.5rem;
       line-height: 1.8;
-      font-weight: 600;
+      font-weight: 400;
     }
-  }
-`;
-
-const StartToday = styled.div`
-  background-image: url("../img/stages-booknow-bg.jpeg");
-  background-position: center;
-  background-size: cover;
-  height: 200px;
-  background-color: white;
-  border-radius: 5px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(209, 232, 226, 0.8);
-    z-index: -1;
-  }
-
-  h2 {
-    padding: 10px 0;
-    color: rgb(53, 65, 59);
-    font-size: 3rem;
-    font-weight: 600;
   }
 `;

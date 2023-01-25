@@ -61,7 +61,9 @@ const Behaviour = () => {
 
           {/* Problem Types Section */}
           <IntroSection>
-            <IntroLeft></IntroLeft>
+            <IntroLeft>
+              <img src="../img/behaviour-intro.jpeg" alt="" />
+            </IntroLeft>
             <IntroRight>
               <RightContent>
                 <h3>Common vs. Complex?</h3>
@@ -280,24 +282,18 @@ const Container = styled.div`
   /* padding: 40px 0; */
   position: relative;
   /* border-bottom: 5px solid rgb(44, 53, 49); */
+  background-color: rgba(44, 53, 49, 1);
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: rgba(44, 53, 49, 1);
+  a {
+    color: rgb(17, 100, 102);
   }
 `;
 
 const Wrap = styled.div`
   padding-top: 80px;
   /* width: 100%; */
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 `;
 
 const BehaviourHeader = styled.header`
@@ -313,10 +309,10 @@ const HeaderLeft = styled.div`
   width: 60%;
   position: absolute;
   background-color: rgb(17, 100, 102);
-  padding: 40px 60px;
+  padding: 40px 60px 40px 120px;
   left: 0;
   top: 50%;
-  height: 80vh;
+  /* height: 80vh; */
   transform: translate(0, -50%);
   z-index: 1;
 `;
@@ -329,25 +325,25 @@ const HeaderLeftContent = styled.div`
   h1 {
     color: rgb(255, 203, 154);
     /* text-transform: uppercase; */
-    font-weight: 400;
-    letter-spacing: 1.8px;
+    /* font-weight: 400; */
+    /* letter-spacing: 1.8px; */
     font-size: 3.5rem;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
   }
 
   h3 {
     color: rgb(209, 232, 226);
-    padding: 25px 0;
-    font-weight: 600;
-    line-height: 1.3;
+    padding: 15px 0;
+    /* font-weight: 600;
+    line-height: 1.3; */
   }
 
   p {
     color: rgba(209, 232, 226, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+    /* font-size: 1.5rem; */
+    /* letter-spacing: 0.5px; */
     padding: 10px 0;
-    line-height: 1.3;
+    /* line-height: 1.3; */
   }
 
   h6 {
@@ -421,7 +417,7 @@ const HeaderRight = styled.div`
 
 const IntroSection = styled.section`
   width: 100%;
-  height: 1400px;
+  height: 1500px;
   display: flex;
   background-color: rgb(209, 232, 226);
   border-bottom: 5px solid rgb(44, 53, 49);
@@ -431,10 +427,11 @@ const IntroLeft = styled.div`
   width: 50%;
   height: 100%;
 
-  background-image: url("../img/behaviour-intro.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 const RightContent = styled.div`
@@ -443,24 +440,24 @@ const RightContent = styled.div`
   h3 {
     color: rgb(17, 100, 102);
     font-size: 3.5rem;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    line-height: normal;
+    /* letter-spacing: 0.5px; */
+    /* font-weight: 400; */
+    /* line-height: normal; */
     margin-bottom: 30px;
   }
 
   p {
     color: rgba(44, 53, 49, 1);
-    letter-spacing: 0.5px;
-    font-size: 1.3rem;
-    line-height: normal;
+    /* letter-spacing: 0.5px; */
+    /* font-size: 1.3rem; */
+    /* line-height: normal; */
   }
 
   h4 {
     color: rgb(255, 203, 154);
     text-shadow: 0 3px 5px rgba(0, 0, 0, 1);
-    font-size: 2rem;
-    font-weight: 400;
+    /* font-size: 2rem; */
+    /* font-weight: 400; */
     text-align: left;
     padding-top: 15px;
   }
@@ -477,14 +474,16 @@ const ExamplesWrap = styled.div`
   width: 100%;
   justify-content: space-between;
   margin-top: 30px;
-  min-height: 100%;
+  /* min-height: 100%; */
   /* height: 700px; */
 
   h5 {
     color: rgb(255, 203, 154);
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+
     font-size: 1.5rem;
     letter-spacing: 0.5px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     margin-bottom: 30px;
     text-align: center;
@@ -506,12 +505,12 @@ const ExampleCardLeft = styled.div`
     flex-direction: column;
     justify-content: space-between;
     /* height: 100%; */
-    /* min-height: fit-content; */
+    min-height: fit-content;
 
     li {
       font-size: 1.3rem;
       color: rgb(209, 232, 226);
-      line-height: 1.7;
+      line-height: 1.8;
     }
   }
 `;
@@ -520,7 +519,7 @@ const ExampleCardRight = styled(ExampleCardLeft)`
   background-color: rgb(53, 65, 59);
 
   .inner-ul li {
-    line-height: normal;
+    line-height: 1.2;
   }
 `;
 
@@ -541,38 +540,39 @@ const AggressionLeft = styled.div`
   h3 {
     color: rgb(17, 100, 102);
     font-size: 3.5rem;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    line-height: normal;
+    /* letter-spacing: 0.5px; */
+    /* font-weight: 400; */
+    /* line-height: normal; */
     margin-bottom: 30px;
   }
 
   p {
     color: rgb(53, 65, 59);
-    letter-spacing: 0.5px;
-    font-size: 1.3rem;
-    line-height: normal;
+    /* letter-spacing: 0.5px; */
+    /* font-size: 1.3rem; */
+    /* line-height: normal; */
   }
 
   h4 {
     color: rgb(255, 203, 154);
     text-shadow: 0 3px 5px rgba(0, 0, 0, 1);
-    font-size: 2rem;
-    font-weight: 400;
+    /* font-size: 2rem; */
+    /* font-weight: 400; */
     text-align: left;
-    padding-top: 15px;
+    padding: 10px 0;
   }
 `;
 
 const LeftContent = styled.div`
   width: 60%;
+  height: 100%;
   margin: 0 auto;
-  padding: 60px 0 0;
+  padding: 60px 0;
 `;
 
 const AggressionRight = styled.div`
   width: 40%;
-  height: 100%;
+  /* height: 100%; */
   img {
     width: 100%;
     height: 100%;
@@ -600,7 +600,7 @@ const PlanCards = styled.div`
 
   .card-icon-arrow {
     font-size: 5rem !important;
-    color: rgb(209, 232, 226);
+    color: rgb(255, 203, 154);
   }
 `;
 
@@ -627,9 +627,9 @@ const Card = styled.div`
 
   p {
     color: rgba(44, 53, 49, 1);
-    letter-spacing: 0.5px;
-    font-size: 1.3rem;
-    font-weight: 600;
+    /* letter-spacing: 0.5px; */
+    /* font-size: 1.3rem; */
+    /* font-weight: 600; */
     text-align: center;
     padding-bottom: 10px;
 
@@ -638,6 +638,7 @@ const Card = styled.div`
       display: block;
       color: rgb(17, 100, 102);
       padding-top: 10px;
+      font-weight: 600;
     }
   }
 `;

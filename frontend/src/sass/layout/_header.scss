@@ -98,6 +98,16 @@
 
            a {
               color: rgb(209, 232, 226);
+
+                        
+                        &:focus {
+                            color: rgb(255, 203, 154);
+                                  
+                          }
+
+                          &:focus.nav-link:after {
+                                  transform: scale(1);
+                          }
            }
           
         }
@@ -116,6 +126,8 @@
 
         li {
           padding: 0 1rem;
+
+
         }
       }
     }
@@ -131,7 +143,8 @@
   
 
   &:hover:after,
-  &:focus:after
+  &:focus:after,
+  &:active::after
 {
       transform: scale(1);
       transition: all 0.2s ease-in-out;
@@ -151,12 +164,9 @@
   transform: scale(0);
     background-color: #ddd;
       transition: all 0.2s ease-in-out;
+                transform-origin: center;
 }
 
-        .nav-link:after {
-          transform: scale(0);
-          transform-origin: center;
-        }
     
 
 .nav-link-side {

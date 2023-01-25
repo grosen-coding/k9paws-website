@@ -103,6 +103,10 @@ const Container = styled.section`
   background-color: rgb(53, 65, 59);
   padding-bottom: 40px;
   border-bottom: 5px solid rgb(44, 53, 49);
+
+  a {
+    color: rgb(217, 176, 140);
+  }
 `;
 
 const Wrap = styled.div`
@@ -111,7 +115,7 @@ const Wrap = styled.div`
     padding: 20px 0;
     font-size: 4rem;
     color: rgb(209, 232, 226);
-    font-weight: 500;
+    /* font-weight: 500; */
   }
   h3 {
     color: rgb(255, 203, 154);
@@ -167,7 +171,7 @@ const GetStartedCard = styled.div`
     color: rgb(53, 65, 59);
     padding: 10px;
     font-size: 6rem;
-    /* font-weight: 600; */
+    font-weight: 400;
   }
 
   h3 {

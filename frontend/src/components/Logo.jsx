@@ -18,6 +18,8 @@ export default Logo;
 const LogoWrap = styled.h1`
   // Logo
   display: inline-block;
+  padding: 0 5px;
+
   .logo {
     font-weight: 600;
     color: #333;
@@ -25,8 +27,8 @@ const LogoWrap = styled.h1`
 
     &--nine {
       color: rgb(17, 100, 102);
-      font-size: 5rem;
-      font-weight: 700;
+      font-size: 4rem;
+      /* font-weight: 700; */
       display: inline-block;
       position: relative;
       top: 0.9rem;

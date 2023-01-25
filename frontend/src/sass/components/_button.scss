@@ -1,6 +1,6 @@
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  // border: 1px solid #000;
   border-radius: 5px;
   background-color: $color-primary;
   color: rgb(209, 232, 226);
@@ -8,7 +8,7 @@
   font-weight: 700;
   cursor: pointer;
   text-align: center;
-  appearance: button;
+  // appearance: button;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
   &:hover {
       background-color: rgb(209, 232, 226);
       color: rgba(44, 53, 49, 1);
-      border: 1px solid rgba(44, 53, 49, 1);
+      outline: 1px solid rgba(44, 53, 49, 1);
       ;
     }
 
@@ -97,10 +97,14 @@
   background: rgb(209, 232, 226);
   color: rgba(17, 100, 102, 1);
 
+  &:hover a {
+      color: rgba(209, 232, 226, 1) !important;
+  }
+
   &:hover {
-    background-color: rgba(17, 100, 102, 0.7);
-    color: rgb(209, 232, 226);
-    border: 1px solid rgb(209, 232, 226);
+    background-color: rgba(17, 100, 102, 1);
+   
+  outline: 1px solid rgba(17, 100, 102, 1);
   }
 }
 

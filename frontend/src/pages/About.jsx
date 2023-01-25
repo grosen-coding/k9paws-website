@@ -1,5 +1,6 @@
 // import {Slideshow}  from "../components/Slideshow"
 import styled from "styled-components";
+import StartToday from "../components/StartToday";
 
 function About() {
   return (
@@ -56,7 +57,7 @@ function About() {
               When it comes to relationship-building with your dog, the
               adolescence phase is a very vulnerable time. Statistics show that
               this development period corresponds with the peak age range at
-              which dogs are relinquished to shelters
+              which dogs are relinquished to shelters &nbsp;
               <span>(Asher et al. 2020)</span>.
             </p>
             <p>
@@ -75,20 +76,20 @@ function About() {
         <AboutMiddle>
           <AboutMiddleContent className="wrapper">
             <p>
-              K9PAWS Dog Training exists to support clients and fidos learn how
-              to confidently navigate puppyhood and adolescence so they can
-              experience an enjoyable life together long term. We teach people
-              how they can establish and maintain a high standard of welfare in
-              all aspects of their dog's life based on individual needs and
-              wants.
+              We proudly operate with a team of keen, educated, and skilled
+              people to help you achieve your goals for your dog. Whether you
+              want to build reliable essential skills that will make life even
+              more enjoyable with your pooch as they get older, or are seeking
+              help with a common or complex problematic behaviour. 
             </p>
             <p>
-              Our commitment to clients and their dogs is to work honestly
-              everyday with integrity and compassion. We promise to fervently
-              deliver training programs and coaching that you can always trust
-              to be in line with what the latest scientific evidence suggests is
-              the most welfare-focused approach for raising a well-adjusted
-              companion dog.
+              Everything that happens while your dog is young contributes in
+              some way to the development of their adult personality because
+              nature (genetics) always intertwines with nurture (life
+              experiences). The passionate and knowledgeable team at K9PAWS Dog
+              Training will help you get started as early as possible with your
+              youngster working toward achieving long lasting desirable
+              behaviour with your future adult dog.
             </p>
           </AboutMiddleContent>
         </AboutMiddle>
@@ -100,6 +101,7 @@ function About() {
             </BottomLeft>
 
             <BottomRight>
+              <h2>Why Choose Us?</h2>
               <p>
                 Training can and should be enjoyable for everyone without adding
                 stress or sacrificing progress. We fully support and are
@@ -145,9 +147,8 @@ function About() {
             </BottomRight>
           </AboutBottomContent>
         </AboutBottom>
-        <Banner>
-          <img src="../img/banner-2.jpeg" alt="" />
-        </Banner>
+
+        <StartToday />
       </Wrap>
     </Container>
   );
@@ -157,12 +158,12 @@ export default About;
 
 const Container = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
   /* padding: 40px 0; */
   position: relative;
   /* border-bottom: 5px solid rgb(44, 53, 49); */
 
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -171,20 +172,22 @@ const Container = styled.div`
     height: 100%;
     z-index: -1;
     background-color: rgba(44, 53, 49, 1);
-  }
+  } */
 `;
 
 const Wrap = styled.div`
-  padding-top: 80px;
+  /* padding-top: 80px; */
 `;
 
 // About HEADER
 const AboutHeader = styled.header`
+  padding-top: 80px;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   position: relative;
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(44, 53, 49, 1);
 
   /* padding: 30px; */
 `;
@@ -207,7 +210,7 @@ const HeaderRight = styled.div`
   width: 60%;
   position: absolute;
   background-color: rgb(17, 100, 102);
-  padding: 120px;
+  padding: 60px 120px 60px 60px;
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
@@ -215,34 +218,34 @@ const HeaderRight = styled.div`
   h2 {
     color: rgb(255, 203, 154);
     /* text-transform: uppercase; */
-    font-weight: 400;
+    /* font-weight: 400; */
     letter-spacing: 1.8px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
-
+    margin-bottom: 20px;
     font-size: 3.5rem;
   }
 
   h3 {
     color: rgb(209, 232, 226);
     padding: 25px 0;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   p {
     color: rgba(209, 232, 226, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+    /* font-size: 1.5rem;
+    letter-spacing: 0.5px; */
   }
 
   a {
-    display: inline;
+    display: inline-block;
   }
 `;
 
 // About CONTENT
 
 const AboutIntro = styled.section`
-  background-color: #e2e2e2;
+  background-color: rgba(209, 232, 226, 0.5);
   width: 100%;
   height: auto;
   border-bottom: 5px solid rgb(44, 53, 49);
@@ -255,10 +258,8 @@ const AboutIntroContent = styled.div`
 
   p {
     color: rgba(44, 53, 49, 1);
-    font-size: 1.3rem;
+
     padding: 20px 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
   }
 `;
 
@@ -270,26 +271,27 @@ const AboutSection = styled.section`
   position: relative;
   width: 100%;
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(44, 53, 49, 1);
 `;
 
 const AboutLeft = styled.div`
   width: 60%;
   position: absolute;
   background-color: rgb(17, 100, 102);
-  padding: 120px;
+  padding: 60px 60px 60px 120px;
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
 
   span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: italic;
+    font-weight: 300;
   }
 
   p {
     color: rgba(209, 232, 226, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+
     padding: 20px 0;
   }
 `;
@@ -315,6 +317,7 @@ const AboutMiddle = styled.div`
   width: 100%;
   height: auto;
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(209, 232, 226, 0.5);
 `;
 
 const AboutMiddleContent = styled.div`
@@ -324,10 +327,8 @@ const AboutMiddleContent = styled.div`
 
   p {
     color: rgba(44, 53, 49, 1);
-    font-size: 1.3rem;
+
     padding: 20px 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
   }
 `;
 
@@ -337,6 +338,7 @@ const AboutBottom = styled.div`
   width: 100%;
   height: auto;
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(44, 53, 49, 1);
 `;
 
 const AboutBottomContent = styled.div`
@@ -356,12 +358,22 @@ const BottomLeft = styled.div`
 
 const BottomRight = styled.div`
   width: 50%;
-  padding: 120px;
+  padding: 100px 120px 60px 60px;
+
+  h2 {
+    color: rgb(255, 203, 154);
+    /* text-transform: uppercase; */
+    /* font-weight: 400; */
+    letter-spacing: 1.8px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+  }
 
   p {
     color: rgba(209, 232, 226, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+    /* font-size: 1.5rem; */
+    /* letter-spacing: 0.5px; */
     padding: 20px 0;
   }
 `;

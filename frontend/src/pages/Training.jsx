@@ -258,24 +258,23 @@ export default Training;
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  /* padding: 40px 0; */
   position: relative;
-  /* border-bottom: 5px solid rgb(44, 53, 49); */
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: rgba(44, 53, 49, 1);
+  button {
+    border: none;
+    &:hover a {
+      color: rgba(209, 232, 226, 0.8);
+    }
+
+    a {
+      color: rgba(44, 53, 49, 1);
+    }
   }
 `;
 
 const Wrap = styled.div`
   padding-top: 80px;
+  background-color: rgba(44, 53, 49, 1);
 `;
 
 const Header = styled.header`
@@ -285,30 +284,32 @@ const Header = styled.header`
   position: relative;
   flex-direction: row-reverse;
   border-bottom: 5px solid rgb(44, 53, 49);
+  background-color: rgba(44, 53, 49, 1);
 `;
 
 const HeaderLeft = styled.div`
   width: 60%;
   position: absolute;
   background-color: rgb(17, 100, 102);
-  padding: 40px 60px;
+  padding: 40px 60px 40px 120px;
   left: 0;
   bottom: 50%;
-  height: 80vh;
+  /* height: 80vh; */
   transform: translate(0, 50%);
   z-index: 1;
+  /* margin-top: 150px; */
 `;
 
 const LeftContent = styled.div`
   width: 70%;
-  height: 80vh;
+  /* height: 80vh; */
 
   margin: 0 auto;
   h2 {
     color: rgb(255, 203, 154);
     /* text-transform: uppercase; */
-    font-weight: 400;
-    letter-spacing: 1.8px;
+    /* font-weight: 400; */
+    /* letter-spacing: 1.8px; */
     font-size: 3.5rem;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
   }
@@ -322,10 +323,10 @@ const LeftContent = styled.div`
 
   p {
     color: rgba(209, 232, 226, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+    /* font-size: 1.5rem; */
+    /* letter-spacing: 0.5px; */
     padding: 10px 0;
-    line-height: 1.3;
+    /* line-height: 1.3; */
   }
 
   h6 {
@@ -372,7 +373,8 @@ const PricingLeft = styled.div`
   }
 
   div {
-    padding: 5px 15px;
+    margin: 10px 0;
+    padding: 0 20px;
     color: #e2e2e2;
 
     &:first-of-type {
@@ -422,21 +424,21 @@ const BenefitsLeft = styled.div`
 const BenefitsRight = styled.div`
   width: 50%;
   /* background-color: #e2e2e2; */
-  padding: 60px 80px 40px;
+  padding: 40px 80px 60px;
 
   h3 {
     color: rgb(17, 100, 102);
     font-size: 3.5rem;
     letter-spacing: 0.5px;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 30px;
+    /* font-weight: 400; */
+    /* line-height: 1.2; */
+    /* margin-bottom: 10px; */
   }
 
   p {
     color: rgba(44, 53, 49, 1);
-    letter-spacing: 0.5px;
-    font-size: 1.3rem;
+    /* letter-spacing: 0.5px;
+    font-size: 1.3rem; */
   }
 `;
 
@@ -446,8 +448,8 @@ const BenefitsContent = styled.div`
   h4 {
     color: rgb(255, 203, 154);
     text-shadow: 0 3px 5px rgba(0, 0, 0, 1);
-    font-size: 2rem;
-    font-weight: 400;
+    /* font-size: 2rem; */
+    /* font-weight: 600; */
     text-align: left;
     padding-top: 35px;
   }
@@ -473,16 +475,17 @@ const PlanCards = styled.div`
 
   .card-icon-arrow {
     font-size: 5rem !important;
-    color: rgb(209, 232, 226);
+    color: rgb(255, 203, 154);
   }
 `;
 
 const Card = styled.div`
   width: 15%;
   background-color: #e2e2e2;
-  padding: 15px;
+  padding: 25px 15px;
   position: relative;
   min-height: 400px;
+  border: 2px solid rgba(44, 53, 49, 1);
   /* height: 100%; */
 
   h2 {
@@ -500,9 +503,9 @@ const Card = styled.div`
 
   p {
     color: rgba(44, 53, 49, 1);
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 600; */
     text-align: center;
   }
 `;
@@ -511,39 +514,39 @@ const Card = styled.div`
 
 const TrainingInfoSection = styled.section`
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   background-color: rgb(209, 232, 226);
   border-bottom: 5px solid rgb(44, 53, 49);
 `;
 
 const InfoLeft = styled.div`
-  width: 60%;
-  padding: 60px 0 0;
+  width: 70%;
+  padding: 60px 0 0 120px;
 `;
 
 const InfoContent = styled.div`
   width: 60%;
   margin: 0 auto;
   color: rgb(44, 53, 49, 1);
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 400; */
 
   h2 {
     color: rgb(17, 100, 102);
     font-size: 3.5rem;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 30px;
+    /* letter-spacing: 0.5px; */
+    /* font-weight: 600; */
+    /* line-height: normal; */
+    /* margin-top: 30px; */
   }
 
   h3 {
     color: rgb(255, 203, 154);
     text-shadow: 0 3px 5px rgba(0, 0, 0, 1);
     font-size: 2.5rem;
-    font-weight: 400;
+    /* font-weight: 400; */
     text-align: left;
     padding-top: 25px;
   }
@@ -551,9 +554,15 @@ const InfoContent = styled.div`
   h4 {
     color: rgb(17, 100, 102);
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 30px;
-    font-weight: 700;
+    /* font-weight: 700; */
+  }
+
+  ul {
+    li {
+      font-size: 1.3rem;
+    }
   }
 `;
 
