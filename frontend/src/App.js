@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GlobalStyle from "./components/GlobalStyles";
 import HeaderNav from "./components/HeaderNav";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       <Router>
+        {/* <GlobalStyle /> */}
         <HeaderNav />
         {/* <Container> */}
         <Routes>

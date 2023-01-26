@@ -647,7 +647,7 @@ const Card = styled.div`
 
 const SectionBanner2 = styled.section`
   height: 400px;
-  width: 100vw;
+  width: 100%;
   background-image: url("../img/banner-3.jpeg");
   background-repeat: no-repeat;
   background-size: cover;

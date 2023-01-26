@@ -130,8 +130,8 @@ export default Home;
 
 const SectionIntro = styled.section`
   height: auto;
-  position: relative;
-  z-index: -2;
+  /* position: relative; */
+  /* z-index: -2; */
   display: flex;
   width: 100%;
   border-bottom: 5px solid rgb(44, 53, 49);

@@ -29,9 +29,11 @@ html {
 body {
     font-family: "Poppins", sans-serif;  font-size: $default-font-size;
 
-  height: 100vh;
+//     width: 100%;
+//   height: 100vh;
+  
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 
@@ -42,14 +44,6 @@ a {
   display: block;
 }
 
-
-
-p {
-
-  @include respond(tab-port) {
-    // font-size: 1.8rem;
-  }
-}
 
 ::selection {
   background-color: $color-primary;

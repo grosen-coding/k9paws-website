@@ -39,7 +39,7 @@ const Main = styled.header`
   background-repeat: no-repeat;
   background-color: rgba(209, 232, 226, 0.2);
   /* background-attachment: fixed; */
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   text-align: center;
   display: flex;

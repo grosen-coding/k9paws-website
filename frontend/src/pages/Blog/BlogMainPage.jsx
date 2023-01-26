@@ -49,7 +49,7 @@ const BlogMainPage = () => {
 
               <ul>
                 {recentPosts.map((post) => {
-                  return <BlogCard post={post} />;
+                  return <BlogCard key={post.key} post={post} />;
                 })}
               </ul>
 
@@ -83,21 +83,21 @@ const Container = styled.main`
   width: 100%;
   height: 100%;
 
-  background-image: url("../img/dog-blog1.jpeg");
+  background-image: url("../img/blog-1.jpeg");
   background-position: center;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
+  /* background-color: rgba(209, 232, 226, 0.4); */
 
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* z-index: -1; */
-    background-color: rgba(209, 232, 226, 0.4);
-  }
+    z-index: -1;
+  } */
 `;
 
 const Wrap = styled.div`
@@ -108,8 +108,8 @@ const Wrap = styled.div`
 const BlogPosts = styled.div`
   /* height: 100%; */
   padding: 120px 0 60px;
-  z-index: 2;
-  position: relative;
+  /* z-index: 2; */
+  /* position: relative; */
 
   h1 {
     font-size: 4rem;
@@ -161,7 +161,7 @@ const RecentPostsContent = styled.div`
     width: 100%;
     padding: 2rem 0;
     /* margin: 5rem 0; */
-    justify-content: space-between;
+    justify-content: space-around;
     // justify-content: center;
     align-items: center;
     margin-bottom: 40px;

@@ -22,8 +22,6 @@
     transform: translateY(10rem);
   }
 
-
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -69,7 +67,6 @@
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -79,12 +76,9 @@
 @keyframes paw {
   0% {
     opacity: 0;
- 
   }
-
   100% {
     opacity: 1;
-
   }
 
 }

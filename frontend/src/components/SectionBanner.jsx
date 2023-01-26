@@ -12,7 +12,7 @@ export default SectionBanner;
 
 const Container = styled.div`
   height: 400px;
-  width: 100vw;
+  width: 100%;
   background-image: url("../img/banner-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;

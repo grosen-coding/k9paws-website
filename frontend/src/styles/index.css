@@ -43,8 +43,6 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  height: 100vh;
-  overflow-x: hidden;
 }
 
 a {
@@ -271,44 +269,6 @@ p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
-}
-
-.u-center-text {
-  text-align: center !important;
-}
-
-.u-margin-bottom-xl {
-  margin-bottom: 12rem;
-}
-
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important;
-}
-@media only screen and (max-width: 768px) {
-  .u-margin-bottom-big {
-    margin-bottom: 5rem !important;
-  }
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
-}
-@media only screen and (max-width: 768px) {
-  .u-margin-bottom-medium {
-    margin-bottom: 3rem !important;
-  }
-}
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important;
-}
-
-.u-margin-top-big {
-  margin-top: 8rem !important;
-}
-
-.u-margin-top-xl {
-  margin-top: 10rem !important;
 }
 
 .about--container {

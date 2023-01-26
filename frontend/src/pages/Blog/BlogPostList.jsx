@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import firebase from "../../config/firebase";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 // import { FaPaw } from "react-icons/fa";
 import BlogCard from "./BlogCard";
-import styled from "styled-components";
 
 const BlogPostList = () => {
   const [blogPosts, setBlogPosts] = useState([]);
