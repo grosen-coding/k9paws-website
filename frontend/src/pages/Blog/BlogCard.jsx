@@ -112,10 +112,11 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center; */
-    width: 90%;
+    width: 100%;
     height: 100%;
     text-align: center;
     transition: 1s;
+    position: relative;
   }
 
   .card--paw {

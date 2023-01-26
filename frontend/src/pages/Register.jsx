@@ -79,7 +79,7 @@ function Register() {
             </strong>{" "}
             clients, please register with our secure{" "}
             <strong>Client Portal</strong> below. You will be contacted within
-            48 hours and provided with a form to then complete you new client
+            48 hours and provided with a form to then complete your new client
             profile. Welcome to the K9PAWS Team, we're excited to begin working
             with you!
           </p>
