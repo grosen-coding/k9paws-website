@@ -336,7 +336,7 @@ const AboutMiddleContent = styled.div`
 
 const AboutBottom = styled.div`
   width: 100%;
-  height: auto;
+  height: 95rem;
   border-bottom: 5px solid rgb(44, 53, 49);
   background-color: rgba(44, 53, 49, 1);
 `;
@@ -344,10 +344,12 @@ const AboutBottom = styled.div`
 const AboutBottomContent = styled.div`
   display: flex;
   width: 100%;
+  height: 100%;
 `;
 
 const BottomLeft = styled.div`
   width: 50%;
+  /* height: 100%; */
 
   img {
     width: 100%;
@@ -358,7 +360,7 @@ const BottomLeft = styled.div`
 
 const BottomRight = styled.div`
   width: 50%;
-  padding: 100px 120px 60px 60px;
+  padding: 100px 120px 0 60px;
 
   h2 {
     color: rgb(255, 203, 154);
