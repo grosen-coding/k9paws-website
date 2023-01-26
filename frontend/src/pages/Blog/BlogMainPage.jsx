@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaPaw } from "react-icons/fa";
 import styled from "styled-components";
 import Logo from "../../components/Logo";
+import BlogCard from "./BlogCard";
 
 const BlogMainPage = () => {
   const [recentPosts, setRecentPosts] = useState([]);
@@ -32,7 +33,7 @@ const BlogMainPage = () => {
   return (
     <Container>
       <Wrap className="wrapper">
-        <BlogPosts className="blog-main">
+        <BlogPosts>
           <h1>The Dog Blog</h1>
 
           <p>
@@ -42,40 +43,13 @@ const BlogMainPage = () => {
             continue educating and entertaining our community of clients.{" "}
           </p>
 
-          <AllPostsWrap>
-            <RecentPostsWrap>
+          <RecentPostsWrap>
+            <RecentPostsContent>
               <h2>Recently Posted Stories</h2>
 
               <ul>
-                {recentPosts.map((post, idx) => {
-                  return (
-                    <BlogCard key={post.key}>
-                      <li className="card--content">
-                        <div className="card--paw">
-                          <FaPaw />
-                        </div>
-
-                        <h3 className="card--title">{post.name.title}</h3>
-
-                        <h4 className="card--category">
-                          <strong>Category:</strong> {post.name.category}
-                        </h4>
-
-                        <h4 className="card--author">
-                          <strong>Author:</strong> {post.name.name}
-                        </h4>
-                      </li>
-
-                      <div className="card-btn">
-                        <Link
-                          to={`/blog/blog_list/${post.name.urlLink}`}
-                          key={post.key}
-                        >
-                          <button className="card--btn">View Post</button>
-                        </Link>
-                      </div>
-                    </BlogCard>
-                  );
+                {recentPosts.map((post) => {
+                  return <BlogCard post={post} />;
                 })}
               </ul>
 
@@ -95,8 +69,8 @@ const BlogMainPage = () => {
                   <span>create</span> new post
                 </Link>
               </BlogButtons>
-            </RecentPostsWrap>
-          </AllPostsWrap>
+            </RecentPostsContent>
+          </RecentPostsWrap>
         </BlogPosts>
       </Wrap>
     </Container>
@@ -108,26 +82,50 @@ export default BlogMainPage;
 const Container = styled.main`
   width: 100%;
   height: 100%;
-  margin-top: 100px;
-  // margin-bottom: 200px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* padding: 2rem; */
+
+  background-image: url("../img/dog-blog1.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    background-color: rgba(209, 232, 226, 0.4);
+  }
 `;
 
-const Wrap = styled.div``;
+const Wrap = styled.div`
+  width: 80%;
+  height: 100%;
+`;
 
 const BlogPosts = styled.div`
+  /* height: 100%; */
+  padding: 120px 0 60px;
+  z-index: 2;
+  position: relative;
+
   h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+    color: rgb(17, 100, 102);
   }
 
   p {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
   }
 `;
-
-const AllPostsWrap = styled.div``;
 
 const RecentPostsWrap = styled.div`
   border-radius: 0.5rem;
@@ -135,211 +133,38 @@ const RecentPostsWrap = styled.div`
   border: 1px solid #333;
   padding: 2rem 5rem;
   width: 75%;
-  margin: 0 auto 70px;
+  height: 100%;
+  margin: 0 auto;
+  /* z-index: 2; */
+  /* position: relative; */
+  background-color: rgba(209, 232, 226, 0.6);
+`;
+
+const RecentPostsContent = styled.div`
+  width: 90%;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    color: rgb(255, 203, 154);
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+    /* font-size: 2rem; */
+    /* font-weight: 400; */
+    /* text-align: left; */
+    font-size: 3rem;
+    padding: 15px 0;
+  }
 
   ul {
     display: flex;
     height: 100%;
     width: 100%;
-    margin: 5rem 0;
+    padding: 2rem 0;
+    /* margin: 5rem 0; */
     justify-content: space-between;
     // justify-content: center;
     align-items: center;
-  }
-`;
-
-const BlogCard = styled.div`
-  border: 1px solid #aaa;
-  width: 20rem;
-  height: 23rem;
-  border-radius: 1rem;
-  margin: 20px;
-  position: relative;
-  transition: 0.5s;
-  overflow: hidden;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-
-  @include respond(tab-port) {
-    width: 60%;
-  }
-
-  @include respond(phone) {
-    height: 15rem;
-    width: 22rem;
-    margin: 10px auto;
-  }
-
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  &:hover .card--paw {
-    top: -1rem;
-    right: 1rem;
-    transform: scale(2.5) rotate(45deg);
-    opacity: 0.4;
-  }
-
-  &:hover .card--title {
-    top: 3rem;
-    font-weight: 800;
-
-    @include respond(phone) {
-      top: 1rem;
-    }
-  }
-
-  &:hover .card--author {
-    bottom: 12rem;
-    opacity: 1;
-
-    @include respond(tab-port) {
-      bottom: 10rem;
-    }
-
-    @include respond(phone) {
-      bottom: 8rem;
-    }
-  }
-
-  &:hover .card--category {
-    bottom: 9rem;
-    opacity: 1;
-
-    @include respond(tab-port) {
-      bottom: 8rem;
-      line-height: 1.2;
-    }
-
-    @include respond(phone) {
-      bottom: 6rem;
-    }
-  }
-
-  &:hover .card-btn {
-    bottom: 2rem;
-    opacity: 1;
-  }
-
-  .card--content {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: 1s;
-  }
-
-  .card--paw {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    font-size: 5rem;
-    transition: 0.5s;
-    color: rgb(63, 174, 76);
-
-    @include respond(tab-port) {
-      font-size: 7rem;
-    }
-
-    @include respond(phone) {
-      top: 60%;
-      font-size: 5rem;
-    }
-  }
-
-  .card--title {
-    color: #555;
-    text-transform: uppercase;
-    position: absolute;
-    top: 12rem;
-    width: 100%;
-    transition: 0.5s;
-    line-height: 1;
-    font-size: 1.4rem;
-    padding: 0 0.6rem;
-
-    @include respond(tab-port) {
-      font-size: 2rem;
-    }
-
-    @include respond(phone) {
-      top: 10rem;
-      font-size: 1.2rem;
-    }
-  }
-
-  .card--author {
-    font-weight: 500;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    bottom: -5rem;
-    transition: 0.7s;
-    transition-delay: 0.1s;
-
-    strong {
-      color: #777;
-    }
-  }
-
-  .card--category {
-    font-weight: 500;
-    position: absolute;
-    width: 100%;
-    bottom: -10rem;
-    transition: 0.7s;
-    transition-delay: 0.2s;
-    opacity: 0;
-
-    strong {
-      color: #777;
-    }
-  }
-
-  .card--btn {
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background: rgb(63, 174, 76);
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    text-align: center;
-    backface-visibility: hidden;
-    transition: 0.3s;
-
-    @include respond(tab-land) {
-      padding: 5px 10px;
-      font-size: 1.6rem;
-    }
-
-    @include respond(tab-port) {
-      padding: 5px 10px;
-      font-size: 1.3rem;
-    }
-
-    @include respond(phone) {
-      padding: 5px 10px;
-      font-size: 1rem;
-    }
-
-    &:hover {
-      color: #333;
-      background-color: #fff;
-      border: 2px solid rgb(63, 174, 76);
-      transform: scale(1.05) translateY(-0.3rem);
-      box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
-    }
-
-    &:active {
-      transform: scale(1) translateY(0);
-      box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.5);
-    }
+    margin-bottom: 40px;
   }
 `;
 

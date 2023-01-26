@@ -21,17 +21,17 @@ function MainReportsPage() {
     }).then((response) => {
       setInitialBreedInfo(response.data);
 
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, []);
 
   const handleSearch = (event, userSearchInput) => {
     event.preventDefault();
 
-    console.log(initialBreedInfo[0]);
+    // console.log(initialBreedInfo[0]);
 
     const filteredBreedInfo = initialBreedInfo.filter((breed) => {
-      console.log(breed);
+      // console.log(breed);
       return (
         breed.bred_for?.toLowerCase().includes(userSearchInput) ||
         breed.breed_group?.toLowerCase().includes(userSearchInput) ||
@@ -97,36 +97,34 @@ function MainReportsPage() {
               {breedSearchResult?.map((breedInfo) => {
                 return (
                   //   <Link to={`/blog/blog_list/${post.name.urlLink}`}>
-                  <div className="breed-info--results-card">
-                    <li key={breedInfo.id}>
-                      <div className="breed-info--results-back">
-                        <div className="breed-info--results-name">
-                          <h3>{breedInfo.name}</h3>
-                        </div>
-                        <p className="breed-info--results-item">
-                          <strong>bred for:</strong> {breedInfo.bred_for}
-                        </p>
-                        <p className="breed-info--results-item">
-                          <strong>breed group:</strong> {breedInfo.breed_group}
-                        </p>
-                        <p className="breed-info--results-item">
-                          <strong>temperament:</strong> {breedInfo.temperament}
-                        </p>
-                        <p className="breed-info--results-item">
-                          <strong>life span:</strong> {breedInfo.life_span}
-                        </p>
+                  <li className="breed-info--results-card" key={breedInfo.id}>
+                    <div className="breed-info--results-back">
+                      <div className="breed-info--results-name">
+                        <h3>{breedInfo.name}</h3>
                       </div>
+                      <p className="breed-info--results-item">
+                        <strong>bred for:</strong> {breedInfo.bred_for}
+                      </p>
+                      <p className="breed-info--results-item">
+                        <strong>breed group:</strong> {breedInfo.breed_group}
+                      </p>
+                      <p className="breed-info--results-item">
+                        <strong>temperament:</strong> {breedInfo.temperament}
+                      </p>
+                      <p className="breed-info--results-item">
+                        <strong>life span:</strong> {breedInfo.life_span}
+                      </p>
+                    </div>
 
-                      <div className="breed-info--results-front">
-                        <div className="breed-info--results-front-img">
-                          <img src={breedInfo.image.url} alt="dog images" />
-                        </div>
-                        <div className="breed-info--results-front-name">
-                          <h3>{breedInfo.name}</h3>
-                        </div>
+                    <div className="breed-info--results-front">
+                      <div className="breed-info--results-front-img">
+                        <img src={breedInfo.image.url} alt="dog images" />
                       </div>
-                    </li>
-                  </div>
+                      <div className="breed-info--results-front-name">
+                        <h3>{breedInfo.name}</h3>
+                      </div>
+                    </div>
+                  </li>
                   //   </Link>
                 );
               })}
